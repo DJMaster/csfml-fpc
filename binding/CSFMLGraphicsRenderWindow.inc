@@ -215,6 +215,15 @@ procedure sfRenderWindow_setIcon(renderWindow: PsfRenderWindow; width: cuint; he
 procedure sfRenderWindow_setVisible(renderWindow: PsfRenderWindow; visible: sfBool); cdecl; external LIB_CSFMLGRAPHICS;
 
 ////////////////////////////////////////////////////////////
+/// \brief Enable / disable vertical synchronization on a render window
+///
+/// \param renderWindow Render window object
+/// \param enabled      sfTrue to enable v-sync, sfFalse to deactivate
+///
+////////////////////////////////////////////////////////////
+procedure sfRenderWindow_setVerticalSyncEnabled(renderWindow: PsfRenderWindow; enabled: sfBool); cdecl; external LIB_CSFMLGRAPHICS;
+
+////////////////////////////////////////////////////////////
 /// \brief Show or hide the mouse cursor on a render window
 ///
 /// \param renderWindow Render window object
@@ -224,13 +233,19 @@ procedure sfRenderWindow_setVisible(renderWindow: PsfRenderWindow; visible: sfBo
 procedure sfRenderWindow_setMouseCursorVisible(renderWindow: PsfRenderWindow; show: sfBool); cdecl; external LIB_CSFMLGRAPHICS;
 
 ////////////////////////////////////////////////////////////
-/// \brief Enable / disable vertical synchronization on a render window
+/// \brief Grab or release the mouse cursor
 ///
-/// \param renderWindow Render window object
-/// \param enabled      sfTrue to enable v-sync, sfFalse to deactivate
+/// If set, grabs the mouse cursor inside this window's client
+/// area so it may no longer be moved outside its bounds.
+/// Note that grabbing is only active while the window has
+/// focus and calling this function for fullscreen windows
+/// won't have any effect (fullscreen windows always grab the
+/// cursor).
+///
+/// \param grabbed sfTrue to enable, sfFalse to disable
 ///
 ////////////////////////////////////////////////////////////
-procedure sfRenderWindow_setVerticalSyncEnabled(renderWindow: PsfRenderWindow; enabled: sfBool); cdecl; external LIB_CSFMLGRAPHICS;
+procedure sfRenderWindow_setMouseCursorGrabbed(renderWindow: PsfRenderWindow; grabbed: sfBool); cdecl; external LIB_CSFMLGRAPHICS;
 
 ////////////////////////////////////////////////////////////
 /// \brief Enable or disable automatic key-repeat for keydown events
@@ -242,6 +257,24 @@ procedure sfRenderWindow_setVerticalSyncEnabled(renderWindow: PsfRenderWindow; e
 ///
 ////////////////////////////////////////////////////////////
 procedure sfRenderWindow_setKeyRepeatEnabled(renderWindow: PsfRenderWindow; enabled: sfBool); cdecl; external LIB_CSFMLGRAPHICS;
+
+////////////////////////////////////////////////////////////
+/// \brief Limit the framerate to a maximum fixed frequency for a render window
+///
+/// \param renderWindow Render window object
+/// \param limit        Framerate limit, in frames per seconds (use 0 to disable limit)
+///
+////////////////////////////////////////////////////////////
+procedure sfRenderWindow_setFramerateLimit(renderWindow: PsfRenderWindow; limit: cuint); cdecl; external LIB_CSFMLGRAPHICS;
+
+////////////////////////////////////////////////////////////
+/// \brief Change the joystick threshold, ie. the value below which no move event will be generated
+///
+/// \param renderWindow Render window object
+/// \param threshold    New threshold, in range [0, 100]
+///
+////////////////////////////////////////////////////////////
+procedure sfRenderWindow_setJoystickThreshold(renderWindow: PsfRenderWindow; threshold: cfloat); cdecl; external LIB_CSFMLGRAPHICS;
 
 ////////////////////////////////////////////////////////////
 /// \brief Activate or deactivate a render window as the current target for rendering
@@ -287,24 +320,6 @@ function sfRenderWindow_hasFocus(const renderWindow: PsfRenderWindow): sfBool; c
 ///
 ////////////////////////////////////////////////////////////
 procedure sfRenderWindow_display(renderWindow: PsfRenderWindow); cdecl; external LIB_CSFMLGRAPHICS;
-
-////////////////////////////////////////////////////////////
-/// \brief Limit the framerate to a maximum fixed frequency for a render window
-///
-/// \param renderWindow Render window object
-/// \param limit        Framerate limit, in frames per seconds (use 0 to disable limit)
-///
-////////////////////////////////////////////////////////////
-procedure sfRenderWindow_setFramerateLimit(renderWindow: PsfRenderWindow; limit: cuint); cdecl; external LIB_CSFMLGRAPHICS;
-
-////////////////////////////////////////////////////////////
-/// \brief Change the joystick threshold, ie. the value below which no move event will be generated
-///
-/// \param renderWindow Render window object
-/// \param threshold    New threshold, in range [0, 100]
-///
-////////////////////////////////////////////////////////////
-procedure sfRenderWindow_setJoystickThreshold(renderWindow: PsfRenderWindow; threshold: cfloat); cdecl; external LIB_CSFMLGRAPHICS;
 
 ////////////////////////////////////////////////////////////
 /// \brief Retrieve the OS-specific handle of a render window
@@ -498,22 +513,31 @@ procedure sfRenderWindow_popGLStates(renderWindow: PsfRenderWindow); cdecl; exte
 procedure sfRenderWindow_resetGLStates(renderWindow: PsfRenderWindow); cdecl; external LIB_CSFMLGRAPHICS;
 
 ////////////////////////////////////////////////////////////
-/// \brief Copy the current contents of a render window to an image
+/// \brief Copy the current contents of the window to an image
+///
+/// \deprecated
+/// Use a sfTexture and its
+/// sfTexture_updateFromRenderWindow(sfTexture*, const sfRenderWindow*, unsigned int, unsigned int)
+/// function and copy its contents into an sfImage instead.
+/// \code
+/// sfVector2u windowSize = sfRenderWindow_getSize(window);
+/// sfTexture* texture = sfTexture_create(windowSize.x, windowSize.y);
+/// sfTexture_updateFromRenderWindow(texture, window, windowSize.x, windowSize.y);
+/// sfImage* screenshot = sfTexture_copyToImage(texture);
+/// \endcode
 ///
 /// This is a slow operation, whose main purpose is to make
 /// screenshots of the application. If you want to update an
 /// image with the contents of the window and then use it for
-/// drawing, you should rather use a sfTexture and its
-/// update(sfWindow*) function.
+/// drawing, you should rather use a sfTexture and the
+/// sfTexture_updateFromWindow(sfTexture*, const sfWindow*, unsigned int, unsigned int) function.
 /// You can also draw things directly to a texture with the
-/// sfRenderWindow class.
+/// sfRenderTexture class.
 ///
-/// \param renderWindow Render window object
-///
-/// \return New image containing the captured contents
+/// \return sfImage containing the captured contents.
 ///
 ////////////////////////////////////////////////////////////
-function sfRenderWindow_capture(const renderWindow: PsfRenderWindow): PsfImage; cdecl; external LIB_CSFMLGRAPHICS;
+function sfRenderWindow_capture(const renderWindow: PsfRenderWindow): PsfImage; cdecl; external LIB_CSFMLGRAPHICS; deprecated;
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the current position of the mouse relative to a render-window
