@@ -39,57 +39,60 @@
 // #include <SFML/System/Vector2.h>
 // #include <SFML/System/Vector3.h>
 
-// 2D vectors
 type
+// 2D vectors
+  PsfGlslVec2 = ^sfGlslVec2;
   sfGlslVec2 = sfVector2f;
+  PsfGlslIvec2 = ^sfGlslIvec2;
   sfGlslIvec2 = sfVector2i;
 
   PsfGlslBvec2 = ^sfGlslBvec2;
   sfGlslBvec2 = record
-  	x: sfBool;
-  	y: sfBool;
+    x: sfBool;
+    y: sfBool;
   end;
 
 // 3D vectors
+  PsfGlslVec3 = ^sfGlslVec3;
   sfGlslVec3 = sfVector3f;
 
   PsfGlslIvec3 = ^sfGlslIvec3;
   sfGlslIvec3 = record
-  	x: cint;
-  	y: cint;
-  	z: cint;
+    x: cint;
+    y: cint;
+    z: cint;
   end;
 
   PsfGlslBvec3 = ^sfGlslBvec3;
   sfGlslBvec3 = record
-	  x: sfBool;
-	  y: sfBool;
-	  z: sfBool;
+    x: sfBool;
+    y: sfBool;
+    z: sfBool;
   end;
 
 // 4D vectors
   PsfGlslVec4 = ^sfGlslVec4;
   sfGlslVec4 = record
-	  x: cfloat;
-	  y: cfloat;
-	  z: cfloat;
-	  w: cfloat;
+    x: cfloat;
+    y: cfloat;
+    z: cfloat;
+    w: cfloat;
   end;
 
   PsfGlslIvec4 = ^sfGlslIvec4;
   sfGlslIvec4 = record
-	  x: cint;
-	  y: cint;
-	  z: cint;
-	  w: cint;
+    x: cint;
+    y: cint;
+    z: cint;
+    w: cint;
   end;
 
   PsfGlslBvec4 = ^sfGlslBvec4;
   sfGlslBvec4 = record
-	  x: sfBool;
-	  y: sfBool;
-	  z: sfBool;
-	  w: sfBool;
+    x: sfBool;
+    y: sfBool;
+    z: sfBool;
+    w: sfBool;
   end;
 
 // matrices
@@ -100,7 +103,8 @@ type
 
   PsfGlslMat4 = ^sfGlslMat4;
   sfGlslMat4 = record
-  	elements: array[0..4*4-1] of cfloat;
+    elements: array[0..4*4-1] of cfloat;
   end;
+
 
 // #endif // SFML_GLSL_H

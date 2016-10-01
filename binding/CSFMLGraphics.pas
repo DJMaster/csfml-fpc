@@ -57,6 +57,7 @@ const
 // #include <SFML/Graphics/ConvexShape.h>
 // #include <SFML/Graphics/Font.h>
 // #include <SFML/Graphics/FontInfo.h>
+// #include <SFML/Graphics/Glsl.h>
 // #include <SFML/Graphics/Glyph.h>
 // #include <SFML/Graphics/Image.h>
 // #include <SFML/Graphics/PrimitiveType.h>
@@ -82,6 +83,7 @@ const
 {$include CSFMLGraphicsColor.inc}
 {$include CSFMLGraphicsVertex.inc}
 {$include CSFMLGraphicsFontInfo.inc}
+{$include CSFMLGraphicsGlsl.inc}
 {$include CSFMLGraphicsGlyph.inc}
 
 {$include CSFMLGraphicsBlendMode.inc}
@@ -94,7 +96,6 @@ const
 {$include CSFMLGraphicsRenderStates.inc}
 {$include CSFMLGraphicsRenderTexture.inc}
 {$include CSFMLGraphicsRenderWindow.inc}
-{$include CSFMLGraphicsGlsl.inc}
 {$include CSFMLGraphicsShader.inc}
 {$include CSFMLGraphicsShape.inc}
 {$include CSFMLGraphicsSprite.inc}
