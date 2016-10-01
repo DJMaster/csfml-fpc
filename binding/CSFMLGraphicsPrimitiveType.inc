@@ -50,15 +50,9 @@ type
     sfPoints,        ///< List of individual points
     sfLines,         ///< List of individual lines
     sfLineStrip,     ///< List of connected lines, a point uses the previous point to form a line
-    // deprecated
-    sfLinesStrip = sfLineStrip,
     sfTriangles,     ///< List of individual triangles
     sfTriangleStrip, ///< List of connected triangles, a point uses the two previous points to form a triangle
-    // deprecated
-    sfTrianglesStrip = sfTriangleStrip,
     sfTriangleFan,   ///< List of connected triangles, a point uses the common center and the previous point to form a triangle
-    // deprecated
-    sfTrianglesFan = sfTriangleFan,
     sfQuads          ///< List of individual quads
   );
 
