@@ -332,6 +332,21 @@ procedure sfWindow_setVisible(window: PsfWindow; visible: sfBool); cdecl; extern
 procedure sfWindow_setMouseCursorVisible(window: PsfWindow; visible: sfBool); cdecl; external LIB_CSFMLWINDOW;
 
 ////////////////////////////////////////////////////////////
+/// \brief Grab or release the mouse cursor
+///
+/// If set, grabs the mouse cursor inside this window's client
+/// area so it may no longer be moved outside its bounds.
+/// Note that grabbing is only active while the window has
+/// focus and calling this function for fullscreen windows
+/// won't have any effect (fullscreen windows always grab the
+/// cursor).
+///
+/// \param grabbed sfTrue to enable, sfFalse to disable
+///
+////////////////////////////////////////////////////////////
+procedure sfWindow_setMouseCursorGrabbed(window: PsfWindow; grabbed: sfBool); cdecl; external LIB_CSFMLWINDOW;
+
+////////////////////////////////////////////////////////////
 /// \brief Enable or disable vertical synchronization
 ///
 /// Activating vertical synchronization will limit the number
@@ -359,6 +374,31 @@ procedure sfWindow_setVerticalSyncEnabled(window: PsfWindow; enabled: sfBool); c
 ///
 ////////////////////////////////////////////////////////////
 procedure sfWindow_setKeyRepeatEnabled(window: PsfWindow; enabled: sfBool); cdecl; external LIB_CSFMLWINDOW;
+
+////////////////////////////////////////////////////////////
+/// \brief Limit the framerate to a maximum fixed frequency
+///
+/// If a limit is set, the window will use a small delay after
+/// each call to sfWindow_display to ensure that the current frame
+/// lasted long enough to match the framerate limit.
+///
+/// \param window Window object
+/// \param limit  Framerate limit, in frames per seconds (use 0 to disable limit)
+///
+////////////////////////////////////////////////////////////
+procedure sfWindow_setFramerateLimit(window: PsfWindow; limit: cuint); cdecl; external LIB_CSFMLWINDOW;
+
+////////////////////////////////////////////////////////////
+/// \brief Change the joystick threshold
+///
+/// The joystick threshold is the value below which
+/// no JoyMoved event will be generated.
+///
+/// \param window    Window object
+/// \param threshold New threshold, in the range [0, 100]
+///
+////////////////////////////////////////////////////////////
+procedure sfWindow_setJoystickThreshold(window: PsfWindow; threshold: cfloat); cdecl; external LIB_CSFMLWINDOW;
 
 ////////////////////////////////////////////////////////////
 /// \brief Activate or deactivate a window as the current target
@@ -417,31 +457,6 @@ function sfWindow_hasFocus(const window: PsfWindow): sfBool; cdecl; external LIB
 ///
 ////////////////////////////////////////////////////////////
 procedure sfWindow_display(window: PsfWindow); cdecl; external LIB_CSFMLWINDOW;
-
-////////////////////////////////////////////////////////////
-/// \brief Limit the framerate to a maximum fixed frequency
-///
-/// If a limit is set, the window will use a small delay after
-/// each call to sfWindow_display to ensure that the current frame
-/// lasted long enough to match the framerate limit.
-///
-/// \param window Window object
-/// \param limit  Framerate limit, in frames per seconds (use 0 to disable limit)
-///
-////////////////////////////////////////////////////////////
-procedure sfWindow_setFramerateLimit(window: PsfWindow; limit: cuint); cdecl; external LIB_CSFMLWINDOW;
-
-////////////////////////////////////////////////////////////
-/// \brief Change the joystick threshold
-///
-/// The joystick threshold is the value below which
-/// no JoyMoved event will be generated.
-///
-/// \param window    Window object
-/// \param threshold New threshold, in the range [0, 100]
-///
-////////////////////////////////////////////////////////////
-procedure sfWindow_setJoystickThreshold(window: PsfWindow; threshold: cfloat); cdecl; external LIB_CSFMLWINDOW;
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the OS-specific handle of the window
