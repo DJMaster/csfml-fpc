@@ -36,6 +36,7 @@
 ////////////////////////////////////////////////////////////
 // #include <SFML/Network/Export.h>
 // #include <SFML/Network/SocketStatus.h>
+// #include <SFML/Network/IpAddress.h>
 // #include <SFML/Network/Types.h>
 
 
@@ -104,13 +105,16 @@ function sfTcpListener_getLocalPort(const listener: PsfTcpListener): cushort; cd
 /// If the socket was previously listening to another port,
 /// it will be stopped first and bound to the new port.
 ///
+/// If there is no specific address to listen to, pass sfIpAddress_Any
+///
 /// \param listener TCP listener object
 /// \param port     Port to listen for new connections
+/// \param address  Address of the interface to listen on
 ///
 /// \return Status code
 ///
 ////////////////////////////////////////////////////////////
-function sfTcpListener_listen(listener: PsfTcpListener; port: cushort): sfSocketStatus; cdecl; external LIB_CSFMLNETWORK;
+function sfTcpListener_listen(listener: PsfTcpListener; port: cushort; address: sfIpAddress): sfSocketStatus; cdecl; external LIB_CSFMLNETWORK;
 
 ////////////////////////////////////////////////////////////
 /// \brief Accept a new connection

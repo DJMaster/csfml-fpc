@@ -107,13 +107,16 @@ function sfUdpSocket_getLocalPort(const socket: PsfUdpSocket): cushort; cdecl; e
 /// system to automatically pick an available port, and then
 /// call sfUdpSocket_getLocalPort to retrieve the chosen port.
 ///
-/// \param socket UDP socket object
-/// \param port   Port to bind the socket to
+/// If there is no specific address to listen to, pass sfIpAddress_Any
+///
+/// \param socket  UDP socket object
+/// \param port    Port to bind the socket to
+/// \param address Address of the interface to bind to
 ///
 /// \return Status code
 ///
 ////////////////////////////////////////////////////////////
-function sfUdpSocket_bind(socket: PsfUdpSocket; port: cushort): sfSocketStatus; cdecl; external LIB_CSFMLNETWORK;
+function sfUdpSocket_bind(socket: PsfUdpSocket; port: cushort; address: sfIpAddress): sfSocketStatus; cdecl; external LIB_CSFMLNETWORK;
 
 ////////////////////////////////////////////////////////////
 /// \brief Unbind a UDP socket from the local port to which it is bound
