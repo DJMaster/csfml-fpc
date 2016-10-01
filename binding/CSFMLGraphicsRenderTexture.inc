@@ -320,4 +320,21 @@ procedure sfRenderTexture_setRepeated(renderTexture: PsfRenderTexture; repeated:
 ////////////////////////////////////////////////////////////
 function sfRenderTexture_isRepeated(const renderTexture: PsfRenderTexture): sfBool; cdecl; external LIB_CSFMLGRAPHICS;
 
+////////////////////////////////////////////////////////////
+/// \brief Generate a mipmap using the current texture data
+///
+/// This function is similar to sfTexture_generateMipmap and operates
+/// on the texture used as the target for drawing.
+/// Be aware that any draw operation may modify the base level image data.
+/// For this reason, calling this function only makes sense after all
+/// drawing is completed and display has been called. Not calling display
+/// after subsequent drawing will lead to undefined behavior if a mipmap
+/// had been previously generated.
+///
+/// \return sfTrue if mipmap generation was successful, sfFalse if unsuccessful
+///
+////////////////////////////////////////////////////////////
+function sfRenderTexture_generateMipmap(renderTexture: PsfRenderTexture): sfBool; cdecl; external LIB_CSFMLGRAPHICS;
+
+
 // #endif // SFML_RENDERTEXTURE_H
