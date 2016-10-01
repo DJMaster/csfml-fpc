@@ -46,8 +46,8 @@ type
 
   PsfGlslBvec2 = ^sfGlslBvec2;
   sfGlslBvec2 = record
-  	x: cbool;
-  	y: cbool;
+  	x: sfBool;
+  	y: sfBool;
   end;
 
 // 3D vectors
@@ -62,9 +62,9 @@ type
 
   PsfGlslBvec3 = ^sfGlslBvec3;
   sfGlslBvec3 = record
-	  x: cbool;
-	  y: cbool;
-	  z: cbool;
+	  x: sfBool;
+	  y: sfBool;
+	  z: sfBool;
   end;
 
 // 4D vectors
@@ -86,10 +86,10 @@ type
 
   PsfGlslBvec4 = ^sfGlslBvec4;
   sfGlslBvec4 = record
-	  x: cbool;
-	  y: cbool;
-	  z: cbool;
-	  w: cbool;
+	  x: sfBool;
+	  y: sfBool;
+	  z: sfBool;
+	  w: sfBool;
   end;
 
 // matrices
