@@ -122,9 +122,11 @@ type
     y: cint;
   end;
 
-////////////////////////////////////////////////////////////
-/// \brief Mouse wheel events parameters (deprecated)
+/// \brief Mouse wheel events parameters
 ///
+/// \deprecated
+/// Use sfMouseWheelScrollEvent instead.
+/// 
 ////////////////////////////////////////////////////////////
 type
   sfMouseWheelEvent = record
