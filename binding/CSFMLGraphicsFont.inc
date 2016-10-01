@@ -94,15 +94,16 @@ procedure sfFont_destroy(font: PsfFont); cdecl; external LIB_CSFMLGRAPHICS;
 ////////////////////////////////////////////////////////////
 /// \brief Get a glyph in a font
 ///
-/// \param font          Source font
-/// \param codePoint     Unicode code point of the character to get
-/// \param characterSize Character size, in pixels
-/// \param bold          Retrieve the bold version or the regular one?
+/// \param font             Source font
+/// \param codePoint        Unicode code point of the character to get
+/// \param characterSize    Character size, in pixels
+/// \param bold             Retrieve the bold version or the regular one?
+/// \param outlineThickness Thickness of outline (when != 0 the glyph will not be filled)
 ///
 /// \return The corresponding glyph
 ///
 ////////////////////////////////////////////////////////////
-function sfFont_getGlyph(font: PsfFont; codePoint: sfUint32; characterSize: cuint; bold: sfBool): sfGlyph; cdecl; external LIB_CSFMLGRAPHICS;
+function sfFont_getGlyph(font: PsfFont; codePoint: sfUint32; characterSize: cuint; bold: sfBool; outlineThickness: cfloat): sfGlyph; cdecl; external LIB_CSFMLGRAPHICS;
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the kerning value corresponding to a given pair of characters in a font

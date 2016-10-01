@@ -296,15 +296,59 @@ procedure sfText_setCharacterSize(text: PsfText; size: cuint); cdecl; external L
 procedure sfText_setStyle(text: PsfText; style: sfUint32); cdecl; external LIB_CSFMLGRAPHICS;
 
 ////////////////////////////////////////////////////////////
-/// \brief Set the global color of a text
+/// \brief Set the fill color of a text
 ///
-/// By default, the text's color is opaque white.
+/// By default, the text's fill color is opaque white.
+/// Setting the fill color to a transparent color with an outline
+/// will cause the outline to be displayed in the fill area of the text.
 ///
 /// \param text  Text object
-/// \param color New color of the text
+/// \param color New fill color of the text
+///
+/// \deprecated This function is deprecated and may be removed in future releases.
+/// Use sfText_setFillColor instead.
 ///
 ////////////////////////////////////////////////////////////
 procedure sfText_setColor(text: PsfText; color: sfColor); cdecl; external LIB_CSFMLGRAPHICS;
+
+////////////////////////////////////////////////////////////
+/// \brief Set the fill color of a text
+///
+/// By default, the text's fill color is opaque white.
+/// Setting the fill color to a transparent color with an outline
+/// will cause the outline to be displayed in the fill area of the text.
+///
+/// \param text  Text object
+/// \param color New fill color of the text
+///
+////////////////////////////////////////////////////////////
+procedure sfText_setFillColor(text: PsfText; color: sfColor); cdecl; external LIB_CSFMLGRAPHICS;
+
+////////////////////////////////////////////////////////////
+/// \brief Set the outline color of the text
+///
+/// By default, the text's outline color is opaque black.
+///
+/// \param text  Text object
+/// \param color New outline color of the text
+///
+////////////////////////////////////////////////////////////
+procedure sfText_setOutlineColor(text: PsfText; color: sfColor); cdecl; external LIB_CSFMLGRAPHICS;
+
+////////////////////////////////////////////////////////////
+/// \brief Set the thickness of the text's outline
+///
+/// By default, the outline thickness is 0.
+///
+/// Be aware that using a negative value for the outline
+/// thickness will cause distorted rendering.
+///
+/// \param thickness New outline thickness, in pixels
+///
+/// \see getOutlineThickness
+///
+////////////////////////////////////////////////////////////
+procedure sfText_setOutlineThickness(text: PsfText; thickness: cfloat); cdecl; external LIB_CSFMLGRAPHICS;
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the string of a text (returns an ANSI string)
@@ -361,14 +405,47 @@ function sfText_getCharacterSize(const text: PsfText): cuint; cdecl; external LI
 function sfText_getStyle(const text: PsfText): sfUint32; cdecl; external LIB_CSFMLGRAPHICS;
 
 ////////////////////////////////////////////////////////////
-/// \brief Get the global color of a text
+/// \brief Get the fill color of a text
 ///
 /// \param text Text object
 ///
-/// \return Global color of the text
+/// \return Fill color of the text
+///
+/// \deprecated This function is deprecated and may be removed in future releases.
+/// Use sfText_getFillColor instead.
 ///
 ////////////////////////////////////////////////////////////
 function sfText_getColor(const text: PsfText): sfColor; cdecl; external LIB_CSFMLGRAPHICS;
+
+////////////////////////////////////////////////////////////
+/// \brief Get the fill color of a text
+///
+/// \param text Text object
+///
+/// \return Fill color of the text
+///
+////////////////////////////////////////////////////////////
+function sfText_getFillColor(const text: PsfText): sfColor; cdecl; external LIB_CSFMLGRAPHICS;
+
+////////////////////////////////////////////////////////////
+/// \brief Get the outline color of a text
+///
+/// \param text Text object
+///
+/// \return Outline color of the text
+///
+////////////////////////////////////////////////////////////
+function sfText_getOutlineColor(const text: PsfText): sfColor; cdecl; external LIB_CSFMLGRAPHICS;
+
+////////////////////////////////////////////////////////////
+/// \brief Get the outline thickness of a text
+///
+/// \param text Text object
+///
+/// \return Outline thickness of a text, in pixels
+///
+////////////////////////////////////////////////////////////
+function sfText_getOutlineThickness(const text: PsfText): cfloat; cdecl; external LIB_CSFMLGRAPHICS;
 
 ////////////////////////////////////////////////////////////
 /// \brief Return the position of the \a index-th character in a text
