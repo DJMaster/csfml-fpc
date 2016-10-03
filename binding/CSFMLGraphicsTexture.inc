@@ -270,6 +270,7 @@ procedure sfTexture_setRepeated(texture: PsfTexture; repeated: sfBool); cdecl; e
 ////////////////////////////////////////////////////////////
 function sfTexture_isRepeated(const texture: PsfTexture): sfBool; cdecl; external LIB_CSFMLGRAPHICS;
 
+////////////////////////////////////////////////////////////
 /// \brief Generate a mipmap using the current texture data
 ///
 /// Mipmaps are pre-computed chains of optimized textures. Each
@@ -294,7 +295,6 @@ function sfTexture_isRepeated(const texture: PsfTexture): sfBool; cdecl; externa
 ////////////////////////////////////////////////////////////
 function sfTexture_generateMipmap(texture: PsfTexture): sfBool; cdecl; external LIB_CSFMLGRAPHICS;
 
-////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 /// \brief Get the underlying OpenGL handle of the texture.
 ///

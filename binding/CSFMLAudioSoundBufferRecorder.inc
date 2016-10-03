@@ -135,4 +135,5 @@ function sfSoundBufferRecorder_setDevice(soundBufferRecorder: PsfSoundBufferReco
 ////////////////////////////////////////////////////////////
 function sfSoundBufferRecorder_getDevice(soundBufferRecorder: PsfSoundBufferRecorder): pchar; cdecl; external LIB_CSFMLAUDIO;
 
+
 // #endif // SFML_SOUNDBUFFERRECORDER_H

@@ -122,6 +122,7 @@ type
     y: cint;
   end;
 
+////////////////////////////////////////////////////////////
 /// \brief Mouse wheel events parameters
 ///
 /// \deprecated

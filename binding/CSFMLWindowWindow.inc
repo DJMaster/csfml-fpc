@@ -323,6 +323,20 @@ procedure sfWindow_setIcon(window: PsfWindow; width: cuint; height: cuint; const
 procedure sfWindow_setVisible(window: PsfWindow; visible: sfBool); cdecl; external LIB_CSFMLWINDOW;
 
 ////////////////////////////////////////////////////////////
+/// \brief Enable or disable vertical synchronization
+///
+/// Activating vertical synchronization will limit the number
+/// of frames displayed to the refresh rate of the monitor.
+/// This can avoid some visual artifacts, and limit the framerate
+/// to a good value (but not constant across different computers).
+///
+/// \param window  Window object
+/// \param enabled sfTrue to enable v-sync, sfFalse to deactivate
+///
+////////////////////////////////////////////////////////////
+procedure sfWindow_setVerticalSyncEnabled(window: PsfWindow; enabled: sfBool); cdecl; external LIB_CSFMLWINDOW;
+
+////////////////////////////////////////////////////////////
 /// \brief Show or hide the mouse cursor
 ///
 /// \param window  Window object
@@ -345,20 +359,6 @@ procedure sfWindow_setMouseCursorVisible(window: PsfWindow; visible: sfBool); cd
 ///
 ////////////////////////////////////////////////////////////
 procedure sfWindow_setMouseCursorGrabbed(window: PsfWindow; grabbed: sfBool); cdecl; external LIB_CSFMLWINDOW;
-
-////////////////////////////////////////////////////////////
-/// \brief Enable or disable vertical synchronization
-///
-/// Activating vertical synchronization will limit the number
-/// of frames displayed to the refresh rate of the monitor.
-/// This can avoid some visual artifacts, and limit the framerate
-/// to a good value (but not constant across different computers).
-///
-/// \param window  Window object
-/// \param enabled sfTrue to enable v-sync, sfFalse to deactivate
-///
-////////////////////////////////////////////////////////////
-procedure sfWindow_setVerticalSyncEnabled(window: PsfWindow; enabled: sfBool); cdecl; external LIB_CSFMLWINDOW;
 
 ////////////////////////////////////////////////////////////
 /// \brief Enable or disable automatic key-repeat
