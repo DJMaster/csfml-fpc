@@ -46,7 +46,7 @@ uses
 ////////////////////////////////////////////////////////////
 const
   CSFML_VERSION_MAJOR = 2;
-  CSFML_VERSION_MINOR = 3;
+  CSFML_VERSION_MINOR = 4;
   CSFML_VERSION_PATCH = 0;
 
 
