@@ -62,6 +62,8 @@ procedure sfContext_destroy(context: PsfContext); cdecl; external LIB_CSFMLWINDO
 /// \param context Context object
 /// \param active  sfTrue to activate, sfFalse to deactivate
 ///
+/// \return sfTrue on success, sfFalse on failure
+///
 ////////////////////////////////////////////////////////////
 procedure sfContext_setActive(context: PsfContext; active: sfBool); cdecl; external LIB_CSFMLWINDOW;
 
