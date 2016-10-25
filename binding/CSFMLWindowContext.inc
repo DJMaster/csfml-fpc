@@ -65,7 +65,7 @@ procedure sfContext_destroy(context: PsfContext); cdecl; external LIB_CSFMLWINDO
 /// \return sfTrue on success, sfFalse on failure
 ///
 ////////////////////////////////////////////////////////////
-procedure sfContext_setActive(context: PsfContext; active: sfBool); cdecl; external LIB_CSFMLWINDOW;
+function sfContext_setActive(context: PsfContext; active: sfBool): sfBool; cdecl; external LIB_CSFMLWINDOW;
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the settings of the context.
