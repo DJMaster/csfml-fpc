@@ -65,5 +65,17 @@ procedure sfContext_destroy(context: PsfContext); cdecl; external LIB_CSFMLWINDO
 ////////////////////////////////////////////////////////////
 procedure sfContext_setActive(context: PsfContext; active: sfBool); cdecl; external LIB_CSFMLWINDOW;
 
+////////////////////////////////////////////////////////////
+/// \brief Get the settings of the context.
+///
+/// Note that these settings may be different than the ones passed to the
+/// constructor; they are indeed adjusted if the original settings are not
+/// directly supported by the system.
+///
+/// \return Structure containing the settings
+///
+////////////////////////////////////////////////////////////
+function sfContext_getSettings(const context: PsfContext): sfContextSettings; cdecl; external LIB_CSFMLWINDOW;
+
 
 // #endif // SFML_CONTEXT_H

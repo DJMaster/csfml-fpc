@@ -68,12 +68,12 @@ const
 {$include CSFMLWindowJoystick.inc}
 {$include CSFMLWindowSensor.inc}
 {$include CSFMLWindowWindowHandle.inc}
-
-{$include CSFMLWindowContext.inc}
 {$include CSFMLWindowEvent.inc}
-{$include CSFMLWindowTouch.inc}
 {$include CSFMLWindowVideoMode.inc}
 {$include CSFMLWindowWindow.inc}
+
+{$include CSFMLWindowContext.inc}
+{$include CSFMLWindowTouch.inc}
 
 
 // #endif // SFML_SFML_WINDOW_H
