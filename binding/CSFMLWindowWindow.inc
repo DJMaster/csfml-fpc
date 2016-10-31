@@ -80,7 +80,8 @@ type
     antialiasingLevel: cuint; ///< Level of antialiasing
     majorVersion: cuint;      ///< Major number of the context version to create
     minorVersion: cuint;      ///< Minor number of the context version to create
-    attributeFlags: sfUint32;    ///< The attribute flags to create the context with
+    attributeFlags: sfUint32; ///< The attribute flags to create the context with
+    sRgbCapable: sfBool;      ///< Whether the context framebuffer is sRGB capable
   end;
   PsfContextSettings = ^sfContextSettings;
 
