@@ -160,5 +160,19 @@ type
 ////////////////////////////////////////////////////////////
 function sfKeyboard_isKeyPressed(key: sfKeyCode): sfBool; cdecl; external LIB_CSFMLWINDOW;
 
+////////////////////////////////////////////////////////////
+/// \brief Show or hide the virtual keyboard.
+///
+/// Warning: the virtual keyboard is not supported on all systems.
+/// It will typically be implemented on mobile OSes (Android, iOS)
+/// but not on desktop OSes (Windows, Linux, ...).
+///
+/// If the virtual keyboard is not available, this function does nothing.
+///
+/// \param visible True to show, false to hide
+///
+////////////////////////////////////////////////////////////
+procedure sfKeyboard_setVirtualKeyboardVisible(visible: sfBool); cdecl; external LIB_CSFMLWINDOW;
+
 
 // #endif // SFML_KEYBOARD_H
