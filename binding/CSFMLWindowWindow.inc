@@ -420,7 +420,7 @@ procedure sfWindow_setJoystickThreshold(window: PsfWindow; threshold: cfloat); c
 ////////////////////////////////////////////////////////////
 function sfWindow_setActive(window: PsfWindow; active: sfBool): sfBool; cdecl; external LIB_CSFMLWINDOW;
 
-///////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 /// \brief Request the current window to be made the active
 /// foreground window
 ///
@@ -431,7 +431,7 @@ function sfWindow_setActive(window: PsfWindow; active: sfBool): sfBool; cdecl; e
 /// is free to deny the request.
 /// This is not to be confused with sfWindow_setActive().
 ///
-///////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 procedure sfWindow_requestFocus(window: PsfWindow); cdecl; external LIB_CSFMLWINDOW;
 
 ////////////////////////////////////////////////////////////

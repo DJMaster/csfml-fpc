@@ -127,7 +127,7 @@ type
 ///
 /// \deprecated
 /// Use sfMouseWheelScrollEvent instead.
-/// 
+///
 ////////////////////////////////////////////////////////////
 type
   sfMouseWheelEvent = record

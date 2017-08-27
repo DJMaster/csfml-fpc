@@ -387,7 +387,7 @@ procedure sfRectangleShape_setSize(shape: PsfRectangleShape; size: sfVector2f); 
 /// \brief Get the size of a rectangle shape
 ///
 /// \param shape Shape object
-//
+///
 /// \return height Size of the rectangle
 ///
 ////////////////////////////////////////////////////////////

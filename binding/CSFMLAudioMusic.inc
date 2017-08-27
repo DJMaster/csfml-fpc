@@ -252,7 +252,7 @@ procedure sfMusic_setVolume(music: PsfMusic; volume: cfloat); cdecl; external LI
 ///
 /// \param music    Music object
 /// \param position Position of the music in the scene
-//
+///
 ////////////////////////////////////////////////////////////
 procedure sfMusic_setPosition(music: PsfMusic; position: sfVector3f); cdecl; external LIB_CSFMLAUDIO;
 
