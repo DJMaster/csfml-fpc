@@ -39,10 +39,9 @@
 // #include <SFML/System/Vector3.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Sensor Types
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Sensor Types
+*)
 type
   sfSensorType = (
     sfSensorAccelerometer,    ///< Measures the raw acceleration (m/s^2)
@@ -56,39 +55,36 @@ type
   );
 
 
-////////////////////////////////////////////////////////////
-/// \brief Check if a sensor is available on the underlying platform
-///
-/// \param sensor Sensor to check
-///
-/// \return sfTrue if the sensor is available, sfFalse otherwise
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Check if a sensor is available on the underlying platform
+
+  \param sensor Sensor to check
+
+  \return sfTrue if the sensor is available, sfFalse otherwise
+*)
 function sfSensor_isAvailable(sensor: sfSensorType): sfBool; cdecl; external LIB_CSFMLWINDOW;
 
-////////////////////////////////////////////////////////////
-/// \brief Enable or disable a sensor
-///
-/// All sensors are disabled by default, to avoid consuming too
-/// much battery power. Once a sensor is enabled, it starts
-/// sending events of the corresponding type.
-///
-/// This function does nothing if the sensor is unavailable.
-///
-/// \param sensor Sensor to enable
-/// \param enabled sfTrue to enable, sfFalse to disable
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Enable or disable a sensor
+
+  All sensors are disabled by default, to avoid consuming too
+  much battery power. Once a sensor is enabled, it starts
+  sending events of the corresponding type.
+
+  This function does nothing if the sensor is unavailable.
+
+  \param sensor Sensor to enable
+  \param enabled sfTrue to enable, sfFalse to disable
+*)
 procedure sfSensor_setEnabled(sensor: sfSensorType; enabled: sfBool); cdecl; external LIB_CSFMLWINDOW;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the current sensor value
-///
-/// \param sensor Sensor to read
-///
-/// \return The current sensor value
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the current sensor value
+
+  \param sensor Sensor to read
+
+  \return The current sensor value
+*)
 function sfSensor_getValue(sensor: sfSensorType): sfVector3f; cdecl; external LIB_CSFMLWINDOW;
 
 

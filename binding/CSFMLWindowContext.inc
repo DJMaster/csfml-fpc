@@ -38,45 +38,41 @@
 // #include <SFML/Window/Types.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Create a new context
-///
-/// This function activates the new context.
-///
-/// \return New sfContext object
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Create a new context
+
+  This function activates the new context.
+
+  \return New sfContext object
+*)
 function sfContext_create(): PsfContext; cdecl; external LIB_CSFMLWINDOW;
 
-////////////////////////////////////////////////////////////
-/// \brief Destroy a context
-///
-/// \param context Context to destroy
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Destroy a context
+
+  \param context Context to destroy
+*)
 procedure sfContext_destroy(context: PsfContext); cdecl; external LIB_CSFMLWINDOW;
 
-////////////////////////////////////////////////////////////
-/// \brief Activate or deactivate explicitely a context
-///
-/// \param context Context object
-/// \param active  sfTrue to activate, sfFalse to deactivate
-///
-/// \return sfTrue on success, sfFalse on failure
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Activate or deactivate explicitely a context
+
+  \param context Context object
+  \param active  sfTrue to activate, sfFalse to deactivate
+
+  \return sfTrue on success, sfFalse on failure
+*)
 function sfContext_setActive(context: PsfContext; active: sfBool): sfBool; cdecl; external LIB_CSFMLWINDOW;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the settings of the context.
-///
-/// Note that these settings may be different than the ones passed to the
-/// constructor; they are indeed adjusted if the original settings are not
-/// directly supported by the system.
-///
-/// \return Structure containing the settings
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the settings of the context.
+
+  Note that these settings may be different than the ones passed to the
+  constructor; they are indeed adjusted if the original settings are not
+  directly supported by the system.
+
+  \return Structure containing the settings
+*)
 function sfContext_getSettings(const context: PsfContext): sfContextSettings; cdecl; external LIB_CSFMLWINDOW;
 
 

@@ -37,10 +37,9 @@
 // #include <SFML/System/Export.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief 3-component vector of floats
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief 3-component vector of floats
+*)
 type
   sfVector3f = record
     x: cfloat;

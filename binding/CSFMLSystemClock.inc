@@ -39,57 +39,52 @@
 // #include <SFML/System/Types.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Create a new clock and start it
-///
-/// \return A new sfClock object
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Create a new clock and start it
+
+  \return A new sfClock object
+*)
 function sfClock_create(): PsfClock; cdecl; external LIB_CSFMLSYSTEM;
 
-////////////////////////////////////////////////////////////
-/// \brief Create a new clock by copying an existing one
-///
-/// \param clock Clock to copy
-///
-/// \return A new sfClock object which is a copy of \a clock
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Create a new clock by copying an existing one
+
+  \param clock Clock to copy
+
+  \return A new sfClock object which is a copy of \a clock
+*)
 function sfClock_copy(const clock: PsfClock): PsfClock; cdecl; external LIB_CSFMLSYSTEM;
 
-////////////////////////////////////////////////////////////
-/// \brief Destroy a clock
-///
-/// \param clock Clock to destroy
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Destroy a clock
+
+  \param clock Clock to destroy
+*)
 procedure sfClock_destroy(clock: PsfClock); cdecl; external LIB_CSFMLSYSTEM;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the time elapsed in a clock
-///
-/// This function returns the time elapsed since the last call
-/// to sfClock_restart (or the construction of the object if
-/// sfClock_restart has not been called).
-///
-/// \param clock Clock object
-///
-/// \return Time elapsed
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the time elapsed in a clock
+
+  This function returns the time elapsed since the last call
+  to sfClock_restart (or the construction of the object if
+  sfClock_restart has not been called).
+
+  \param clock Clock object
+
+  \return Time elapsed
+*)
 function sfClock_getElapsedTime(const clock: PsfClock): sfTime; cdecl; external LIB_CSFMLSYSTEM;
 
-////////////////////////////////////////////////////////////
-/// \brief Restart a clock
-///
-/// This function puts the time counter back to zero.
-/// It also returns the time elapsed since the clock was started.
-///
-/// \param clock Clock object
-///
-/// \return Time elapsed
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Restart a clock
+
+  This function puts the time counter back to zero.
+  It also returns the time elapsed since the clock was started.
+
+  \param clock Clock object
+
+  \return Time elapsed
+*)
 function sfClock_restart(clock: PsfClock): sfTime; cdecl; external LIB_CSFMLSYSTEM;
 
 

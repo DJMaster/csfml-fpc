@@ -39,9 +39,9 @@
 // #include <SFML/System/Vector2.h>
 
 
-////////////////////////////////////////////////////////////
-/// Define a point with color and texture coordinates
-////////////////////////////////////////////////////////////
+(*
+  Define a point with color and texture coordinates
+*)
 type
   sfVertex = record
     position: sfVector2f;  ///< Position of the vertex

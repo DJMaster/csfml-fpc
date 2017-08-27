@@ -38,36 +38,32 @@
 // #include <SFML/System/Types.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Create a new mutex
-///
-/// \return A new sfMutex object
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Create a new mutex
+
+  \return A new sfMutex object
+*)
 function sfMutex_create(): PsfMutex; cdecl; external LIB_CSFMLSYSTEM;
 
-////////////////////////////////////////////////////////////
-/// \brief Destroy a mutex
-///
-/// \param mutex Mutex to destroy
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Destroy a mutex
+
+  \param mutex Mutex to destroy
+*)
 procedure sfMutex_destroy(mutex: PsfMutex); cdecl; external LIB_CSFMLSYSTEM;
 
-////////////////////////////////////////////////////////////
-/// \brief Lock a mutex
-///
-/// \param mutex Mutex object
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Lock a mutex
+
+  \param mutex Mutex object
+*)
 procedure sfMutex_lock(mutex: PsfMutex); cdecl; external LIB_CSFMLSYSTEM;
 
-////////////////////////////////////////////////////////////
-/// \brief Unlock a mutex
-///
-/// \param mutex Mutex object
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Unlock a mutex
+
+  \param mutex Mutex object
+*)
 procedure sfMutex_unlock(mutex: PsfMutex); cdecl; external LIB_CSFMLSYSTEM;
 
 

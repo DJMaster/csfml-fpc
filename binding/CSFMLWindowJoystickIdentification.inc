@@ -37,9 +37,9 @@
 // #include <SFML/Window/Export.h>
 
 
-////////////////////////////////////////////////////////////
-/// sfJoystickIdentification holds a joystick's identification
-////////////////////////////////////////////////////////////
+(*
+  sfJoystickIdentification holds a joystick's identification
+*)
 type
   sfJoystickIdentification = record
     name: pchar;

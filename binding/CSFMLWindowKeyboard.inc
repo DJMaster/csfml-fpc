@@ -37,10 +37,9 @@
 // #include <SFML/Window/Export.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Key codes
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Key codes
+*)
 type
   sfKeyCode = (
     sfKeyUnknown = -1, ///< Unhandled key
@@ -150,28 +149,26 @@ type
   );
 
 
-////////////////////////////////////////////////////////////
-/// \brief Check if a key is pressed
-///
-/// \param key Key to check
-///
-/// \return sfTrue if the key is pressed, sfFalse otherwise
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Check if a key is pressed
+
+  \param key Key to check
+
+  \return sfTrue if the key is pressed, sfFalse otherwise
+*)
 function sfKeyboard_isKeyPressed(key: sfKeyCode): sfBool; cdecl; external LIB_CSFMLWINDOW;
 
-////////////////////////////////////////////////////////////
-/// \brief Show or hide the virtual keyboard.
-///
-/// Warning: the virtual keyboard is not supported on all systems.
-/// It will typically be implemented on mobile OSes (Android, iOS)
-/// but not on desktop OSes (Windows, Linux, ...).
-///
-/// If the virtual keyboard is not available, this function does nothing.
-///
-/// \param visible True to show, false to hide
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Show or hide the virtual keyboard.
+
+  Warning: the virtual keyboard is not supported on all systems.
+  It will typically be implemented on mobile OSes (Android, iOS)
+  but not on desktop OSes (Windows, Linux, ...).
+
+  If the virtual keyboard is not available, this function does nothing.
+
+  \param visible True to show, false to hide
+*)
 procedure sfKeyboard_setVirtualKeyboardVisible(visible: sfBool); cdecl; external LIB_CSFMLWINDOW;
 
 

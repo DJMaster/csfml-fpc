@@ -44,10 +44,9 @@ type
   sfInputStreamGetSizeFunc = function (userData: pointer): sfInt64; cdecl;
 
 
-////////////////////////////////////////////////////////////
-/// \brief Set of callbacks that allow users to define custom file streams
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Set of callbacks that allow users to define custom file streams
+*)
 type
   sfInputStream = record
     read: sfInputStreamReadFunc;       ///< Function to read data from the stream

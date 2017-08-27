@@ -39,40 +39,36 @@
 // #include <stddef.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Create a new packet
-///
-/// \return A new sfPacket object
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Create a new packet
+
+  \return A new sfPacket object
+*)
 function sfPacket_create(): PsfPacket; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Create a new packet by copying an existing one
-///
-/// \param packet Packet to copy
-///
-/// \return A new sfPacket object which is a copy of \a packet
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Create a new packet by copying an existing one
+
+  \param packet Packet to copy
+
+  \return A new sfPacket object which is a copy of \a packet
+*)
 function sfPacket_copy(const packet: PsfPacket): PsfPacket; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Destroy a packet
-///
-/// \param packet Packet to destroy
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Destroy a packet
+
+  \param packet Packet to destroy
+*)
 procedure sfPacket_destroy(packet: PsfPacket); cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Append data to the end of a packet
-///
-/// \param packet      Packet object
-/// \param data        Pointer to the sequence of bytes to append
-/// \param sizeInBytes Number of bytes to append
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Append data to the end of a packet
+
+  \param packet      Packet object
+  \param data        Pointer to the sequence of bytes to append
+  \param sizeInBytes Number of bytes to append
+*)
 procedure sfPacket_append(packet: PsfPacket; const data: pointer; sizeInBytes: csize_t); cdecl; external LIB_CSFMLNETWORK;
 
 ////////////////////////////////////////////////////////////
@@ -85,70 +81,65 @@ procedure sfPacket_append(packet: PsfPacket; const data: pointer; sizeInBytes: c
 ///////////////////////////////////////////////////////////
 procedure sfPacket_clear(packet: PsfPacket); cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Get a pointer to the data contained in a packet
-///
-/// Warning: the returned pointer may become invalid after
-/// you append data to the packet, therefore it should never
-/// be stored.
-/// The return pointer is NULL if the packet is empty.
-///
-/// \param packet Packet object
-///
-/// \return Pointer to the data
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get a pointer to the data contained in a packet
+
+  Warning: the returned pointer may become invalid after
+  you append data to the packet, therefore it should never
+  be stored.
+  The return pointer is NULL if the packet is empty.
+
+  \param packet Packet object
+
+  \return Pointer to the data
+*)
 function sfPacket_getData(const packet: PsfPacket): pointer; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the size of the data contained in a packet
-///
-/// This function returns the number of bytes pointed to by
-/// what sfPacket_getData returns.
-///
-/// \param packet Packet object
-///
-/// \return Data size, in bytes
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the size of the data contained in a packet
+
+  This function returns the number of bytes pointed to by
+  what sfPacket_getData returns.
+
+  \param packet Packet object
+
+  \return Data size, in bytes
+*)
 function sfPacket_getDataSize(const packet: PsfPacket): csize_t; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Tell if the reading position has reached the
-///        end of a packet
-///
-/// This function is useful to know if there is some data
-/// left to be read, without actually reading it.
-///
-/// \param packet Packet object
-///
-/// \return sfTrue if all data was read, sfFalse otherwise
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Tell if the reading position has reached the
+         end of a packet
+
+  This function is useful to know if there is some data
+  left to be read, without actually reading it.
+
+  \param packet Packet object
+
+  \return sfTrue if all data was read, sfFalse otherwise
+*)
 function sfPacket_endOfPacket(const packet: PsfPacket): sfBool; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Test the validity of a packet, for reading
-///
-/// This function allows to test the packet, to check if
-/// a reading operation was successful.
-///
-/// A packet will be in an invalid state if it has no more
-/// data to read.
-///
-/// \param packet Packet object
-///
-/// \return sfTrue if last data extraction from packet was successful
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Test the validity of a packet, for reading
+
+  This function allows to test the packet, to check if
+  a reading operation was successful.
+
+  A packet will be in an invalid state if it has no more
+  data to read.
+
+  \param packet Packet object
+
+  \return sfTrue if last data extraction from packet was successful
+*)
 function sfPacket_canRead(const packet: PsfPacket): sfBool; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Functions to extract data from a packet
-///
-/// \param packet Packet object
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Functions to extract data from a packet
+
+  \param packet Packet object
+*)
 function sfPacket_readBool(packet: PsfPacket): sfBool; cdecl; external LIB_CSFMLNETWORK;
 function sfPacket_readInt8(packet: PsfPacket): sfInt8; cdecl; external LIB_CSFMLNETWORK;
 function sfPacket_readUint8(packet: PsfPacket): sfUint8; cdecl; external LIB_CSFMLNETWORK;
@@ -161,12 +152,11 @@ function sfPacket_readDouble(packet: PsfPacket): cdouble; cdecl; external LIB_CS
 procedure sfPacket_readString(packet: PsfPacket; string_: pchar); cdecl; external LIB_CSFMLNETWORK;
 procedure sfPacket_readWideString(packet: PsfPacket; string_: pucs4char); cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Functions to insert data into a packet
-///
-/// \param packet Packet object
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Functions to insert data into a packet
+
+  \param packet Packet object
+*)
 procedure sfPacket_writeBool(packet: PsfPacket; value: sfBool); cdecl; external LIB_CSFMLNETWORK;
 procedure sfPacket_writeInt8(packet: PsfPacket; value: sfInt8); cdecl; external LIB_CSFMLNETWORK;
 procedure sfPacket_writeUint8(packet: PsfPacket; value: sfUint8); cdecl; external LIB_CSFMLNETWORK;

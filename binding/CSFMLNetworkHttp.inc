@@ -39,10 +39,9 @@
 // #include <SFML/System/Time.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Enumerate the available HTTP methods for a request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Enumerate the available HTTP methods for a request
+*)
 type
   sfHttpMethod = (
     sfHttpGet,   ///< Request in get mode, standard method to retrieve a page
@@ -53,10 +52,9 @@ type
   );
 
 
-////////////////////////////////////////////////////////////
-/// \brief Enumerate all the valid status codes for a response
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Enumerate all the valid status codes for a response
+*)
 type
   sfHttpStatus = (
     // 2xx: success
@@ -94,216 +92,199 @@ type
   );
 
 
-////////////////////////////////////////////////////////////
-/// \brief Create a new HTTP request
-///
-/// \return A new sfHttpRequest object
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Create a new HTTP request
+
+  \return A new sfHttpRequest object
+*)
 function sfHttpRequest_create(): PsfHttpRequest; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Destroy a HTTP request
-///
-/// \param httpRequest HTTP request to destroy
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Destroy a HTTP request
+
+  \param httpRequest HTTP request to destroy
+*)
 procedure sfHttpRequest_destroy(httpRequest: PsfHttpRequest); cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Set the value of a header field of a HTTP request
-///
-/// The field is created if it doesn't exist. The name of
-/// the field is case insensitive.
-/// By default, a request doesn't contain any field (but the
-/// mandatory fields are added later by the HTTP client when
-/// sending the request).
-///
-/// \param httpRequest HTTP request
-/// \param field       Name of the field to set
-/// \param value       Value of the field
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Set the value of a header field of a HTTP request
+
+  The field is created if it doesn't exist. The name of
+  the field is case insensitive.
+  By default, a request doesn't contain any field (but the
+  mandatory fields are added later by the HTTP client when
+  sending the request).
+
+  \param httpRequest HTTP request
+  \param field       Name of the field to set
+  \param value       Value of the field
+*)
 procedure sfHttpRequest_setField(httpRequest: PsfHttpRequest; const field: pchar; const value: pchar); cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Set a HTTP request method
-///
-/// See the sfHttpMethod enumeration for a complete list of all
-/// the availale methods.
-/// The method is sfHttpGet by default.
-///
-/// \param httpRequest HTTP request
-/// \param method      Method to use for the request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Set a HTTP request method
+
+  See the sfHttpMethod enumeration for a complete list of all
+  the availale methods.
+  The method is sfHttpGet by default.
+
+  \param httpRequest HTTP request
+  \param method      Method to use for the request
+*)
 procedure sfHttpRequest_setMethod(httpRequest: PsfHttpRequest; method: sfHttpMethod); cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Set a HTTP request URI
-///
-/// The URI is the resource (usually a web page or a file)
-/// that you want to get or post.
-/// The URI is "/" (the root page) by default.
-///
-/// \param httpRequest HTTP request
-/// \param uri         URI to request, relative to the host
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Set a HTTP request URI
+
+  The URI is the resource (usually a web page or a file)
+  that you want to get or post.
+  The URI is "/" (the root page) by default.
+
+  \param httpRequest HTTP request
+  \param uri         URI to request, relative to the host
+*)
 procedure sfHttpRequest_setUri(httpRequest: PsfHttpRequest; const uri: pchar); cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Set the HTTP version of a HTTP request
-///
-/// The HTTP version is 1.0 by default.
-///
-/// \param httpRequest HTTP request
-/// \param major       Major HTTP version number
-/// \param minor       Minor HTTP version number
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Set the HTTP version of a HTTP request
+
+  The HTTP version is 1.0 by default.
+
+  \param httpRequest HTTP request
+  \param major       Major HTTP version number
+  \param minor       Minor HTTP version number
+*)
 procedure sfHttpRequest_setHttpVersion(httpRequest: PsfHttpRequest; major: cuint; minor: cuint); cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Set the body of a HTTP request
-///
-/// The body of a request is optional and only makes sense
-/// for POST requests. It is ignored for all other methods.
-/// The body is empty by default.
-///
-/// \param httpRequest HTTP request
-/// \param body        Content of the body
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Set the body of a HTTP request
+
+  The body of a request is optional and only makes sense
+  for POST requests. It is ignored for all other methods.
+  The body is empty by default.
+
+  \param httpRequest HTTP request
+  \param body        Content of the body
+*)
 procedure sfHttpRequest_setBody(httpRequest: PsfHttpRequest; const body: pchar); cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Destroy a HTTP response
-///
-/// \param httpResponse HTTP response to destroy
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Destroy a HTTP response
+
+  \param httpResponse HTTP response to destroy
+*)
 procedure sfHttpResponse_destroy(httpResponse: PsfHttpResponse); cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the value of a field of a HTTP response
-///
-/// If the field \a field is not found in the response header,
-/// the empty string is returned. This function uses
-/// case-insensitive comparisons.
-///
-/// \param httpResponse HTTP response
-/// \param field        Name of the field to get
-///
-/// \return Value of the field, or empty string if not found
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the value of a field of a HTTP response
+
+  If the field \a field is not found in the response header,
+  the empty string is returned. This function uses
+  case-insensitive comparisons.
+
+  \param httpResponse HTTP response
+  \param field        Name of the field to get
+
+  \return Value of the field, or empty string if not found
+*)
 function sfHttpResponse_getField(const httpResponse: PsfHttpResponse; const field: pchar): pchar; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the status code of a HTTP reponse
-///
-/// The status code should be the first thing to be checked
-/// after receiving a response, it defines whether it is a
-/// success, a failure or anything else (see the sfHttpStatus
-/// enumeration).
-///
-/// \param httpResponse HTTP response
-///
-/// \return Status code of the response
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the status code of a HTTP reponse
+
+  The status code should be the first thing to be checked
+  after receiving a response, it defines whether it is a
+  success, a failure or anything else (see the sfHttpStatus
+  enumeration).
+
+  \param httpResponse HTTP response
+
+  \return Status code of the response
+*)
 function sfHttpResponse_getStatus(const httpResponse: PsfHttpResponse): sfHttpStatus; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the major HTTP version number of a HTTP response
-///
-/// \param httpResponse HTTP response
-///
-/// \return Major HTTP version number
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the major HTTP version number of a HTTP response
+
+  \param httpResponse HTTP response
+
+  \return Major HTTP version number
+*)
 function sfHttpResponse_getMajorVersion(const httpResponse: PsfHttpResponse): cuint; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the minor HTTP version number of a HTTP response
-///
-/// \param httpResponse HTTP response
-///
-/// \return Minor HTTP version number
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the minor HTTP version number of a HTTP response
+
+  \param httpResponse HTTP response
+
+  \return Minor HTTP version number
+*)
 function sfHttpResponse_getMinorVersion(const httpResponse: PsfHttpResponse): cuint; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the body of a HTTP response
-///
-/// The body of a response may contain:
-/// \li the requested page (for GET requests)
-/// \li a response from the server (for POST requests)
-/// \li nothing (for HEAD requests)
-/// \li an error message (in case of an error)
-///
-/// \param httpResponse HTTP response
-///
-/// \return The response body
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the body of a HTTP response
+
+  The body of a response may contain:
+  \li the requested page (for GET requests)
+  \li a response from the server (for POST requests)
+  \li nothing (for HEAD requests)
+  \li an error message (in case of an error)
+
+  \param httpResponse HTTP response
+
+  \return The response body
+*)
 function sfHttpResponse_getBody(const httpResponse: PsfHttpResponse): pchar; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Create a new Http object
-///
-/// \return A new sfHttp object
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Create a new Http object
+
+  \return A new sfHttp object
+*)
 function sfHttp_create(): PsfHttp; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Destroy a Http object
-///
-/// \param http Http object to destroy
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Destroy a Http object
+
+  \param http Http object to destroy
+*)
 procedure sfHttp_destroy(http: PsfHttp); cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Set the target host of a HTTP object
-///
-/// This function just stores the host address and port, it
-/// doesn't actually connect to it until you send a request.
-/// If the port is 0, it means that the HTTP client will use
-/// the right port according to the protocol used
-/// (80 for HTTP, 443 for HTTPS). You should
-/// leave it like this unless you really need a port other
-/// than the standard one, or use an unknown protocol.
-///
-/// \param http Http object
-/// \param host Web server to connect to
-/// \param port Port to use for connection
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Set the target host of a HTTP object
+
+  This function just stores the host address and port, it
+  doesn't actually connect to it until you send a request.
+  If the port is 0, it means that the HTTP client will use
+  the right port according to the protocol used
+  (80 for HTTP, 443 for HTTPS). You should
+  leave it like this unless you really need a port other
+  than the standard one, or use an unknown protocol.
+
+  \param http Http object
+  \param host Web server to connect to
+  \param port Port to use for connection
+*)
 procedure sfHttp_setHost(http: PsfHttp; const host: pchar; port: cushort); cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Send a HTTP request and return the server's response.
-///
-/// You must have a valid host before sending a request (see sfHttp_setHost).
-/// Any missing mandatory header field in the request will be added
-/// with an appropriate value.
-/// Warning: this function waits for the server's response and may
-/// not return instantly; use a thread if you don't want to block your
-/// application, or use a timeout to limit the time to wait. A value
-/// of 0 means that the client will use the system defaut timeout
-/// (which is usually pretty long).
-///
-/// \param http    Http object
-/// \param request Request to send
-/// \param timeout Maximum time to wait
-///
-/// \return Server's response
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Send a HTTP request and return the server's response.
+
+  You must have a valid host before sending a request (see sfHttp_setHost).
+  Any missing mandatory header field in the request will be added
+  with an appropriate value.
+  Warning: this function waits for the server's response and may
+  not return instantly; use a thread if you don't want to block your
+  application, or use a timeout to limit the time to wait. A value
+  of 0 means that the client will use the system defaut timeout
+  (which is usually pretty long).
+
+  \param http    Http object
+  \param request Request to send
+  \param timeout Maximum time to wait
+
+  \return Server's response
+*)
 function sfHttp_sendRequest(http: PsfHttp; const request: PsfHttpRequest; timeout: sfTime): PsfHttpResponse; cdecl; external LIB_CSFMLNETWORK;
 
 

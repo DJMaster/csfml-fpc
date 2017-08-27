@@ -37,81 +37,73 @@
 // #include <SFML/System/Export.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Represents a time value
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Represents a time value
+*)
 type
   sfTime = record
     microseconds: sfInt64;
   end;
   PsfTime = ^sfTime;
 
-////////////////////////////////////////////////////////////
-/// \brief Predefined "zero" time value 
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Predefined "zero" time value 
+*)
 var
   sfTime_Zero: sfTime; external LIB_CSFMLSYSTEM;
 
-////////////////////////////////////////////////////////////
-/// \brief Return a time value as a number of seconds
-///
-/// \param time Time value
-///
-/// \return Time in seconds
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Return a time value as a number of seconds
+
+  \param time Time value
+
+  \return Time in seconds
+*)
 function sfTime_asSeconds(time: sfTime): cfloat; cdecl; external LIB_CSFMLSYSTEM;
 
-////////////////////////////////////////////////////////////
-/// \brief Return a time value as a number of milliseconds
-///
-/// \param time Time value
-///
-/// \return Time in milliseconds
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Return a time value as a number of milliseconds
+
+  \param time Time value
+
+  \return Time in milliseconds
+*)
 function sfTime_asMilliseconds(time: sfTime): sfInt32; cdecl; external LIB_CSFMLSYSTEM;
 
-////////////////////////////////////////////////////////////
-/// \brief Return a time value as a number of microseconds
-///
-/// \param time Time value
-///
-/// \return Time in microseconds
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Return a time value as a number of microseconds
+
+  \param time Time value
+
+  \return Time in microseconds
+*)
 function sfTime_asMicroseconds(time: sfTime): sfInt64; cdecl; external LIB_CSFMLSYSTEM;
 
-////////////////////////////////////////////////////////////
-/// \brief Construct a time value from a number of seconds
-///
-/// \param amount Number of seconds
-///
-/// \return Time value constructed from the amount of seconds
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Construct a time value from a number of seconds
+
+  \param amount Number of seconds
+
+  \return Time value constructed from the amount of seconds
+*)
 function sfSeconds(amount: cfloat): sfTime; cdecl; external LIB_CSFMLSYSTEM;
 
-////////////////////////////////////////////////////////////
-/// \brief Construct a time value from a number of milliseconds
-///
-/// \param amount Number of milliseconds
-///
-/// \return Time value constructed from the amount of milliseconds
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Construct a time value from a number of milliseconds
+
+  \param amount Number of milliseconds
+
+  \return Time value constructed from the amount of milliseconds
+*)
 function sfMilliseconds(amount: sfInt32): sfTime; cdecl; external LIB_CSFMLSYSTEM;
 
-////////////////////////////////////////////////////////////
-/// \brief Construct a time value from a number of microseconds
-///
-/// \param amount Number of microseconds
-///
-/// \return Time value constructed from the amount of microseconds
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Construct a time value from a number of microseconds
+
+  \param amount Number of microseconds
+
+  \return Time value constructed from the amount of microseconds
+*)
 function sfMicroseconds(amount: sfInt64): sfTime; cdecl; external LIB_CSFMLSYSTEM;
 
 

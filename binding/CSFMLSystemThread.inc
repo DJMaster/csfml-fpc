@@ -38,74 +38,69 @@
 // #include <SFML/System/Types.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Create a new thread from a function pointer
-///
-/// Note: this does *not* run the thread, use sfThread_launch.
-///
-/// \param function Entry point of the thread
-/// \param userData Custom data to pass to the thread function
-///
-/// \return A new sfThread object
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Create a new thread from a function pointer
+
+  Note: this does *not* run the thread, use sfThread_launch.
+
+  \param function Entry point of the thread
+  \param userData Custom data to pass to the thread function
+
+  \return A new sfThread object
+*)
 type
   sfThreadEntryPoint = procedure(UserData: Pointer); cdecl;
 
 function sfThread_create(proc: sfThreadEntryPoint; userData: pointer): PsfThread; cdecl; external LIB_CSFMLSYSTEM;
 
-////////////////////////////////////////////////////////////
-/// \brief Destroy a thread
-///
-/// This function calls sfThread_wait, so that the internal thread
-/// cannot survive after the sfThread object is destroyed.
-///
-/// \param thread Thread to destroy
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Destroy a thread
+
+  This function calls sfThread_wait, so that the internal thread
+  cannot survive after the sfThread object is destroyed.
+
+  \param thread Thread to destroy
+*)
 procedure sfThread_destroy(thread: PsfThread); cdecl; external LIB_CSFMLSYSTEM;
 
-////////////////////////////////////////////////////////////
-/// \brief Run a thread
-///
-/// This function starts the entry point passed to the
-/// thread's constructor, and returns immediately.
-/// After this function returns, the thread's function is
-/// running in parallel to the calling code.
-///
-/// \param thread Thread object
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Run a thread
+
+  This function starts the entry point passed to the
+  thread's constructor, and returns immediately.
+  After this function returns, the thread's function is
+  running in parallel to the calling code.
+
+  \param thread Thread object
+*)
 procedure sfThread_launch(thread: PsfThread); cdecl; external LIB_CSFMLSYSTEM;
 
-////////////////////////////////////////////////////////////
-/// \brief Wait until a thread finishes
-///
-/// This function will block the execution until the
-/// thread's function ends.
-/// Warning: if the thread function never ends, the calling
-/// thread will block forever.
-/// If this function is called from its owner thread, it
-/// returns without doing anything.
-///
-/// \param thread Thread object
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Wait until a thread finishes
+
+  This function will block the execution until the
+  thread's function ends.
+  Warning: if the thread function never ends, the calling
+  thread will block forever.
+  If this function is called from its owner thread, it
+  returns without doing anything.
+
+  \param thread Thread object
+*)
 procedure sfThread_wait(thread: PsfThread); cdecl; external LIB_CSFMLSYSTEM;
 
-////////////////////////////////////////////////////////////
-/// \brief Terminate a thread
-///
-/// This function immediately stops the thread, without waiting
-/// for its function to finish.
-/// Terminating a thread with this function is not safe,
-/// and can lead to local variables not being destroyed
-/// on some operating systems. You should rather try to make
-/// the thread function terminate by itself.
-///
-/// \param thread Thread object
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Terminate a thread
+
+  This function immediately stops the thread, without waiting
+  for its function to finish.
+  Terminating a thread with this function is not safe,
+  and can lead to local variables not being destroyed
+  on some operating systems. You should rather try to make
+  the thread function terminate by itself.
+
+  \param thread Thread object
+*)
 procedure sfThread_terminate(thread: PsfThread); cdecl; external LIB_CSFMLSYSTEM;
 
 

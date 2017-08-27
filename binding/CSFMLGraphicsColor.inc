@@ -37,10 +37,9 @@
 // #include </Graphics/Export.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Utility class for manpulating RGBA colors
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Utility class for manpulating RGBA colors
+*)
 type
   sfColor = record
     r: sfUint8;
@@ -60,80 +59,73 @@ var
   sfCyan: sfColor; external LIB_CSFMLGRAPHICS;        ///< Cyan predefined color
   sfTransparent: sfColor; external LIB_CSFMLGRAPHICS; ///< Transparent (black) predefined color
 
-////////////////////////////////////////////////////////////
-/// \brief Construct a color from its 3 RGB components
-///
-/// \param red   Red component   (0 .. 255)
-/// \param green Green component (0 .. 255)
-/// \param blue  Blue component  (0 .. 255)
-///
-/// \return sfColor constructed from the components
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Construct a color from its 3 RGB components
+
+  \param red   Red component   (0 .. 255)
+  \param green Green component (0 .. 255)
+  \param blue  Blue component  (0 .. 255)
+
+  \return sfColor constructed from the components
+*)
 function sfColor_fromRGB(red: sfUint8; green: sfUint8; blue: sfUint8): sfColor; cdecl; external LIB_CSFMLGRAPHICS;
 
-////////////////////////////////////////////////////////////
-/// \brief Construct a color from its 4 RGBA components
-///
-/// \param red   Red component   (0 .. 255)
-/// \param green Green component (0 .. 255)
-/// \param blue  Blue component  (0 .. 255)
-/// \param alpha Alpha component (0 .. 255)
-///
-/// \return sfColor constructed from the components
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Construct a color from its 4 RGBA components
+
+  \param red   Red component   (0 .. 255)
+  \param green Green component (0 .. 255)
+  \param blue  Blue component  (0 .. 255)
+  \param alpha Alpha component (0 .. 255)
+
+  \return sfColor constructed from the components
+*)
 function sfColor_fromRGBA(red: sfUint8; green: sfUint8; blue: sfUint8; alpha: sfUint8): sfColor; cdecl; external LIB_CSFMLGRAPHICS;
 
-////////////////////////////////////////////////////////////
-/// \brief Construct the color from 32-bit unsigned integer
-///
-/// \param color Number containing the RGBA components (in that order)
-///
-/// \return sfColor constructed from the 32-bit unsigned integer
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Construct the color from 32-bit unsigned integer
+
+  \param color Number containing the RGBA components (in that order)
+
+  \return sfColor constructed from the 32-bit unsigned integer
+*)
 function sfColor_fromInteger(color: sfUint32): sfColor; cdecl; external LIB_CSFMLGRAPHICS;
 
-////////////////////////////////////////////////////////////
-/// \brief Convert a color to a 32-bit unsigned integer
-///
-/// \return Color represented as a 32-bit unsigned integer
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Convert a color to a 32-bit unsigned integer
+
+  \return Color represented as a 32-bit unsigned integer
+*)
 function sfColor_toInteger(color: sfColor): sfUint32; cdecl; external LIB_CSFMLGRAPHICS;
 
-////////////////////////////////////////////////////////////
-/// \brief Add two colors
-///
-/// \param color1 First color
-/// \param color2 Second color
-///
-/// \return Component-wise saturated addition of the two colors
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Add two colors
+
+  \param color1 First color
+  \param color2 Second color
+
+  \return Component-wise saturated addition of the two colors
+*)
 function sfColor_add(color1: sfColor; color2: sfColor): sfColor; cdecl; external LIB_CSFMLGRAPHICS;
 
-////////////////////////////////////////////////////////////
-/// \brief Subtract two colors
-///
-/// \param color1 First color
-/// \param color2 Second color
-///
-/// \return Component-wise saturated subtraction of the two colors
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Subtract two colors
+
+  \param color1 First color
+  \param color2 Second color
+
+  \return Component-wise saturated subtraction of the two colors
+*)
 function sfColor_subtract(color1: sfColor; color2: sfColor): sfColor; cdecl; external LIB_CSFMLGRAPHICS;
 
-////////////////////////////////////////////////////////////
-/// \brief Modulate two colors
-///
-/// \param color1 First color
-/// \param color2 Second color
-///
-/// \return Component-wise multiplication of the two colors
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Modulate two colors
+
+  \param color1 First color
+  \param color2 Second color
+
+  \return Component-wise multiplication of the two colors
+*)
 function sfColor_modulate(color1: sfColor; color2: sfColor): sfColor; cdecl; external LIB_CSFMLGRAPHICS;
 
 

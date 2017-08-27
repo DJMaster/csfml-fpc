@@ -40,10 +40,9 @@
 // #include <SFML/Graphics/Types.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Define the states used for drawing to a RenderTarget
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Define the states used for drawing to a RenderTarget
+*)
 type
   sfRenderStates = record
     blendMode: sfBlendMode; ///< Blending mode

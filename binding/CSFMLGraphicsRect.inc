@@ -37,10 +37,10 @@
 // #include </Graphics/Export.h>
 
 
-////////////////////////////////////////////////////////////
-/// sfFloatRect and sfIntRect are utility classes for
-/// manipulating rectangles.
-////////////////////////////////////////////////////////////
+(*
+  sfFloatRect and sfIntRect are utility classes for
+  manipulating rectangles.
+*)
 type
   sfFloatRect = record
     left: cfloat;
@@ -59,29 +59,27 @@ type
   end;
   PsfIntRect = ^sfIntRect;
 
-////////////////////////////////////////////////////////////
-/// \brief Check if a point is inside a rectangle's area
-///
-/// \param rect Rectangle to test
-/// \param x    X coordinate of the point to test
-/// \param y    Y coordinate of the point to test
-///
-/// \return sfTrue if the point is inside
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Check if a point is inside a rectangle's area
+
+  \param rect Rectangle to test
+  \param x    X coordinate of the point to test
+  \param y    Y coordinate of the point to test
+
+  \return sfTrue if the point is inside
+*)
 function sfFloatRect_contains(const rect: PsfFloatRect; x: cfloat; y: cfloat): sfBool; cdecl; external LIB_CSFMLGRAPHICS;
 function sfIntRect_contains(const rect: PsfIntRect; x: cint; y: cint): sfBool; cdecl; external LIB_CSFMLGRAPHICS;
 
-////////////////////////////////////////////////////////////
-/// \brief Check intersection between two rectangles
-///
-/// \param rect1        First rectangle to test
-/// \param rect2        Second rectangle to test
-/// \param intersection Rectangle to be filled with overlapping rect (can be NULL)
-///
-/// \return sfTrue if rectangles overlap
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Check intersection between two rectangles
+
+  \param rect1        First rectangle to test
+  \param rect2        Second rectangle to test
+  \param intersection Rectangle to be filled with overlapping rect (can be NULL)
+
+  \return sfTrue if rectangles overlap
+*)
 function sfFloatRect_intersects(const rect1: PsfFloatRect; const rect2: PsfFloatRect; intersection: PsfFloatRect): sfBool; cdecl; external LIB_CSFMLGRAPHICS;
 function sfIntRect_intersects(const rect1: PsfIntRect; const rect2: PsfIntRect; intersection: PsfIntRect): sfBool; cdecl; external LIB_CSFMLGRAPHICS;
 

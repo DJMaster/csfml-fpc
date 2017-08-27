@@ -37,10 +37,9 @@
 // #include </Audio/Export.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Enumeration of statuses for sounds and musics
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Enumeration of statuses for sounds and musics
+*)
 type
   sfSoundStatus = (
     sfStopped, ///< Sound / music is not playing

@@ -38,101 +38,93 @@
 // #include </Audio/Types.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Create a new sound buffer recorder
-///
-/// \return A new sfSoundBufferRecorder object (NULL if failed)
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Create a new sound buffer recorder
+
+  \return A new sfSoundBufferRecorder object (NULL if failed)
+*)
 function sfSoundBufferRecorder_create(): PsfSoundBufferRecorder; cdecl; external LIB_CSFMLAUDIO;
 
-////////////////////////////////////////////////////////////
-/// \brief Destroy a sound buffer recorder
-///
-/// \param soundBufferRecorder Sound buffer recorder to destroy
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Destroy a sound buffer recorder
+
+  \param soundBufferRecorder Sound buffer recorder to destroy
+*)
 procedure sfSoundBufferRecorder_destroy(soundBufferRecorder: PsfSoundBufferRecorder); cdecl; external LIB_CSFMLAUDIO;
 
-////////////////////////////////////////////////////////////
-/// \brief Start the capture of a sound recorder recorder
-///
-/// The \a sampleRate parameter defines the number of audio samples
-/// captured per second. The higher, the better the quality
-/// (for example, 44100 samples/sec is CD quality).
-/// This function uses its own thread so that it doesn't block
-/// the rest of the program while the capture runs.
-/// Please note that only one capture can happen at the same time.
-///
-/// \param soundBufferRecorder Sound buffer recorder object
-/// \param sampleRate          Desired capture rate, in number of samples per second
-///
-/// \return sfTrue, if it was able to start recording
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Start the capture of a sound recorder recorder
+
+  The \a sampleRate parameter defines the number of audio samples
+  captured per second. The higher, the better the quality
+  (for example, 44100 samples/sec is CD quality).
+  This function uses its own thread so that it doesn't block
+  the rest of the program while the capture runs.
+  Please note that only one capture can happen at the same time.
+
+  \param soundBufferRecorder Sound buffer recorder object
+  \param sampleRate          Desired capture rate, in number of samples per second
+
+  \return sfTrue, if it was able to start recording
+*)
 function sfSoundBufferRecorder_start(soundBufferRecorder: PsfSoundBufferRecorder; sampleRate: cuint): sfBool; cdecl; external LIB_CSFMLAUDIO;
 
-////////////////////////////////////////////////////////////
-/// \brief Stop the capture of a sound recorder
-///
-/// \param soundBufferRecorder Sound buffer recorder object
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Stop the capture of a sound recorder
+
+  \param soundBufferRecorder Sound buffer recorder object
+*)
 procedure sfSoundBufferRecorder_stop(soundBufferRecorder: PsfSoundBufferRecorder); cdecl; external LIB_CSFMLAUDIO;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the sample rate of a sound buffer recorder
-///
-/// The sample rate defines the number of audio samples
-/// captured per second. The higher, the better the quality
-/// (for example, 44100 samples/sec is CD quality).
-///
-/// \param soundBufferRecorder Sound buffer recorder object
-///
-/// \return Sample rate, in samples per second
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the sample rate of a sound buffer recorder
+
+  The sample rate defines the number of audio samples
+  captured per second. The higher, the better the quality
+  (for example, 44100 samples/sec is CD quality).
+
+  \param soundBufferRecorder Sound buffer recorder object
+
+  \return Sample rate, in samples per second
+*)
 function sfSoundBufferRecorder_getSampleRate(const soundBufferRecorder: PsfSoundBufferRecorder): cuint; cdecl; external LIB_CSFMLAUDIO;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the sound buffer containing the captured audio data
-///
-/// The sound buffer is valid only after the capture has ended.
-/// This function provides a read-only access to the internal
-/// sound buffer, but it can be copied if you need to
-/// make any modification to it.
-///
-/// \param soundBufferRecorder Sound buffer recorder object
-///
-/// \return Read-only access to the sound buffer
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the sound buffer containing the captured audio data
+
+  The sound buffer is valid only after the capture has ended.
+  This function provides a read-only access to the internal
+  sound buffer, but it can be copied if you need to
+  make any modification to it.
+
+  \param soundBufferRecorder Sound buffer recorder object
+
+  \return Read-only access to the sound buffer
+*)
 function sfSoundBufferRecorder_getBuffer(const soundBufferRecorder: PsfSoundBufferRecorder): PsfSoundBuffer; cdecl; external LIB_CSFMLAUDIO;
 
-////////////////////////////////////////////////////////////
-/// \brief Set the audio capture device
-///
-/// This function sets the audio capture device to the device
-/// with the given name. It can be called on the fly (i.e:
-/// while recording). If you do so while recording and
-/// opening the device fails, it stops the recording.
-///
-/// \param soundBufferRecorder Sound buffer recorder object
-/// \param name                The name of the audio capture device
-///
-/// \return sfTrue, if it was able to set the requested device
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Set the audio capture device
+
+  This function sets the audio capture device to the device
+  with the given name. It can be called on the fly (i.e:
+  while recording). If you do so while recording and
+  opening the device fails, it stops the recording.
+
+  \param soundBufferRecorder Sound buffer recorder object
+  \param name                The name of the audio capture device
+
+  \return sfTrue, if it was able to set the requested device
+*)
 function sfSoundBufferRecorder_setDevice(soundBufferRecorder: PsfSoundBufferRecorder; const name: pchar): sfBool; cdecl; external LIB_CSFMLAUDIO;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the name of the current audio capture device
-///
-/// \param soundBufferRecorder Sound buffer recorder object
-///
-/// \return The name of the current audio capture device
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the name of the current audio capture device
+
+  \param soundBufferRecorder Sound buffer recorder object
+
+  \return The name of the current audio capture device
+*)
 function sfSoundBufferRecorder_getDevice(soundBufferRecorder: PsfSoundBufferRecorder): pchar; cdecl; external LIB_CSFMLAUDIO;
 
 

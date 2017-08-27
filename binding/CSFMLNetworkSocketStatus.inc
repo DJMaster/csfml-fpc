@@ -32,10 +32,9 @@
 // #define SFML_SOCKETSTATUS_H
 
 
-////////////////////////////////////////////////////////////
-/// \brief Define the status that can be returned by the socket functions
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Define the status that can be returned by the socket functions
+*)
 type
   sfSocketStatus = (
     sfSocketDone,         ///< The socket has sent / received the data

@@ -38,10 +38,9 @@
 // #include <SFML/Window/JoystickIdentification.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Global joysticks capabilities
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Global joysticks capabilities
+*)
 type
   sfJoystickCapabilities = cuint;
 const
@@ -50,10 +49,9 @@ const
   sfJoystickAxisCount   = 8;  ///< Maximum number of supported axes
 
 
-////////////////////////////////////////////////////////////
-/// \brief Axes supported by SFML joysticks
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Axes supported by SFML joysticks
+*)
 type
   sfJoystickAxis = (
     sfJoystickX,    ///< The X axis
@@ -67,89 +65,82 @@ type
   );
 
 
-////////////////////////////////////////////////////////////
-/// \brief Check if a joystick is connected
-///
-/// \param joystick Index of the joystick to check
-///
-/// \return sfTrue if the joystick is connected, sfFalse otherwise
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Check if a joystick is connected
+
+  \param joystick Index of the joystick to check
+
+  \return sfTrue if the joystick is connected, sfFalse otherwise
+*)
 function sfJoystick_isConnected(joystick: cuint): sfBool; cdecl; external LIB_CSFMLWINDOW;
 
-////////////////////////////////////////////////////////////
-/// \brief Return the number of buttons supported by a joystick
-///
-/// If the joystick is not connected, this function returns 0.
-///
-/// \param joystick Index of the joystick
-///
-/// \return Number of buttons supported by the joystick
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Return the number of buttons supported by a joystick
+
+  If the joystick is not connected, this function returns 0.
+
+  \param joystick Index of the joystick
+
+  \return Number of buttons supported by the joystick
+*)
 function sfJoystick_getButtonCount(joystick: cuint): cuint; cdecl; external LIB_CSFMLWINDOW;
 
-////////////////////////////////////////////////////////////
-/// \brief Check if a joystick supports a given axis
-///
-/// If the joystick is not connected, this function returns false.
-///
-/// \param joystick Index of the joystick
-/// \param axis     Axis to check
-///
-/// \return sfTrue if the joystick supports the axis, sfFalse otherwise
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Check if a joystick supports a given axis
+
+  If the joystick is not connected, this function returns false.
+
+  \param joystick Index of the joystick
+  \param axis     Axis to check
+
+  \return sfTrue if the joystick supports the axis, sfFalse otherwise
+*)
 function sfJoystick_hasAxis(joystick: cuint; axis: sfJoystickAxis): sfBool; cdecl; external LIB_CSFMLWINDOW;
 
-////////////////////////////////////////////////////////////
-/// \brief Check if a joystick button is pressed
-///
-/// If the joystick is not connected, this function returns false.
-///
-/// \param joystick Index of the joystick
-/// \param button   Button to check
-///
-/// \return sfTrue if the button is pressed, sfFalse otherwise
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Check if a joystick button is pressed
+
+  If the joystick is not connected, this function returns false.
+
+  \param joystick Index of the joystick
+  \param button   Button to check
+
+  \return sfTrue if the button is pressed, sfFalse otherwise
+*)
 function sfJoystick_isButtonPressed(joystick: cuint; button: cuint): sfBool; cdecl; external LIB_CSFMLWINDOW;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the current position of a joystick axis
-///
-/// If the joystick is not connected, this function returns 0.
-///
-/// \param joystick Index of the joystick
-/// \param axis     Axis to check
-///
-/// \return Current position of the axis, in range [-100 .. 100]
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the current position of a joystick axis
+
+  If the joystick is not connected, this function returns 0.
+
+  \param joystick Index of the joystick
+  \param axis     Axis to check
+
+  \return Current position of the axis, in range [-100 .. 100]
+*)
 function sfJoystick_getAxisPosition(joystick: cuint; axis: sfJoystickAxis): cfloat; cdecl; external LIB_CSFMLWINDOW;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the joystick information
-///
-/// The result of this function will only remain valid until
-/// the next time the function is called.
-///
-/// \param joystick Index of the joystick
-///
-/// \return Structure containing joystick information.
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the joystick information
+
+  The result of this function will only remain valid until
+  the next time the function is called.
+
+  \param joystick Index of the joystick
+
+  \return Structure containing joystick information.
+*)
 function sfJoystick_getIdentification(joystick: cuint): sfJoystickIdentification; cdecl; external LIB_CSFMLWINDOW;
 
-////////////////////////////////////////////////////////////
-/// \brief Update the states of all joysticks
-///
-/// This function is used internally by SFML, so you normally
-/// don't have to call it explicitely. However, you may need to
-/// call it if you have no window yet (or no window at all):
-/// in this case the joysticks states are not updated automatically.
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Update the states of all joysticks
+
+  This function is used internally by SFML, so you normally
+  don't have to call it explicitely. However, you may need to
+  call it if you have no window yet (or no window at all):
+  in this case the joysticks states are not updated automatically.
+*)
 procedure sfJoystick_update(); cdecl; external LIB_CSFMLWINDOW;
 
 

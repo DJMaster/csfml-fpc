@@ -40,10 +40,9 @@
 // #include <stddef.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Enumeration of transfer modes
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Enumeration of transfer modes
+*)
 type
   sfFtpTransferMode = (
     sfFtpBinary, ///< Binary mode (file is transfered as a sequence of bytes)
@@ -52,10 +51,9 @@ type
   );
 
 
-////////////////////////////////////////////////////////////
-/// \brief Status codes possibly returned by a FTP response
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Status codes possibly returned by a FTP response
+*)
 type
   sfFtpStatus = (
     // 1xx: the requested action is being initiated,
@@ -119,416 +117,383 @@ type
   );
 
 
-////////////////////////////////////////////////////////////
-/// \brief Destroy a FTP listing response
-///
-/// \param ftpListingResponse Ftp listing response to destroy
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Destroy a FTP listing response
+
+  \param ftpListingResponse Ftp listing response to destroy
+*)
 procedure sfFtpListingResponse_destroy(ftpListingResponse: PsfFtpListingResponse); cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Check if a FTP listing response status code means a success
-///
-/// This function is defined for convenience, it is
-/// equivalent to testing if the status code is < 400.
-///
-/// \param ftpListingResponse Ftp listing response
-///
-/// \return sfTrue if the status is a success, sfFalse if it is a failure
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Check if a FTP listing response status code means a success
+
+  This function is defined for convenience, it is
+  equivalent to testing if the status code is < 400.
+
+  \param ftpListingResponse Ftp listing response
+
+  \return sfTrue if the status is a success, sfFalse if it is a failure
+*)
 function sfFtpListingResponse_isOk(const ftpListingResponse: PsfFtpListingResponse): sfBool; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the status code of a FTP listing response
-///
-/// \param ftpListingResponse Ftp listing response
-///
-/// \return Status code
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the status code of a FTP listing response
+
+  \param ftpListingResponse Ftp listing response
+
+  \return Status code
+*)
 function sfFtpListingResponse_getStatus(const ftpListingResponse: PsfFtpListingResponse): sfFtpStatus; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the full message contained in a FTP listing response
-///
-/// \param ftpListingResponse Ftp listing response
-///
-/// \return The response message
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the full message contained in a FTP listing response
+
+  \param ftpListingResponse Ftp listing response
+
+  \return The response message
+*)
 function sfFtpListingResponse_getMessage(const ftpListingResponse: PsfFtpListingResponse): pchar; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Return the number of directory/file names contained in a FTP listing response
-///
-/// \param ftpListingResponse Ftp listing response
-///
-/// \return Total number of names available
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Return the number of directory/file names contained in a FTP listing response
+
+  \param ftpListingResponse Ftp listing response
+
+  \return Total number of names available
+*)
 function sfFtpListingResponse_getCount(const ftpListingResponse: PsfFtpListingResponse): csize_t; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Return a directory/file name contained in a FTP listing response
-///
-/// \param ftpListingResponse Ftp listing response
-/// \param index              Index of the name to get (in range [0 .. getCount])
-///
-/// \return The requested name
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Return a directory/file name contained in a FTP listing response
+
+  \param ftpListingResponse Ftp listing response
+  \param index              Index of the name to get (in range [0 .. getCount])
+
+  \return The requested name
+*)
 function sfFtpListingResponse_getName(const ftpListingResponse: PsfFtpListingResponse; index: csize_t): pchar; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Destroy a FTP directory response
-///
-/// \param ftpDirectoryResponse Ftp directory response to destroy
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Destroy a FTP directory response
+
+  \param ftpDirectoryResponse Ftp directory response to destroy
+*)
 procedure sfFtpDirectoryResponse_destroy(ftpDirectoryResponse: PsfFtpDirectoryResponse); cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Check if a FTP directory response status code means a success
-///
-/// This function is defined for convenience, it is
-/// equivalent to testing if the status code is < 400.
-///
-/// \param ftpDirectoryResponse Ftp directory response
-///
-/// \return sfTrue if the status is a success, sfFalse if it is a failure
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Check if a FTP directory response status code means a success
+
+  This function is defined for convenience, it is
+  equivalent to testing if the status code is < 400.
+
+  \param ftpDirectoryResponse Ftp directory response
+
+  \return sfTrue if the status is a success, sfFalse if it is a failure
+*)
 function sfFtpDirectoryResponse_isOk(const ftpDirectoryResponse: PsfFtpDirectoryResponse): sfBool; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the status code of a FTP directory response
-///
-/// \param ftpDirectoryResponse Ftp directory response
-///
-/// \return Status code
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the status code of a FTP directory response
+
+  \param ftpDirectoryResponse Ftp directory response
+
+  \return Status code
+*)
 function sfFtpDirectoryResponse_getStatus(const ftpDirectoryResponse: PsfFtpDirectoryResponse): sfFtpStatus; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the full message contained in a FTP directory response
-///
-/// \param ftpDirectoryResponse Ftp directory response
-///
-/// \return The response message
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the full message contained in a FTP directory response
+
+  \param ftpDirectoryResponse Ftp directory response
+
+  \return The response message
+*)
 function sfFtpDirectoryResponse_getMessage(const ftpDirectoryResponse: PsfFtpDirectoryResponse): pchar; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the directory returned in a FTP directory response
-///
-/// \param ftpDirectoryResponse Ftp directory response
-///
-/// \return Directory name
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the directory returned in a FTP directory response
+
+  \param ftpDirectoryResponse Ftp directory response
+
+  \return Directory name
+*)
 function sfFtpDirectoryResponse_getDirectory(const ftpDirectoryResponse: PsfFtpDirectoryResponse): pchar; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Destroy a FTP response
-///
-/// \param ftpResponse Ftp response to destroy
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Destroy a FTP response
+
+  \param ftpResponse Ftp response to destroy
+*)
 procedure sfFtpResponse_destroy(ftpResponse: PsfFtpResponse); cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Check if a FTP response status code means a success
-///
-/// This function is defined for convenience, it is
-/// equivalent to testing if the status code is < 400.
-///
-/// \param ftpResponse Ftp response object
-///
-/// \return sfTrue if the status is a success, sfFalse if it is a failure
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Check if a FTP response status code means a success
+
+  This function is defined for convenience, it is
+  equivalent to testing if the status code is < 400.
+
+  \param ftpResponse Ftp response object
+
+  \return sfTrue if the status is a success, sfFalse if it is a failure
+*)
 function sfFtpResponse_isOk(const ftpResponse: PsfFtpResponse): sfBool; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the status code of a FTP response
-///
-/// \param ftpResponse Ftp response object
-///
-/// \return Status code
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the status code of a FTP response
+
+  \param ftpResponse Ftp response object
+
+  \return Status code
+*)
 function sfFtpResponse_getStatus(const ftpResponse: PsfFtpResponse): sfFtpStatus; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the full message contained in a FTP response
-///
-/// \param ftpResponse Ftp response object
-///
-/// \return The response message
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the full message contained in a FTP response
+
+  \param ftpResponse Ftp response object
+
+  \return The response message
+*)
 function sfFtpResponse_getMessage(const ftpResponse: PsfFtpResponse): pchar; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Create a new Ftp object
-///
-/// \return A new sfFtp object
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Create a new Ftp object
+
+  \return A new sfFtp object
+*)
 function sfFtp_create(): PsfFtp; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Destroy a Ftp object
-///
-/// \param ftp Ftp object to destroy
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Destroy a Ftp object
+
+  \param ftp Ftp object to destroy
+*)
 procedure sfFtp_destroy(ftp: PsfFtp); cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Connect to the specified FTP server
-///
-/// The port should be 21, which is the standard
-/// port used by the FTP protocol. You shouldn't use a different
-/// value, unless you really know what you do.
-/// This function tries to connect to the server so it may take
-/// a while to complete, especially if the server is not
-/// reachable. To avoid blocking your application for too long,
-/// you can use a timeout. Using 0 means that the
-/// system timeout will be used (which is usually pretty long).
-///
-/// \param ftp     Ftp object
-/// \param server  Name or address of the FTP server to connect to
-/// \param port    Port used for the connection
-/// \param timeout Maximum time to wait
-///
-/// \return Server response to the request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Connect to the specified FTP server
+
+  The port should be 21, which is the standard
+  port used by the FTP protocol. You shouldn't use a different
+  value, unless you really know what you do.
+  This function tries to connect to the server so it may take
+  a while to complete, especially if the server is not
+  reachable. To avoid blocking your application for too long,
+  you can use a timeout. Using 0 means that the
+  system timeout will be used (which is usually pretty long).
+
+  \param ftp     Ftp object
+  \param server  Name or address of the FTP server to connect to
+  \param port    Port used for the connection
+  \param timeout Maximum time to wait
+
+  \return Server response to the request
+*)
 function sfFtp_connect(ftp: PsfFtp; server: sfIpAddress; port: cushort; timeout: sfTime): PsfFtpResponse; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Log in using an anonymous account
-///
-/// Logging in is mandatory after connecting to the server.
-/// Users that are not logged in cannot perform any operation.
-///
-/// \param ftp Ftp object
-///
-/// \return Server response to the request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Log in using an anonymous account
+
+  Logging in is mandatory after connecting to the server.
+  Users that are not logged in cannot perform any operation.
+
+  \param ftp Ftp object
+
+  \return Server response to the request
+*)
 function sfFtp_loginAnonymous(ftp: PsfFtp): PsfFtpResponse; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Log in using a username and a password
-///
-/// Logging in is mandatory after connecting to the server.
-/// Users that are not logged in cannot perform any operation.
-///
-/// \param ftp      Ftp object
-/// \param name     User name
-/// \param password Password
-///
-/// \return Server response to the request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Log in using a username and a password
+
+  Logging in is mandatory after connecting to the server.
+  Users that are not logged in cannot perform any operation.
+
+  \param ftp      Ftp object
+  \param name     User name
+  \param password Password
+
+  \return Server response to the request
+*)
 function sfFtp_login(ftp: PsfFtp; const name: pchar; const password: pchar): PsfFtpResponse; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Close the connection with the server
-///
-/// \param ftp Ftp object
-///
-/// \return Server response to the request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Close the connection with the server
+
+  \param ftp Ftp object
+
+  \return Server response to the request
+*)
 function sfFtp_disconnect(ftp: PsfFtp): PsfFtpResponse; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Send a null command to keep the connection alive
-///
-/// This command is useful because the server may close the
-/// connection automatically if no command is sent.
-///
-/// \param ftp Ftp object
-///
-/// \return Server response to the request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Send a null command to keep the connection alive
+
+  This command is useful because the server may close the
+  connection automatically if no command is sent.
+
+  \param ftp Ftp object
+
+  \return Server response to the request
+*)
 function sfFtp_keepAlive(ftp: PsfFtp): PsfFtpResponse; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the current working directory
-///
-/// The working directory is the root path for subsequent
-/// operations involving directories and/or filenames.
-///
-/// \param ftp Ftp object
-///
-/// \return Server response to the request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the current working directory
+
+  The working directory is the root path for subsequent
+  operations involving directories and/or filenames.
+
+  \param ftp Ftp object
+
+  \return Server response to the request
+*)
 function sfFtp_getWorkingDirectory(ftp: PsfFtp): PsfFtpDirectoryResponse; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the contents of the given directory
-///
-/// This function retrieves the sub-directories and files
-/// contained in the given directory. It is not recursive.
-/// The \a directory parameter is relative to the current
-/// working directory.
-///
-/// \param ftp       Ftp object
-/// \param directory Directory to list
-///
-/// \return Server response to the request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the contents of the given directory
+
+  This function retrieves the sub-directories and files
+  contained in the given directory. It is not recursive.
+  The \a directory parameter is relative to the current
+  working directory.
+
+  \param ftp       Ftp object
+  \param directory Directory to list
+
+  \return Server response to the request
+*)
 function sfFtp_getDirectoryListing(ftp: PsfFtp; const directory: pchar): PsfFtpListingResponse; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Change the current working directory
-///
-/// The new directory must be relative to the current one.
-///
-/// \param ftp       Ftp object
-/// \param directory New working directory
-///
-/// \return Server response to the request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Change the current working directory
+
+  The new directory must be relative to the current one.
+
+  \param ftp       Ftp object
+  \param directory New working directory
+
+  \return Server response to the request
+*)
 function sfFtp_changeDirectory(ftp: PsfFtp; const directory: pchar): PsfFtpResponse; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Go to the parent directory of the current one
-///
-/// \param ftp Ftp object
-///
-/// \return Server response to the request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Go to the parent directory of the current one
+
+  \param ftp Ftp object
+
+  \return Server response to the request
+*)
 function sfFtp_parentDirectory(ftp: PsfFtp): PsfFtpResponse; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Create a new directory
-///
-/// The new directory is created as a child of the current
-/// working directory.
-///
-/// \param ftp  Ftp object
-/// \param name Name of the directory to create
-///
-/// \return Server response to the request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Create a new directory
+
+  The new directory is created as a child of the current
+  working directory.
+
+  \param ftp  Ftp object
+  \param name Name of the directory to create
+
+  \return Server response to the request
+*)
 function sfFtp_createDirectory(ftp: PsfFtp; const name: pchar): PsfFtpResponse; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Remove an existing directory
-///
-/// The directory to remove must be relative to the
-/// current working directory.
-/// Use this function with caution, the directory will
-/// be removed permanently!
-///
-/// \param ftp  Ftp object
-/// \param name Name of the directory to remove
-///
-/// \return Server response to the request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Remove an existing directory
+
+  The directory to remove must be relative to the
+  current working directory.
+  Use this function with caution, the directory will
+  be removed permanently!
+
+  \param ftp  Ftp object
+  \param name Name of the directory to remove
+
+  \return Server response to the request
+*)
 function sfFtp_deleteDirectory(ftp: PsfFtp; const name: pchar): PsfFtpResponse; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Rename an existing file
-///
-/// The filenames must be relative to the current working
-/// directory.
-///
-/// \param ftp     Ftp object
-/// \param file    File to rename
-/// \param newName New name of the file
-///
-/// \return Server response to the request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Rename an existing file
+
+  The filenames must be relative to the current working
+  directory.
+
+  \param ftp     Ftp object
+  \param file    File to rename
+  \param newName New name of the file
+
+  \return Server response to the request
+*)
 function sfFtp_renameFile(ftp: PsfFtp; const file_: pchar; const newName: pchar): PsfFtpResponse; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Remove an existing file
-///
-/// The file name must be relative to the current working
-/// directory.
-/// Use this function with caution, the file will be
-/// removed permanently!
-///
-/// \param ftp  Ftp object
-/// \param name File to remove
-///
-/// \return Server response to the request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Remove an existing file
+
+  The file name must be relative to the current working
+  directory.
+  Use this function with caution, the file will be
+  removed permanently!
+
+  \param ftp  Ftp object
+  \param name File to remove
+
+  \return Server response to the request
+*)
 function sfFtp_deleteFile(ftp: PsfFtp; const name: pchar): PsfFtpResponse; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Download a file from a FTP server
-///
-/// The filename of the distant file is relative to the
-/// current working directory of the server, and the local
-/// destination path is relative to the current directory
-/// of your application.
-///
-/// \param ftp        Ftp object
-/// \param remoteFile Filename of the distant file to download
-/// \param localPath  Where to put to file on the local computer
-/// \param mode       Transfer mode
-///
-/// \return Server response to the request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Download a file from a FTP server
+
+  The filename of the distant file is relative to the
+  current working directory of the server, and the local
+  destination path is relative to the current directory
+  of your application.
+
+  \param ftp        Ftp object
+  \param remoteFile Filename of the distant file to download
+  \param localPath  Where to put to file on the local computer
+  \param mode       Transfer mode
+
+  \return Server response to the request
+*)
 function sfFtp_download(ftp: PsfFtp; const remoteFile: pchar; const localPath: pchar; mode: sfFtpTransferMode): PsfFtpResponse; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Upload a file to a FTP server
-///
-/// The name of the local file is relative to the current
-/// working directory of your application, and the
-/// remote path is relative to the current directory of the
-/// FTP server.
-///
-/// \param ftp        Ftp object
-/// \param localFile  Path of the local file to upload
-/// \param remotePath Where to put to file on the server
-/// \param mode       Transfer mode
-///
-/// \return Server response to the request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Upload a file to a FTP server
+
+  The name of the local file is relative to the current
+  working directory of your application, and the
+  remote path is relative to the current directory of the
+  FTP server.
+
+  \param ftp        Ftp object
+  \param localFile  Path of the local file to upload
+  \param remotePath Where to put to file on the server
+  \param mode       Transfer mode
+
+  \return Server response to the request
+*)
 function sfFtp_upload(ftp: PsfFtp; const localFile: pchar; const destPath: pchar; mode: sfFtpTransferMode): PsfFtpResponse; cdecl; external LIB_CSFMLNETWORK;
 
-////////////////////////////////////////////////////////////
-/// \brief Send a command to the FTP server
-///
-/// While the most often used commands are provided as
-/// specific functions, this function can be used to send
-/// any FTP command to the server. If the command requires
-/// one or more parameters, they can be specified in
-/// \a parameter. Otherwise you should pass NULL.
-/// If the server returns information, you can extract it
-/// from the response using sfResponse_getMessage().
-///
-/// \param ftp       Ftp object
-/// \param command   Command to send
-/// \param parameter Command parameter
-///
-/// \return Server response to the request
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Send a command to the FTP server
+
+  While the most often used commands are provided as
+  specific functions, this function can be used to send
+  any FTP command to the server. If the command requires
+  one or more parameters, they can be specified in
+  \a parameter. Otherwise you should pass NULL.
+  If the server returns information, you can extract it
+  from the response using sfResponse_getMessage().
+
+  \param ftp       Ftp object
+  \param command   Command to send
+  \param parameter Command parameter
+
+  \return Server response to the request
+*)
 function sfFtp_sendCommand(ftp: PsfFtp; const command: pchar; const parameter: pchar): PsfFtpResponse; cdecl; external LIB_CSFMLNETWORK;
 
 

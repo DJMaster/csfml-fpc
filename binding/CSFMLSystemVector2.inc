@@ -37,10 +37,9 @@
 // #include <SFML/System/Export.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief 2-component vector of integers
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief 2-component vector of integers
+*)
 type
   sfVector2i = record
     x: cint;
@@ -48,10 +47,9 @@ type
   end;
 
 
-////////////////////////////////////////////////////////////
-/// \brief 2-component vector of unsigned integers
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief 2-component vector of unsigned integers
+*)
 type
   sfVector2u = record
     x: cuint;
@@ -59,10 +57,9 @@ type
   end;
 
 
-////////////////////////////////////////////////////////////
-/// \brief 2-component vector of floats
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief 2-component vector of floats
+*)
 type
   sfVector2f = record
     x: cfloat;

@@ -39,10 +39,9 @@
 // #include <SFML/System/Vector2.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Mouse buttons
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Mouse buttons
+*)
 type
   sfMouseButton = (
     sfMouseLeft,       ///< The left mouse button
@@ -54,10 +53,9 @@ type
     sfMouseButtonCount ///< Keep last -- the total number of mouse buttons
   );
 
-////////////////////////////////////////////////////////////
-/// \brief Mouse wheels
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Mouse wheels
+*)
 type
   sfMouseWheel = (
     sfMouseVerticalWheel,  ///< The vertical mouse wheel
@@ -65,39 +63,36 @@ type
   );
 
 
-////////////////////////////////////////////////////////////
-/// \brief Check if a mouse button is pressed
-///
-/// \param button Button to check
-///
-/// \return sfTrue if the button is pressed, sfFalse otherwise
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Check if a mouse button is pressed
+
+  \param button Button to check
+
+  \return sfTrue if the button is pressed, sfFalse otherwise
+*)
 function sfMouse_isButtonPressed(button: sfMouseButton): sfBool; cdecl; external LIB_CSFMLWINDOW;
 
-////////////////////////////////////////////////////////////
-/// \brief Get the current position of the mouse
-///
-/// This function returns the current position of the mouse
-/// cursor relative to the given window, or desktop if NULL is passed.
-///
-/// \param relativeTo Reference window
-///
-/// \return Position of the mouse cursor, relative to the given window
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Get the current position of the mouse
+
+  This function returns the current position of the mouse
+  cursor relative to the given window, or desktop if NULL is passed.
+
+  \param relativeTo Reference window
+
+  \return Position of the mouse cursor, relative to the given window
+*)
 function sfMouse_getPosition(const relativeTo: PsfWindow): sfVector2i; cdecl; external LIB_CSFMLWINDOW;
 
-////////////////////////////////////////////////////////////
-/// \brief Set the current position of the mouse
-///
-/// This function sets the current position of the mouse
-/// cursor relative to the given window, or desktop if NULL is passed.
-///
-/// \param position   New position of the mouse
-/// \param relativeTo Reference window
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Set the current position of the mouse
+
+  This function sets the current position of the mouse
+  cursor relative to the given window, or desktop if NULL is passed.
+
+  \param position   New position of the mouse
+  \param relativeTo Reference window
+*)
 procedure sfMouse_setPosition(position: sfVector2i; const relativeTo: PsfWindow); cdecl; external LIB_CSFMLWINDOW;
 
 

@@ -37,10 +37,9 @@
 // #include </Graphics/Rect.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief sfGlyph describes a glyph (a visual character)
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief sfGlyph describes a glyph (a visual character)
+*)
 type
   sfGlyph = record
     advance: cfloat;        ///< Offset to move horizontically to the next character

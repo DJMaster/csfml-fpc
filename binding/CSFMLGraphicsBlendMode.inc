@@ -37,10 +37,9 @@
 // #include </Graphics/Export.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Enumeration of the blending factors
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Enumeration of the blending factors
+*)
 type
   sfBlendFactor = (
     sfBlendFactorZero,             ///< (0, 0, 0, 0)
@@ -56,10 +55,9 @@ type
   );
 
 
-////////////////////////////////////////////////////////////
-/// \brief Enumeration of the blending equations
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Enumeration of the blending equations
+*)
 type
   sfBlendEquation = (
     sfBlendEquationAdd,            ///< Pixel = Src * SrcFactor + Dst * DstFactor
@@ -68,10 +66,9 @@ type
   );
 
 
-////////////////////////////////////////////////////////////
-/// \brief Blending mode for drawing
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Blending mode for drawing
+*)
 type
   sfBlendMode = record
     colorSrcFactor: sfBlendFactor;  ///< Source blending factor for the color channels

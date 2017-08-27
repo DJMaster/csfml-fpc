@@ -41,10 +41,9 @@
 // #include <SFML/Window/Sensor.h>
 
 
-////////////////////////////////////////////////////////////
-/// \brief Definition of all the event types
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Definition of all the event types
+*)
 type
   sfEventType = (
     sfEvtClosed,                 ///< The window requested to be closed (no data)
@@ -75,10 +74,9 @@ type
   );
 
 
-////////////////////////////////////////////////////////////
-/// \brief Keyboard event parameters
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Keyboard event parameters
+*)
 type
   sfKeyEvent = record
     type_: sfEventType;
@@ -89,20 +87,18 @@ type
     system: sfBool;
   end;
 
-////////////////////////////////////////////////////////////
-/// \brief Text event parameters
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Text event parameters
+*)
 type
   sfTextEvent = record
     type_: sfEventType;
     unicode: sfUint32;
   end;
 
-////////////////////////////////////////////////////////////
-/// \brief Mouse move event parameters
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Mouse move event parameters
+*)
 type
   sfMouseMoveEvent = record
     type_: sfEventType;
@@ -110,10 +106,9 @@ type
     y: cint;
   end;
 
-////////////////////////////////////////////////////////////
-/// \brief Mouse buttons events parameters
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Mouse buttons events parameters
+*)
 type
   sfMouseButtonEvent = record
     type_: sfEventType;
@@ -122,13 +117,12 @@ type
     y: cint;
   end;
 
-////////////////////////////////////////////////////////////
-/// \brief Mouse wheel events parameters
-///
-/// \deprecated
-/// Use sfMouseWheelScrollEvent instead.
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Mouse wheel events parameters
+
+  \deprecated
+  Use sfMouseWheelScrollEvent instead.
+*)
 type
   sfMouseWheelEvent = record
     type_: sfEventType;
@@ -137,10 +131,9 @@ type
     y: cint;
   end;
 
-////////////////////////////////////////////////////////////
-/// \brief Mouse wheel events parameters
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Mouse wheel events parameters
+*)
 type
   sfMouseWheelScrollEvent = record
     type_: sfEventType;
@@ -150,10 +143,9 @@ type
     y: cint;
   end;
 
-////////////////////////////////////////////////////////////
-/// \brief Joystick axis move event parameters
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Joystick axis move event parameters
+*)
 type
   sfJoystickMoveEvent = record
     type_: sfEventType;
@@ -162,10 +154,9 @@ type
     position: cfloat;
   end;
 
-////////////////////////////////////////////////////////////
-/// \brief Joystick buttons events parameters
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Joystick buttons events parameters
+*)
 type
   sfJoystickButtonEvent = record
     type_: sfEventType;
@@ -173,20 +164,18 @@ type
     button: cuint;
   end;
 
-////////////////////////////////////////////////////////////
-/// \brief Joystick connection/disconnection event parameters
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Joystick connection/disconnection event parameters
+*)
 type
   sfJoystickConnectEvent = record
     type_: sfEventType;
     joystickId: cuint;
   end;
 
-////////////////////////////////////////////////////////////
-/// \brief Size events parameters
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Size events parameters
+*)
 type
   sfSizeEvent = record
     type_: sfEventType;
@@ -194,10 +183,9 @@ type
     height: cuint;
   end;
 
-////////////////////////////////////////////////////////////
-/// \brief Touch events parameters
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Touch events parameters
+*)
 type
   sfTouchEvent = record
     type_: sfEventType;
@@ -206,10 +194,9 @@ type
     y: cint;
   end;
 
-////////////////////////////////////////////////////////////
-/// \brief Sensor event parameters
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief Sensor event parameters
+*)
 type
   sfSensorEvent = record
     type_: sfEventType;
@@ -219,10 +206,9 @@ type
     z: cfloat;
   end;
 
-////////////////////////////////////////////////////////////
-/// \brief sfEvent defines a system event and its parameters
-///
-////////////////////////////////////////////////////////////
+(*
+  \brief sfEvent defines a system event and its parameters
+*)
 type
   sfEvent = record
     case cint of
