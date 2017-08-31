@@ -33,12 +33,13 @@
 
 
 type
+  PsfContext = ^sfContext;
   sfContext = record
   end;
-  PsfContext = ^sfContext;
+
+  PsfWindow = ^sfWindow;
   sfWindow = record
   end;
-  PsfWindow = ^sfWindow;
 
 
 // #endif // SFML_WINDOW_TYPES_H

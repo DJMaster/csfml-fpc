@@ -42,22 +42,21 @@
   manipulating rectangles.
 *)
 type
+  PsfFloatRect = ^sfFloatRect;
   sfFloatRect = record
     left: cfloat;
     top: cfloat;
     width: cfloat;
     height: cfloat;
   end;
-  PsfFloatRect = ^sfFloatRect;
 
-type
+  PsfIntRect = ^sfIntRect;
   sfIntRect = record
     left: cint;
     top: cint;
     width: cint;
     height: cint;
   end;
-  PsfIntRect = ^sfIntRect;
 
 (*
   \brief Check if a point is inside a rectangle's area

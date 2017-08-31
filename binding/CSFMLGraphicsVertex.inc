@@ -43,12 +43,12 @@
   Define a point with color and texture coordinates
 *)
 type
+  PsfVertex = ^sfVertex;
   sfVertex = record
     position: sfVector2f;  ///< Position of the vertex
     color: sfColor;        ///< Color of the vertex
     texCoords: sfVector2f; ///< Coordinates of the texture's pixel to map to the vertex
   end;
-  PsfVertex = ^sfVertex;
 
 
 // #endif // SFML_VERTEX_H

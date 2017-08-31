@@ -41,10 +41,10 @@
   \brief Represents a time value
 *)
 type
+  PsfTime = ^sfTime;
   sfTime = record
     microseconds: sfInt64;
   end;
-  PsfTime = ^sfTime;
 
 (*
   \brief Predefined "zero" time value 

@@ -48,6 +48,7 @@ type
   \brief Set of callbacks that allow users to define custom file streams
 *)
 type
+  PsfInputStream = ^sfInputStream;
   sfInputStream = record
     read: sfInputStreamReadFunc;       ///< Function to read data from the stream
     seek: sfInputStreamSeekFunc;       ///< Function to set the current read position
@@ -55,7 +56,6 @@ type
     getSize: sfInputStreamGetSizeFunc; ///< Function to get the total number of bytes in the stream
     userData: pointer;                 ///< User data that will be passed to the callbacks
   end;
-  PsfInputStream = ^sfInputStream;
 
 
 // #endif // SFML_INPUTSTREAM_H

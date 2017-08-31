@@ -31,26 +31,29 @@
 // #ifndef SFML_AUDIO_TYPES_H
 // #define SFML_AUDIO_TYPES_H
 
-
 type
+  PsfMusic = ^sfMusic;
   sfMusic = record
   end;
-  PsfMusic = ^sfMusic;
+
+  PsfSound = ^sfSound;
   sfSound = record
   end;
-  PsfSound = ^sfSound;
+
+  PsfSoundBuffer = ^sfSoundBuffer;
   sfSoundBuffer = record
   end;
-  PsfSoundBuffer = ^sfSoundBuffer;
+
+  PsfSoundBufferRecorder = ^sfSoundBufferRecorder;
   sfSoundBufferRecorder = record
   end;
-  PsfSoundBufferRecorder = ^sfSoundBufferRecorder;
+
+  PsfSoundRecorder = ^sfSoundRecorder;
   sfSoundRecorder = record
   end;
-  PsfSoundRecorder = ^sfSoundRecorder;
+
+  PsfSoundStream = ^sfSoundStream;
   sfSoundStream = record
   end;
-  PsfSoundStream = ^sfSoundStream;
-
 
 // #endif // SFML_AUDIO_TYPES_H

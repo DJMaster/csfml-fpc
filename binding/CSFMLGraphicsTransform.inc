@@ -44,10 +44,10 @@
   \brief Encapsulate a 3x3 transform matrix
 *)
 type
+  PsfTransform = ^sfTransform;
   sfTransform = record
     matrix: array[0..8] of cfloat;
   end;
-  PsfTransform = ^sfTransform;
 
 
 (*

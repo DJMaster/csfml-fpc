@@ -33,51 +33,65 @@
 
 
 type
+  PsfCircleShape = ^sfCircleShape;
   sfCircleShape = record
   end;
-  PsfCircleShape = ^sfCircleShape;
+
+  PsfConvexShape = ^sfConvexShape;
   sfConvexShape = record
   end;
-  PsfConvexShape = ^sfConvexShape;
+
+  PsfFont = ^sfFont;
   sfFont = record
   end;
-  PsfFont = ^sfFont;
+
+  PsfImage = ^sfImage;
   sfImage = record
   end;
-  PsfImage = ^sfImage;
+
+  PsfShader = ^sfShader;
   sfShader = record
   end;
-  PsfShader = ^sfShader;
+
+  PsfRectangleShape = ^sfRectangleShape;
   sfRectangleShape = record
   end;
-  PsfRectangleShape = ^sfRectangleShape;
+
+  PsfRenderTexture = ^sfRenderTexture;
   sfRenderTexture = record
   end;
-  PsfRenderTexture = ^sfRenderTexture;
+
+  PsfRenderWindow = ^sfRenderWindow;
   sfRenderWindow = record
   end;
-  PsfRenderWindow = ^sfRenderWindow;
+
+  PsfShape = ^sfShape;
   sfShape = record
   end;
-  PsfShape = ^sfShape;
+
+  PsfSprite = ^sfSprite;
   sfSprite = record
   end;
-  PsfSprite = ^sfSprite;
+
+  PsfText = ^sfText;
   sfText = record
   end;
-  PsfText = ^sfText;
+
+  PsfTexture = ^sfTexture;
   sfTexture = record
   end;
-  PsfTexture = ^sfTexture;
+
+  PsfTransformable = ^sfTransformable;
   sfTransformable = record
   end;
-  PsfTransformable = ^sfTransformable;
+
+  PsfVertexArray = ^sfVertexArray;
   sfVertexArray = record
   end;
-  PsfVertexArray = ^sfVertexArray;
+
+  PsfView = ^sfView;
   sfView = record
   end;
-  PsfView = ^sfView;
 
 
 // #endif // SFML_GRAPHICS_TYPES_H

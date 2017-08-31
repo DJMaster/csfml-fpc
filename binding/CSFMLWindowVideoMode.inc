@@ -44,12 +44,12 @@
          by the display device
 *)
 type
+  PsfVideoMode = ^sfVideoMode;
   sfVideoMode = record
     width: cuint;         ///< Video mode width, in pixels
     height: cuint;        ///< Video mode height, in pixels
     bitsPerPixel: cuint ; ///< Video mode pixel depth, in bits per pixels
   end;
-  PsfVideoMode = ^sfVideoMode;
 
 
 (*

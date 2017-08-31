@@ -184,20 +184,23 @@ const
 // 8 bits integer types
 type
   sfInt8 = cschar;
-  sfUint8 = cuchar;
+
   PsfUint8 = ^sfUint8;
+  sfUint8 = cuchar;
 
 // 16 bits integer types
 type
-  sfInt16 = csshort;
   PsfInt16 = ^sfInt16;
+  sfInt16 = csshort;
+
   sfUint16 = cushort;
 
 // 32 bits integer types
 type
- sfInt32 = csint;
- sfUint32 = cuint;
- PsfUint32 = ^sfUint32;
+  sfInt32 = csint;
+
+  PsfUint32 = ^sfUint32;
+  sfUint32 = cuint;
 
 // 64 bits integer types
 type

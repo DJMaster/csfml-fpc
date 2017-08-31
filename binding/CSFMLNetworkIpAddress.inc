@@ -42,10 +42,10 @@
   \brief Encapsulate an IPv4 network address
 *)
 type
+  PsfIpAddress = ^sfIpAddress;
   sfIpAddress = record
     address: array[0..15] of char;
   end;
-  PsfIpAddress = ^sfIpAddress;
 
 
 (*

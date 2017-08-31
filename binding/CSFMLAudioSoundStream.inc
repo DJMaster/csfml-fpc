@@ -45,11 +45,11 @@
   \brief defines the data to fill by the OnGetData callback
 *)
 type
+  PsfSoundStreamChunk = ^sfSoundStreamChunk;
   sfSoundStreamChunk = record
     samples: PsfInt16;  ///< Pointer to the audio samples
     sampleCount: cuint; ///< Number of samples pointed by Samples
   end;
-  PsfSoundStreamChunk = ^sfSoundStreamChunk;
 
 type
   sfSoundStreamGetDataCallback = function (chunk: PsfSoundStreamChunk; userData: pointer): sfBool; cdecl; ///< Type of the callback used to get a sound stream data

@@ -33,15 +33,17 @@
 
 
 type
+  PsfClock = ^sfClock;
   sfClock = record
   end;
-  PsfClock = ^sfClock;
+
+  PsfMutex = ^sfMutex;
   sfMutex = record
   end;
-  PsfMutex = ^sfMutex;
+
+  PsfThread = ^sfThread;
   sfThread = record
   end;
-  PsfThread = ^sfThread;
 
 
 // #endif // SFML_SYSTEM_TYPES_H

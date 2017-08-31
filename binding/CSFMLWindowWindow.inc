@@ -71,6 +71,7 @@ type
   \brief Structure defining the window's creation settings
 *)
 type
+  PsfContextSettings = ^sfContextSettings;
   sfContextSettings = record
     depthBits: cuint;         ///< Bits of the depth buffer
     stencilBits: cuint;       ///< Bits of the stencil buffer
@@ -80,7 +81,6 @@ type
     attributeFlags: sfUint32; ///< The attribute flags to create the context with
     sRgbCapable: sfBool;      ///< Whether the context framebuffer is sRGB capable
   end;
-  PsfContextSettings = ^sfContextSettings;
 
 
 (*

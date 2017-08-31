@@ -33,43 +33,54 @@
 
 
 type
- sfFtpDirectoryResponse = record
- end;
- PsfFtpDirectoryResponse = ^sfFtpDirectoryResponse;
- sfFtpListingResponse = record
- end;
- PsfFtpListingResponse = ^sfFtpListingResponse;
- sfFtpResponse = record
- end;
- PsfFtpResponse = ^sfFtpResponse;
- sfFtp = record
- end;
- PsfFtp = ^sfFtp;
- sfHttpRequest = record
- end;
- PsfHttpRequest = ^sfHttpRequest;
- sfHttpResponse = record
- end;
- PsfHttpResponse = ^sfHttpResponse;
- sfHttp = record
- end;
- PsfHttp = ^sfHttp;
- sfPacket = record
- end;
- PsfPacket = ^sfPacket;
- sfSocketSelector = record
- end;
- PsfSocketSelector = ^sfSocketSelector;
- sfTcpListener = record
- end;
- PsfTcpListener = ^sfTcpListener;
- sfTcpSocket = record
- end;
- PsfTcpSocket = ^sfTcpSocket;
- PPsfTcpSocket = ^PsfTcpSocket;
- sfUdpSocket = record
- end;
- PsfUdpSocket = ^sfUdpSocket;
+  PsfFtpDirectoryResponse = ^sfFtpDirectoryResponse;
+  sfFtpDirectoryResponse = record
+  end;
+
+  PsfFtpListingResponse = ^sfFtpListingResponse;
+  sfFtpListingResponse = record
+  end;
+
+  PsfFtpResponse = ^sfFtpResponse;
+  sfFtpResponse = record
+  end;
+
+  PsfFtp = ^sfFtp;
+  sfFtp = record
+  end;
+
+  PsfHttpRequest = ^sfHttpRequest;
+  sfHttpRequest = record
+  end;
+
+  PsfHttpResponse = ^sfHttpResponse;
+  sfHttpResponse = record
+  end;
+
+  PsfHttp = ^sfHttp;
+  sfHttp = record
+  end;
+
+  PsfPacket = ^sfPacket;
+  sfPacket = record
+  end;
+
+  PsfSocketSelector = ^sfSocketSelector;
+  sfSocketSelector = record
+  end;
+
+  PsfTcpListener = ^sfTcpListener;
+  sfTcpListener = record
+  end;
+
+  PPsfTcpSocket = ^PsfTcpSocket;
+  PsfTcpSocket = ^sfTcpSocket;
+  sfTcpSocket = record
+  end;
+
+  PsfUdpSocket = ^sfUdpSocket;
+  sfUdpSocket = record
+  end;
 
 
 // #endif // SFML_NETWORK_TYPES_H

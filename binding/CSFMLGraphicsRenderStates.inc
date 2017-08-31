@@ -44,13 +44,13 @@
   \brief Define the states used for drawing to a RenderTarget
 *)
 type
+  PsfRenderStates = ^sfRenderStates;
   sfRenderStates = record
     blendMode: sfBlendMode; ///< Blending mode
     transform: sfTransform; ///< Transform
     texture: PsfTexture;    ///< Texture
     shader: PsfShader;      ///< Shader
   end;
-  PsfRenderStates = ^sfRenderStates;
 
 
 // #endif // SFML_RENDERSTATES_H

@@ -210,6 +210,7 @@ type
   \brief sfEvent defines a system event and its parameters
 *)
 type
+  PsfEvent = ^sfEvent;
   sfEvent = record
     case cint of
      0: (type_: sfEventType);                        ///< Type of the event
@@ -226,7 +227,6 @@ type
     11: (touch: sfTouchEvent);                       ///< Touch events parameters
     12: (sensor: sfSensorEvent);                     ///< Sensor event parameters
   end;
-  PsfEvent = ^sfEvent;
 
 
 // #endif // SFML_EVENT_H

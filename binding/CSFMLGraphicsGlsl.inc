@@ -43,6 +43,7 @@ type
 // 2D vectors
   PsfGlslVec2 = ^sfGlslVec2;
   sfGlslVec2 = sfVector2f;
+
   PsfGlslIvec2 = ^sfGlslIvec2;
   sfGlslIvec2 = sfVector2i;
 
