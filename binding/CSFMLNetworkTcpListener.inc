@@ -39,7 +39,6 @@
 // #include <SFML/Network/IpAddress.h>
 // #include <SFML/Network/Types.h>
 
-
 (*
   \brief Create a new TCP listener
 
@@ -126,6 +125,5 @@ function sfTcpListener_listen(listener: PsfTcpListener; port: cushort; address: 
   \return Status code
 *)
 function sfTcpListener_accept(listener: PsfTcpListener; connected: PPsfTcpSocket): sfSocketStatus; cdecl; external LIB_CSFMLNETWORK;
-
 
 // #endif // SFML_TCPLISTENER_H

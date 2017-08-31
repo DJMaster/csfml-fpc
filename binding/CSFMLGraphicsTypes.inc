@@ -31,7 +31,6 @@
 // #ifndef SFML_GRAPHICS_TYPES_H
 // #define SFML_GRAPHICS_TYPES_H
 
-
 type
   PsfCircleShape = ^sfCircleShape;
   sfCircleShape = record
@@ -92,6 +91,5 @@ type
   PsfView = ^sfView;
   sfView = record
   end;
-
 
 // #endif // SFML_GRAPHICS_TYPES_H

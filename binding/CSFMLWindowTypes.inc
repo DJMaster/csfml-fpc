@@ -31,7 +31,6 @@
 // #ifndef SFML_WINDOW_TYPES_H
 // #define SFML_WINDOW_TYPES_H
 
-
 type
   PsfContext = ^sfContext;
   sfContext = record
@@ -40,6 +39,5 @@ type
   PsfWindow = ^sfWindow;
   sfWindow = record
   end;
-
 
 // #endif // SFML_WINDOW_TYPES_H

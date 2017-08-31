@@ -36,7 +36,6 @@
 ////////////////////////////////////////////////////////////
 // #include </Graphics/Export.h>
 
-
 (*
   \brief Utility class for manpulating RGBA colors
 *)
@@ -127,6 +126,5 @@ function sfColor_subtract(color1: sfColor; color2: sfColor): sfColor; cdecl; ext
   \return Component-wise multiplication of the two colors
 *)
 function sfColor_modulate(color1: sfColor; color2: sfColor): sfColor; cdecl; external LIB_CSFMLGRAPHICS;
-
 
 // #endif // SFML_COLOR_H

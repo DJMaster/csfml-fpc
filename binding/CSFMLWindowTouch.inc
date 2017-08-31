@@ -38,7 +38,6 @@
 // #include <SFML/Window/Types.h>
 // #include <SFML/System/Vector2.h>
 
-
 (*
   \brief Check if a touch event is currently down
 
@@ -60,6 +59,5 @@ function sfTouch_isDown(finger: cuint): sfBool; cdecl; external LIB_CSFMLWINDOW;
   \return Current position of \a finger, or undefined if it's not down
 *)
 function sfTouch_getPosition(finger: cuint; const relativeTo: PsfWindow): sfVector2i; cdecl; external LIB_CSFMLWINDOW;
-
 
 // #endif // SFML_TOUCH_H

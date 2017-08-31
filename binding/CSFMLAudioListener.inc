@@ -37,7 +37,6 @@
 // #include </Audio/Export.h>
 // #include </System/Vector3.h>
 
-
 (*
   \brief Change the global volume of all the sounds and musics
 
@@ -113,6 +112,5 @@ procedure sfListener_setUpVector(upVector: sfVector3f); cdecl; external LIB_CSFM
   \return Listener's upward vector (not normalized)
 *)
 function sfListener_getUpVector(): sfVector3f; cdecl; external LIB_CSFMLAUDIO;
-
 
 // #endif // SFML_LISTENER_H

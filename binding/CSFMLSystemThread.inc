@@ -37,7 +37,6 @@
 // #include <SFML/System/Export.h>
 // #include <SFML/System/Types.h>
 
-
 (*
   \brief Create a new thread from a function pointer
 
@@ -102,6 +101,5 @@ procedure sfThread_wait(thread: PsfThread); cdecl; external LIB_CSFMLSYSTEM;
   \param thread Thread object
 *)
 procedure sfThread_terminate(thread: PsfThread); cdecl; external LIB_CSFMLSYSTEM;
-
 
 // #endif // SFML_THREAD_H

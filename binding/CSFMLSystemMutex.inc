@@ -37,7 +37,6 @@
 // #include <SFML/System/Export.h>
 // #include <SFML/System/Types.h>
 
-
 (*
   \brief Create a new mutex
 
@@ -65,6 +64,5 @@ procedure sfMutex_lock(mutex: PsfMutex); cdecl; external LIB_CSFMLSYSTEM;
   \param mutex Mutex object
 *)
 procedure sfMutex_unlock(mutex: PsfMutex); cdecl; external LIB_CSFMLSYSTEM;
-
 
 // #endif // SFML_MUTEX_H

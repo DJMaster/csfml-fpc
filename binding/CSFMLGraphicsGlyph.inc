@@ -36,7 +36,6 @@
 ////////////////////////////////////////////////////////////
 // #include </Graphics/Rect.h>
 
-
 (*
   \brief sfGlyph describes a glyph (a visual character)
 *)
@@ -46,6 +45,5 @@ type
     bounds: sfFloatRect;    ///< Bounding rectangle of the glyph, in coordinates relative to the baseline
     textureRect: sfIntRect; ///< Texture coordinates of the glyph inside the font's image
   end;
-
 
 // #endif // SFML_GLYPH_H

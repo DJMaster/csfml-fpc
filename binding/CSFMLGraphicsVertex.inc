@@ -38,7 +38,6 @@
 // #include <SFML/Graphics/Color.h>
 // #include <SFML/System/Vector2.h>
 
-
 (*
   Define a point with color and texture coordinates
 *)
@@ -49,6 +48,5 @@ type
     color: sfColor;        ///< Color of the vertex
     texCoords: sfVector2f; ///< Coordinates of the texture's pixel to map to the vertex
   end;
-
 
 // #endif // SFML_VERTEX_H

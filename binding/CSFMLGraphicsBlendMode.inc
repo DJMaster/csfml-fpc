@@ -36,7 +36,6 @@
 ////////////////////////////////////////////////////////////
 // #include </Graphics/Export.h>
 
-
 (*
   \brief Enumeration of the blending factors
 *)
@@ -54,7 +53,6 @@ type
     sfBlendFactorOneMinusDstAlpha  ///< (1, 1, 1, 1) - (dst.a, dst.a, dst.a, dst.a)
   );
 
-
 (*
   \brief Enumeration of the blending equations
 *)
@@ -64,7 +62,6 @@ type
     sfBlendEquationSubtract,       ///< Pixel = Src * SrcFactor - Dst * DstFactor
     sfBlendEquationReverseSubtract ///< Pixel = Dst * DstFactor - Src * SrcFactor
   );
-
 
 (*
   \brief Blending mode for drawing
@@ -84,6 +81,5 @@ var
   sfBlendAdd: sfBlendMode; external LIB_CSFMLGRAPHICS;      ///< Add source to dest
   sfBlendMultiply: sfBlendMode; external LIB_CSFMLGRAPHICS; ///< Multiply source and dest
   sfBlendNone: sfBlendMode; external LIB_CSFMLGRAPHICS;     ///< Overwrite dest with source
-
 
 // #endif // SFML_BLENDMODE_H

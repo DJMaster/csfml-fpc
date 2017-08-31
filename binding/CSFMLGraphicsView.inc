@@ -39,7 +39,6 @@
 // #include <SFML/Graphics/Types.h>
 // #include <SFML/System/Vector2.h>
 
-
 (*
   \brief Create a default view
 
@@ -191,6 +190,5 @@ procedure sfView_rotate(view: PsfView; angle: cfloat); cdecl; external LIB_CSFML
   \param factor Zoom factor to apply
 *)
 procedure sfView_zoom(view: PsfView; factor: cfloat); cdecl; external LIB_CSFMLGRAPHICS;
-
 
 // #endif // SFML_VIEW_H

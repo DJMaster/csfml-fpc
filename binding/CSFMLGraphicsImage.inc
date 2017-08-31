@@ -42,7 +42,6 @@
 // #include </System/Vector2.h>
 // #include <stddef.h>
 
-
 (*
   \brief Create an image
 
@@ -258,6 +257,5 @@ procedure sfImage_flipHorizontally(image: PsfImage); cdecl; external LIB_CSFMLGR
   \param image Image object
 *)
 procedure sfImage_flipVertically(image: PsfImage); cdecl; external LIB_CSFMLGRAPHICS;
-
 
 // #endif // SFML_IMAGE_H

@@ -41,7 +41,6 @@
 // #include <SFML/Graphics/Vertex.h>
 // #include <stddef.h>
 
-
 (*
   \brief Create a new vertex array
 
@@ -158,6 +157,5 @@ function sfVertexArray_getPrimitiveType(vertexArray: PsfVertexArray): sfPrimitiv
   \return Bounding rectangle of the vertex array
 *)
 function sfVertexArray_getBounds(vertexArray: PsfVertexArray): sfFloatRect; cdecl; external LIB_CSFMLGRAPHICS;
-
 
 // #endif // SFML_VERTEXARRAY_H

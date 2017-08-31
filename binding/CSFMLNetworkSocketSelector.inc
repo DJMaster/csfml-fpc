@@ -38,7 +38,6 @@
 // #include <SFML/Network/Types.h>
 // #include <SFML/System/Time.h>
 
-
 (*
   \brief Create a new selector
 
@@ -134,6 +133,5 @@ function sfSocketSelector_wait(selector: PsfSocketSelector; timeout: sfTime): sf
 function sfSocketSelector_isTcpListenerReady(const selector: PsfSocketSelector; socket: PsfTcpListener): sfBool; cdecl; external LIB_CSFMLNETWORK;
 function sfSocketSelector_isTcpSocketReady(const selector: PsfSocketSelector; socket: PsfTcpSocket): sfBool; cdecl; external LIB_CSFMLNETWORK;
 function sfSocketSelector_isUdpSocketReady(const selector: PsfSocketSelector; socket: PsfUdpSocket): sfBool; cdecl; external LIB_CSFMLNETWORK;
-
 
 // #endif // SFML_SOCKETSELECTOR_H

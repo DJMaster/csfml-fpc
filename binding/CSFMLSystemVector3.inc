@@ -36,7 +36,6 @@
 ////////////////////////////////////////////////////////////
 // #include <SFML/System/Export.h>
 
-
 (*
   \brief 3-component vector of floats
 *)
@@ -46,6 +45,5 @@ type
     y: cfloat;
     z: cfloat;
   end;
-
 
 // #endif // SFML_VECTOR3_H

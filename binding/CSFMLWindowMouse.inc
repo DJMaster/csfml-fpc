@@ -38,7 +38,6 @@
 // #include <SFML/Window/Types.h>
 // #include <SFML/System/Vector2.h>
 
-
 (*
   \brief Mouse buttons
 *)
@@ -61,7 +60,6 @@ type
     sfMouseVerticalWheel,  ///< The vertical mouse wheel
     sfMouseHorizontalWheel ///< The horizontal mouse wheel
   );
-
 
 (*
   \brief Check if a mouse button is pressed
@@ -94,6 +92,5 @@ function sfMouse_getPosition(const relativeTo: PsfWindow): sfVector2i; cdecl; ex
   \param relativeTo Reference window
 *)
 procedure sfMouse_setPosition(position: sfVector2i; const relativeTo: PsfWindow); cdecl; external LIB_CSFMLWINDOW;
-
 
 // #endif // SFML_MOUSE_H

@@ -40,7 +40,6 @@
 // #include </System/Time.h>
 // #include </System/Vector3.h>
 
-
 (*
   \brief defines the data to fill by the OnGetData callback
 *)
@@ -54,7 +53,6 @@ type
 type
   sfSoundStreamGetDataCallback = function (chunk: PsfSoundStreamChunk; userData: pointer): sfBool; cdecl; ///< Type of the callback used to get a sound stream data
   sfSoundStreamSeekCallback = procedure (time: sfTime; userData: pointer); cdecl;                         ///< Type of the callback used to seek in a sound stream
-
 
 (*
   \brief Create a new sound stream
@@ -321,6 +319,5 @@ function sfSoundStream_getLoop(const soundStream: PsfSoundStream): sfBool; cdecl
   \return Current playing position
 *)
 function sfSoundStream_getPlayingOffset(const soundStream: PsfSoundStream): sfTime; cdecl; external LIB_CSFMLAUDIO;
-
 
 // #endif // SFML_SOUNDSTREAM_H

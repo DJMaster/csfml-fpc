@@ -36,7 +36,6 @@
 ////////////////////////////////////////////////////////////
 // #include <SFML/System/Export.h>
 
-
 (*
   \brief Represents a time value
 *)
@@ -105,6 +104,5 @@ function sfMilliseconds(amount: sfInt32): sfTime; cdecl; external LIB_CSFMLSYSTE
   \return Time value constructed from the amount of microseconds
 *)
 function sfMicroseconds(amount: sfInt64): sfTime; cdecl; external LIB_CSFMLSYSTEM;
-
 
 // #endif // SFML_TIME_H

@@ -42,7 +42,6 @@
 // #include <SFML/System/Vector2.h>
 // #include <stddef.h>
 
-
 (*
   sfText styles
 *)
@@ -54,7 +53,6 @@ type
     sfTextUnderlined    = 4, ///< Underlined characters
     sfTextStrikeThrough = 8  ///< Strike through characters
   );
-
 
 (*
   \brief Create a new text
@@ -459,6 +457,5 @@ function sfText_getLocalBounds(const text: PsfText): sfFloatRect; cdecl; externa
   \return Global bounding rectangle of the entity
 *)
 function sfText_getGlobalBounds(const text: PsfText): sfFloatRect; cdecl; external LIB_CSFMLGRAPHICS;
-
 
 // #endif // SFML_TEXT_H

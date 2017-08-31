@@ -39,7 +39,6 @@
 // #include <SFML/Graphics/Transform.h>
 // #include <SFML/Graphics/Types.h>
 
-
 (*
   \brief Define the states used for drawing to a RenderTarget
 *)
@@ -51,6 +50,5 @@ type
     texture: PsfTexture;    ///< Texture
     shader: PsfShader;      ///< Shader
   end;
-
 
 // #endif // SFML_RENDERSTATES_H

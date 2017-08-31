@@ -41,7 +41,6 @@
 // #include <SFML/Window/Types.h>
 // #include <SFML/System/Vector2.h>
 
-
 (*
   \brief Enumeration of window creation styles
 *)
@@ -55,7 +54,6 @@ type
     sfFullscreen   = 8  ///< Fullscreen mode (this flag and all others are mutually exclusive)
   );
 
-
 (*
   \brief Enumeration of the context attribute flags
 *)
@@ -65,7 +63,6 @@ type
     sfContextCore    = 1, ///< Core attribute
     sfContextDebug   = 4  ///< Debug attribute
   );
-
 
 (*
   \brief Structure defining the window's creation settings
@@ -81,7 +78,6 @@ type
     attributeFlags: sfUint32; ///< The attribute flags to create the context with
     sRgbCapable: sfBool;      ///< Whether the context framebuffer is sRGB capable
   end;
-
 
 (*
   \brief Construct a new window
@@ -443,6 +439,5 @@ procedure sfWindow_display(window: PsfWindow); cdecl; external LIB_CSFMLWINDOW;
   \return System handle of the window
 *)
 function sfWindow_getSystemHandle(const window: PsfWindow): sfWindowHandle; cdecl; external LIB_CSFMLWINDOW;
-
 
 // #endif // SFML_WINDOW_H

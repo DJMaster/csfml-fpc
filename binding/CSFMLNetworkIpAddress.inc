@@ -37,7 +37,6 @@
 // #include <SFML/Network/Export.h>
 // #include <SFML/System/Time.h>
 
-
 (*
   \brief Encapsulate an IPv4 network address
 *)
@@ -46,7 +45,6 @@ type
   sfIpAddress = record
     address: array[0..15] of char;
   end;
-
 
 (*
   \brief Empty object that represents invalid addresses
@@ -175,6 +173,5 @@ function sfIpAddress_getLocalAddress(): sfIpAddress; cdecl; external LIB_CSFMLNE
   \return Public IP address of the computer
 *)
 function sfIpAddress_getPublicAddress(timeout: sfTime): sfIpAddress; cdecl; external LIB_CSFMLNETWORK;
-
 
 // #endif // SFML_IPADDRESS_H

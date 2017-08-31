@@ -36,13 +36,11 @@
 ////////////////////////////////////////////////////////////
 // #include <SFML/System/Export.h>
 
-
 type
   sfInputStreamReadFunc = function (data: pointer; size: sfInt64; userData: pointer): sfInt64; cdecl;
   sfInputStreamSeekFunc = function (position: sfInt64; userData: pointer): sfInt64; cdecl;
   sfInputStreamTellFunc = function (userData: pointer): sfInt64; cdecl;
   sfInputStreamGetSizeFunc = function (userData: pointer): sfInt64; cdecl;
-
 
 (*
   \brief Set of callbacks that allow users to define custom file streams
@@ -56,6 +54,5 @@ type
     getSize: sfInputStreamGetSizeFunc; ///< Function to get the total number of bytes in the stream
     userData: pointer;                 ///< User data that will be passed to the callbacks
   end;
-
 
 // #endif // SFML_INPUTSTREAM_H

@@ -74,7 +74,6 @@ const
 {$include CSFMLWindowContext.inc}
 {$include CSFMLWindowTouch.inc}
 
-
 // #endif // SFML_SFML_WINDOW_H
 
 implementation

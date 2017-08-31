@@ -48,7 +48,6 @@
 // #include <SFML/System/Vector2.h>
 // #include <stddef.h>
 
-
 (*
   \brief Construct a new render window
 
@@ -534,6 +533,5 @@ procedure sfMouse_setPositionRenderWindow(position: sfVector2i; const relativeTo
   \return Current position of \a finger, or undefined if it's not down
 *)
 function sfTouch_getPositionRenderWindow(finger: cuint; const relativeTo: PsfRenderWindow): sfVector2i; cdecl; external LIB_CSFMLGRAPHICS;
-
 
 // #endif // SFML_RENDERWINDOW_H

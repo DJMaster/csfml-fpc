@@ -42,7 +42,6 @@
 // #include </System/Vector2.h>
 // #include <stddef.h>
 
-
 (*
   \brief Create a new rectangle shape
 
@@ -392,6 +391,5 @@ function sfRectangleShape_getLocalBounds(const shape: PsfRectangleShape): sfFloa
   \return Global bounding rectangle of the entity
 *)
 function sfRectangleShape_getGlobalBounds(const shape: PsfRectangleShape): sfFloatRect; cdecl; external LIB_CSFMLGRAPHICS;
-
 
 // #endif // SFML_RECTANGLESHAPE_H

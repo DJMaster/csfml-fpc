@@ -42,7 +42,6 @@
 // #include </System/Vector2.h>
 // #include <stddef.h>
 
-
 (*
   \brief Create a new convex shape
 
@@ -400,6 +399,5 @@ function sfConvexShape_getLocalBounds(const shape: PsfConvexShape): sfFloatRect;
   \return Global bounding rectangle of the entity
 *)
 function sfConvexShape_getGlobalBounds(const shape: PsfConvexShape): sfFloatRect; cdecl; external LIB_CSFMLGRAPHICS;
-
 
 // #endif // SFML_CONVEXSHAPE_H

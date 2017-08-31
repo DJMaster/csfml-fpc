@@ -71,7 +71,6 @@ const
 {$include CSFMLAudioSoundRecorder.inc}
 {$include CSFMLAudioSoundStream.inc}
 
-
 // #endif // SFML_AUDIO_H
 
 implementation

@@ -31,7 +31,6 @@
 // #ifndef SFML_SOCKETSTATUS_H
 // #define SFML_SOCKETSTATUS_H
 
-
 (*
   \brief Define the status that can be returned by the socket functions
 *)
@@ -44,6 +43,5 @@ type
     sfSocketError         ///< An unexpected error happened
 
   );
-
 
 // #endif // SFML_SOCKETSTATUS_H

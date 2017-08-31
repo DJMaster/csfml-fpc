@@ -37,7 +37,6 @@
 // #include <SFML/Window/Export.h>
 // #include <SFML/Window/JoystickIdentification.h>
 
-
 (*
   \brief Global joysticks capabilities
 *)
@@ -47,7 +46,6 @@ const
   sfJoystickCount       = 8;  ///< Maximum number of supported joysticks
   sfJoystickButtonCount = 32; ///< Maximum number of supported buttons
   sfJoystickAxisCount   = 8;  ///< Maximum number of supported axes
-
 
 (*
   \brief Axes supported by SFML joysticks
@@ -63,7 +61,6 @@ type
     sfJoystickPovX, ///< The X axis of the point-of-view hat
     sfJoystickPovY  ///< The Y axis of the point-of-view hat
   );
-
 
 (*
   \brief Check if a joystick is connected
@@ -142,6 +139,5 @@ function sfJoystick_getIdentification(joystick: cuint): sfJoystickIdentification
   in this case the joysticks states are not updated automatically.
 *)
 procedure sfJoystick_update(); cdecl; external LIB_CSFMLWINDOW;
-
 
 // #endif // SFML_JOYSTICK_H

@@ -40,7 +40,6 @@
 // #include </System/Time.h>
 // #include <stddef.h>
 
-
 (*
   \brief Create a new sound buffer and load it from a file
 
@@ -184,6 +183,5 @@ function sfSoundBuffer_getChannelCount(const soundBuffer: PsfSoundBuffer): cuint
   \return Sound duration
 *)
 function sfSoundBuffer_getDuration(const soundBuffer: PsfSoundBuffer): sfTime; cdecl; external LIB_CSFMLAUDIO;
-
 
 // #endif // SFML_SOUNDBUFFER_H

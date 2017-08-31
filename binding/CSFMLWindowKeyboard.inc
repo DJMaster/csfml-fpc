@@ -36,7 +36,6 @@
 ////////////////////////////////////////////////////////////
 // #include <SFML/Window/Export.h>
 
-
 (*
   \brief Key codes
 *)
@@ -148,7 +147,6 @@ type
     sfKeyCount         ///< Keep last -- the total number of keyboard keys
   );
 
-
 (*
   \brief Check if a key is pressed
 
@@ -170,6 +168,5 @@ function sfKeyboard_isKeyPressed(key: sfKeyCode): sfBool; cdecl; external LIB_CS
   \param visible True to show, false to hide
 *)
 procedure sfKeyboard_setVirtualKeyboardVisible(visible: sfBool); cdecl; external LIB_CSFMLWINDOW;
-
 
 // #endif // SFML_KEYBOARD_H

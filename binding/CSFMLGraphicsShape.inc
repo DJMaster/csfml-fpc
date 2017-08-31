@@ -42,7 +42,6 @@
 // #include <SFML/System/Vector2.h>
 // #include <stddef.h>
 
-
 type
   sfShapeGetPointCountCallback = function (shape: pointer): csize_t; cdecl;               ///< Type of the callback used to get the number of points in a shape
   sfShapeGetPointCallback = function (index: csize_t; shape: pointer): sfVector2f; cdecl; ///< Type of the callback used to get a point of a shape
@@ -383,6 +382,5 @@ function sfShape_getGlobalBounds(const shape: PsfShape): sfFloatRect; cdecl; ext
   the getPointCount or getPoint callbacks is different).
 *)
 procedure sfShape_update(shape: PsfShape); cdecl; external LIB_CSFMLGRAPHICS;
-
 
 // #endif // SFML_SHAPE_H

@@ -40,7 +40,6 @@
 // #include </System/Time.h>
 // #include </System/Vector3.h>
 
-
 (*
   \brief Create a new sound
 
@@ -307,6 +306,5 @@ function sfSound_getAttenuation(const sound: PsfSound): cfloat; cdecl; external 
   \return Current playing position
 *)
 function sfSound_getPlayingOffset(const sound: PsfSound): sfTime; cdecl; external LIB_CSFMLAUDIO;
-
 
 // #endif // SFML_SOUND_H

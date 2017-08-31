@@ -43,7 +43,6 @@
 // #include <SFML/System/Vector2.h>
 // #include <SFML/System/Vector3.h>
 
-
 (*
   \brief Load the vertex, geometry and fragment shaders from files
 
@@ -675,6 +674,5 @@ function sfShader_isAvailable(): sfBool; cdecl; external LIB_CSFMLGRAPHICS;
   \return True if geometry shaders are supported, false otherwise
 *)
 function sfShader_isGeometryAvailable(): sfBool; cdecl; external LIB_CSFMLGRAPHICS;
-
 
 // #endif // SFML_SHADER_H

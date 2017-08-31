@@ -40,7 +40,6 @@
 // #include <SFML/Window/Mouse.h>
 // #include <SFML/Window/Sensor.h>
 
-
 (*
   \brief Definition of all the event types
 *)
@@ -72,7 +71,6 @@ type
 
     sfEvtCount                   ///< Keep last -- the total number of event types
   );
-
 
 (*
   \brief Keyboard event parameters
@@ -227,6 +225,5 @@ type
     11: (touch: sfTouchEvent);                       ///< Touch events parameters
     12: (sensor: sfSensorEvent);                     ///< Sensor event parameters
   end;
-
 
 // #endif // SFML_EVENT_H

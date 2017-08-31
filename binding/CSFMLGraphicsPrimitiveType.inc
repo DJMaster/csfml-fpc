@@ -36,7 +36,6 @@
 ////////////////////////////////////////////////////////////
 // #include </Graphics/Export.h>
 
-
 (*
   \brief Types of primitives that a sf::VertexArray can render
 
@@ -54,6 +53,5 @@ type
     sfTriangleFan,   ///< List of connected triangles, a point uses the common center and the previous point to form a triangle
     sfQuads          ///< List of individual quads
   );
-
 
 // #endif // SFML_BLENDMODE_H

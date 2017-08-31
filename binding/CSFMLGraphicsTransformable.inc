@@ -39,7 +39,6 @@
 // #include <SFML/Graphics/Transform.h>
 // #include <SFML/System/Vector2.h>
 
-
 (*
   \brief Create a new transformable
 
@@ -202,6 +201,5 @@ function sfTransformable_getTransform(const transformable: PsfTransformable): sf
   \return Inverse of the combined transformations applied to the object
 *)
 function sfTransformable_getInverseTransform(const transformable: PsfTransformable): sfTransform; cdecl; external LIB_CSFMLGRAPHICS;
-
 
 // #endif // SFML_TRANSFORMABLE_H

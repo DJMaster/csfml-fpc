@@ -44,7 +44,6 @@
 // #include <SFML/System/Vector2.h>
 // #include <stddef.h>
 
-
 (*
   \brief Construct a new render texture
 
@@ -312,6 +311,5 @@ function sfRenderTexture_isRepeated(const renderTexture: PsfRenderTexture): sfBo
   \return sfTrue if mipmap generation was successful, sfFalse if unsuccessful
 *)
 function sfRenderTexture_generateMipmap(renderTexture: PsfRenderTexture): sfBool; cdecl; external LIB_CSFMLGRAPHICS;
-
 
 // #endif // SFML_RENDERTEXTURE_H

@@ -37,7 +37,6 @@
 // #include </Audio/Export.h>
 // #include </Audio/Types.h>
 
-
 (*
   \brief Create a new sound buffer recorder
 
@@ -126,6 +125,5 @@ function sfSoundBufferRecorder_setDevice(soundBufferRecorder: PsfSoundBufferReco
   \return The name of the current audio capture device
 *)
 function sfSoundBufferRecorder_getDevice(soundBufferRecorder: PsfSoundBufferRecorder): pchar; cdecl; external LIB_CSFMLAUDIO;
-
 
 // #endif // SFML_SOUNDBUFFERRECORDER_H

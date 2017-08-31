@@ -42,7 +42,6 @@
 // #include </System/Vector3.h>
 // #include <stddef.h>
 
-
 (*
   \brief Create a new music and load it from a file
 
@@ -350,6 +349,5 @@ function sfMusic_getMinDistance(const music: PsfMusic): cfloat; cdecl; external 
   \return Attenuation factor of the music
 *)
 function sfMusic_getAttenuation(const music: PsfMusic): cfloat; cdecl; external LIB_CSFMLAUDIO;
-
 
 // #endif // SFML_MUSIC_H

@@ -37,7 +37,6 @@
 // #include <SFML/System/Export.h>
 // #include <SFML/System/Time.h>
 
-
 (*
   \brief Make the current thread sleep for a given duration
 
@@ -47,6 +46,5 @@
   \param duration Time to sleep
 *)
 procedure sfSleep(duration: sfTime); cdecl; external LIB_CSFMLSYSTEM;
-
 
 // #endif // SFML_SLEEP_H

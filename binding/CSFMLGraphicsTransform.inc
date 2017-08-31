@@ -39,7 +39,6 @@
 // #include <SFML/Graphics/Types.h>
 // #include <SFML/System/Vector2.h>
 
-
 (*
   \brief Encapsulate a 3x3 transform matrix
 *)
@@ -48,7 +47,6 @@ type
   sfTransform = record
     matrix: array[0..8] of cfloat;
   end;
-
 
 (*
   \brief Identity transform (does nothing)
@@ -199,6 +197,5 @@ procedure sfTransform_scale(transform: PsfTransform; scaleX: cfloat; scaleY: cfl
   \param centerY   Y coordinate of the center of scaling
 *)
 procedure sfTransform_scaleWithCenter(transform: PsfTransform; scaleX: cfloat; scaleY: cfloat; centerX: cfloat; centerY: cfloat); cdecl; external LIB_CSFMLGRAPHICS;
-
 
 // #endif // SFML_TRANSFORM_H

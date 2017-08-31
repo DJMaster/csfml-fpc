@@ -36,7 +36,6 @@
 ////////////////////////////////////////////////////////////
 // #include </Graphics/Export.h>
 
-
 (*
   sfFloatRect and sfIntRect are utility classes for
   manipulating rectangles.
@@ -81,6 +80,5 @@ function sfIntRect_contains(const rect: PsfIntRect; x: cint; y: cint): sfBool; c
 *)
 function sfFloatRect_intersects(const rect1: PsfFloatRect; const rect2: PsfFloatRect; intersection: PsfFloatRect): sfBool; cdecl; external LIB_CSFMLGRAPHICS;
 function sfIntRect_intersects(const rect1: PsfIntRect; const rect2: PsfIntRect; intersection: PsfIntRect): sfBool; cdecl; external LIB_CSFMLGRAPHICS;
-
 
 // #endif // SFML_RECT_H

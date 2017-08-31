@@ -42,7 +42,6 @@
 // #include <SFML/Graphics/Types.h>
 // #include <SFML/System/Vector2.h>
 
-
 (*
   \brief Create a new sprite
 
@@ -310,6 +309,5 @@ function sfSprite_getLocalBounds(const sprite: PsfSprite): sfFloatRect; cdecl; e
   \return Global bounding rectangle of the entity
 *)
 function sfSprite_getGlobalBounds(const sprite: PsfSprite): sfFloatRect; cdecl; external LIB_CSFMLGRAPHICS;
-
 
 // #endif // SFML_SPRITE_H

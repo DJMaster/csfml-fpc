@@ -39,12 +39,10 @@
 // #include </System/Time.h>
 // #include <stddef.h>
 
-
 type
   sfSoundRecorderStartCallback = function (userData: pointer): sfBool; cdecl;                                               ///< Type of the callback used when starting a capture
   sfSoundRecorderProcessCallback = function (const data: PsfInt16; sampleFrames: csize_t; userData: pointer): sfBool; cdecl; ///< Type of the callback used to process audio data
   sfSoundRecorderStopCallback = procedure (userData: pointer); cdecl;                                                       ///< Type of the callback used when stopping a capture
-
 
 (*
   \brief Construct a new sound recorder from callback functions
@@ -203,6 +201,5 @@ procedure sfSoundRecorder_setChannelCount(soundRecorder: PsfSoundRecorder; chann
   \see sfSoundRecorder_setChannelCount
 *)
 function sfSoundRecorder_getChannelCount(const soundRecorder: PsfSoundRecorder): cuint; cdecl; external LIB_CSFMLAUDIO;
-
 
 // #endif // SFML_SOUNDRECORDER_H

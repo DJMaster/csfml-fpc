@@ -37,7 +37,6 @@
 // #include <SFML/Window/Export.h>
 // #include <stddef.h>
 
-
 (*
   \brief sfVideoMode defines a video mode (width, height, bpp, frequency)
          and provides functions for getting modes supported
@@ -50,7 +49,6 @@ type
     height: cuint;        ///< Video mode height, in pixels
     bitsPerPixel: cuint ; ///< Video mode pixel depth, in bits per pixels
   end;
-
 
 (*
   \brief Get the current desktop video mode
@@ -88,6 +86,5 @@ function sfVideoMode_getFullscreenModes(count: pcsize_t): PsfVideoMode; cdecl; e
   \return sfTrue if the video mode is valid for fullscreen mode
 *)
 function sfVideoMode_isValid(mode: sfVideoMode): sfBool; cdecl; external LIB_CSFMLWINDOW;
-
 
 // #endif // SFML_VIDEOMODE_H

@@ -72,7 +72,6 @@ const
 {$include CSFMLNetworkTcpSocket.inc}
 {$include CSFMLNetworkUdpSocket.inc}
 
-
 // #endif // SFML_NETWORK_H
 
 implementation

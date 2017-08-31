@@ -41,7 +41,6 @@
 // #include <SFML/System/Time.h>
 // #include <stddef.h>
 
-
 (*
   \brief Create a new TCP socket
 
@@ -219,6 +218,5 @@ function sfTcpSocket_sendPacket(socket: PsfTcpSocket; packet: PsfPacket): sfSock
   \return Status code
 *)
 function sfTcpSocket_receivePacket(socket: PsfTcpSocket; packet: PsfPacket): sfSocketStatus; cdecl; external LIB_CSFMLNETWORK;
-
 
 // #endif // SFML_TCPSOCKET_H

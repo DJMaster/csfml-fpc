@@ -42,7 +42,6 @@
 // #include </System/Vector2.h>
 // #include <stddef.h>
 
-
 (*
   \brief Create a new circle shape
 
@@ -400,6 +399,5 @@ function sfCircleShape_getLocalBounds(const shape: PsfCircleShape): sfFloatRect;
   \return Global bounding rectangle of the entity
 *)
 function sfCircleShape_getGlobalBounds(const shape: PsfCircleShape): sfFloatRect; cdecl; external LIB_CSFMLGRAPHICS;
-
 
 //#endif // SFML_CIRCLESHAPE_H

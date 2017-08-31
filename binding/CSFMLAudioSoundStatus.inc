@@ -36,7 +36,6 @@
 ////////////////////////////////////////////////////////////
 // #include </Audio/Export.h>
 
-
 (*
   \brief Enumeration of statuses for sounds and musics
 *)
@@ -46,6 +45,5 @@ type
     sfPaused,  ///< Sound / music is paused
     sfPlaying  ///< Sound / music is playing
   );
-
 
 // #endif // SFML_SOUNDSTATUS_H

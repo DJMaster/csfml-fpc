@@ -38,7 +38,6 @@
 // #include <SFML/System/Time.h>
 // #include <SFML/System/Types.h>
 
-
 (*
   \brief Create a new clock and start it
 
@@ -86,6 +85,5 @@ function sfClock_getElapsedTime(const clock: PsfClock): sfTime; cdecl; external 
   \return Time elapsed
 *)
 function sfClock_restart(clock: PsfClock): sfTime; cdecl; external LIB_CSFMLSYSTEM;
-
 
 // #endif // SFML_CLOCK_H

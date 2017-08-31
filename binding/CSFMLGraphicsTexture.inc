@@ -42,7 +42,6 @@
 // #include <SFML/System/Vector2.h>
 // #include <stddef.h>
 
-
 (*
   \brief Create a new texture
 
@@ -316,6 +315,5 @@ procedure sfTexture_bind(const texture: PsfTexture); cdecl; external LIB_CSFMLGR
   \return Maximum size allowed for textures, in pixels
 *)
 function sfTexture_getMaximumSize(): cuint; cdecl; external LIB_CSFMLGRAPHICS;
-
 
 // #endif // SFML_TEXTURE_H

@@ -38,7 +38,6 @@
 // #include <SFML/Window/Types.h>
 // #include <SFML/System/Vector3.h>
 
-
 (*
   \brief Sensor Types
 *)
@@ -53,7 +52,6 @@ type
 
     sfSensorCount             ///< Keep last -- the total number of sensor types
   );
-
 
 (*
   \brief Check if a sensor is available on the underlying platform
@@ -86,6 +84,5 @@ procedure sfSensor_setEnabled(sensor: sfSensorType; enabled: sfBool); cdecl; ext
   \return The current sensor value
 *)
 function sfSensor_getValue(sensor: sfSensorType): sfVector3f; cdecl; external LIB_CSFMLWINDOW;
-
 
 // #endif // SFML_SENSOR_H

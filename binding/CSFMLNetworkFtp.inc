@@ -39,7 +39,6 @@
 // #include <SFML/Network/Types.h>
 // #include <stddef.h>
 
-
 (*
   \brief Enumeration of transfer modes
 *)
@@ -49,7 +48,6 @@ type
     sfFtpAscii,  ///< Text mode using ASCII encoding
     sfFtpEbcdic  ///< Text mode using EBCDIC encoding
   );
-
 
 (*
   \brief Status codes possibly returned by a FTP response
@@ -115,7 +113,6 @@ type
     sfFtpConnectionClosed = 1002, ///< Connection with server closed
     sfFtpInvalidFile      = 1003  ///< Invalid file to upload / download
   );
-
 
 (*
   \brief Destroy a FTP listing response
@@ -495,6 +492,5 @@ function sfFtp_upload(ftp: PsfFtp; const localFile: pchar; const destPath: pchar
   \return Server response to the request
 *)
 function sfFtp_sendCommand(ftp: PsfFtp; const command: pchar; const parameter: pchar): PsfFtpResponse; cdecl; external LIB_CSFMLNETWORK;
-
 
 // #endif // SFML_FTP_H

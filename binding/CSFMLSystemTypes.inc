@@ -31,7 +31,6 @@
 // #ifndef SFML_SYSTEM_TYPES_H
 // #define SFML_SYSTEM_TYPES_H
 
-
 type
   PsfClock = ^sfClock;
   sfClock = record
@@ -44,6 +43,5 @@ type
   PsfThread = ^sfThread;
   sfThread = record
   end;
-
 
 // #endif // SFML_SYSTEM_TYPES_H

@@ -37,7 +37,6 @@
 // #include <SFML/Window/Export.h>
 // #include <SFML/Window/Types.h>
 
-
 (*
   \brief Create a new context
 
@@ -74,6 +73,5 @@ function sfContext_setActive(context: PsfContext; active: sfBool): sfBool; cdecl
   \return Structure containing the settings
 *)
 function sfContext_getSettings(const context: PsfContext): sfContextSettings; cdecl; external LIB_CSFMLWINDOW;
-
 
 // #endif // SFML_CONTEXT_H

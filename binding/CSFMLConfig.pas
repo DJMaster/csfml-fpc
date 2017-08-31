@@ -40,7 +40,6 @@ uses
 // #ifndef SFML_CONFIG_H
 // #define SFML_CONFIG_H
 
-
 ////////////////////////////////////////////////////////////
 // Define the CSFML version
 ////////////////////////////////////////////////////////////
@@ -48,7 +47,6 @@ const
   CSFML_VERSION_MAJOR = 2;
   CSFML_VERSION_MINOR = 4;
   CSFML_VERSION_PATCH = 0;
-
 
 ////////////////////////////////////////////////////////////
 // Check if we need to mark functions as extern "C"
@@ -58,7 +56,6 @@ const
 // #else
 //     #define CSFML_EXTERN_C extern
 // #endif
-
 
 ////////////////////////////////////////////////////////////
 // Identify the operating system
@@ -89,7 +86,6 @@ const
 //     #error This operating system is not supported by SFML library
 // 
 // #endif
-
 
 ////////////////////////////////////////////////////////////
 // Define helpers to create portable import / export macros for each module
@@ -171,7 +167,6 @@ type
 const
   sfFalse = 0;
   sfTrue  = 1;
-
 
 ////////////////////////////////////////////////////////////
 // Define portable fixed-size types

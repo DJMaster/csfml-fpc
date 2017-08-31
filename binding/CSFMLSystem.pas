@@ -69,7 +69,6 @@ const
 {$include CSFMLSystemVector2.inc}
 {$include CSFMLSystemVector3.inc}
 
-
 // #endif // SFML_SYSTEM_H
 
 implementation

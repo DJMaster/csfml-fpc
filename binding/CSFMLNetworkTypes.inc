@@ -31,7 +31,6 @@
 // #ifndef SFML_NETWORK_TYPES_H
 // #define SFML_NETWORK_TYPES_H
 
-
 type
   PsfFtpDirectoryResponse = ^sfFtpDirectoryResponse;
   sfFtpDirectoryResponse = record
@@ -81,6 +80,5 @@ type
   PsfUdpSocket = ^sfUdpSocket;
   sfUdpSocket = record
   end;
-
 
 // #endif // SFML_NETWORK_TYPES_H

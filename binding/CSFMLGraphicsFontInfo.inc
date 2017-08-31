@@ -36,7 +36,6 @@
 ////////////////////////////////////////////////////////////
 // #include </Graphics/Export.h>
 
-
 (*
   sfFontInfo holds various information about a font
 *)
@@ -44,6 +43,5 @@ type
   sfFontInfo = record
     family: pchar;
   end;
-
 
 // #endif // SFML_FONTINFO_H

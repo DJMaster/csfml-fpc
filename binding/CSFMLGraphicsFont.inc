@@ -41,7 +41,6 @@
 // #include </System/InputStream.h>
 // #include <stddef.h>
 
-
 (*
   \brief Create a new font from a file
 
@@ -168,6 +167,5 @@ function sfFont_getTexture(font: PsfFont; characterSize: cuint): PsfTexture; cde
   \return A structure that holds the font information
 *)
 function sfFont_getInfo(const font: PsfFont): sfFontInfo; cdecl; external LIB_CSFMLGRAPHICS;
-
 
 // #endif // SFML_FONT_H

@@ -36,7 +36,6 @@
 ////////////////////////////////////////////////////////////
 // #include <SFML/System/Export.h>
 
-
 (*
   \brief 2-component vector of integers
 *)
@@ -45,7 +44,6 @@ type
     x: cint;
     y: cint;
   end;
-
 
 (*
   \brief 2-component vector of unsigned integers
@@ -56,7 +54,6 @@ type
     y: cuint;
   end;
 
-
 (*
   \brief 2-component vector of floats
 *)
@@ -65,6 +62,5 @@ type
     x: cfloat;
     y: cfloat;
   end;
-
 
 // #endif // SFML_VECTOR2_H

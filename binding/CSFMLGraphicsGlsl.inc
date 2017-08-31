@@ -107,5 +107,4 @@ type
     elements: array[0..4*4-1] of cfloat;
   end;
 
-
 // #endif // SFML_GLSL_H

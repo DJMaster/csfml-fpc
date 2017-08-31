@@ -105,7 +105,6 @@ const
 {$include CSFMLGraphicsVertexArray.inc}
 {$include CSFMLGraphicsView.inc}
 
-
 // #endif // SFML_GRAPHICS_H
 
 implementation

@@ -38,7 +38,6 @@
 // #include <SFML/Network/Types.h>
 // #include <SFML/System/Time.h>
 
-
 (*
   \brief Enumerate the available HTTP methods for a request
 *)
@@ -50,7 +49,6 @@ type
     sfHttpPut,   ///< Request in put mode, useful for a REST API
     sfHttpDelete ///< Request in delete mode, useful for a REST API 
   );
-
 
 (*
   \brief Enumerate all the valid status codes for a response
@@ -90,7 +88,6 @@ type
     sfHttpInvalidResponse  = 1000, ///< Response is not a valid HTTP one
     sfHttpConnectionFailed = 1001  ///< Connection with server failed
   );
-
 
 (*
   \brief Create a new HTTP request
@@ -286,6 +283,5 @@ procedure sfHttp_setHost(http: PsfHttp; const host: pchar; port: cushort); cdecl
   \return Server's response
 *)
 function sfHttp_sendRequest(http: PsfHttp; const request: PsfHttpRequest; timeout: sfTime): PsfHttpResponse; cdecl; external LIB_CSFMLNETWORK;
-
 
 // #endif // SFML_HTTP_H

@@ -40,7 +40,6 @@
 // #include <SFML/Network/Types.h>
 // #include <stddef.h>
 
-
 (*
   \brief Create a new UDP socket
 
@@ -198,6 +197,5 @@ function sfUdpSocket_receivePacket(socket: PsfUdpSocket; packet: PsfPacket; remo
   \return The maximum size of a UDP datagram (message)
 *)
 function sfUdpSocket_maxDatagramSize(): cuint; cdecl; external LIB_CSFMLNETWORK;
-
 
 // #endif // SFML_UDPSOCKET_H

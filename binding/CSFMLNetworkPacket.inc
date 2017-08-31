@@ -38,7 +38,6 @@
 // #include <SFML/Network/Types.h>
 // #include <stddef.h>
 
-
 (*
   \brief Create a new packet
 
@@ -168,6 +167,5 @@ procedure sfPacket_writeFloat(packet: PsfPacket; value: cfloat); cdecl; external
 procedure sfPacket_writeDouble(packet: PsfPacket; value: cdouble); cdecl; external LIB_CSFMLNETWORK;
 procedure sfPacket_writeString(packet: PsfPacket; const string_: pchar); cdecl; external LIB_CSFMLNETWORK;
 procedure sfPacket_writeWideString(packet: PsfPacket; const string_: pucs4char); cdecl; external LIB_CSFMLNETWORK;
-
 
 // #endif // SFML_PACKET_H

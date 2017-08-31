@@ -36,7 +36,6 @@
 ////////////////////////////////////////////////////////////
 // #include <SFML/Window/Export.h>
 
-
 (*
   sfJoystickIdentification holds a joystick's identification
 *)
@@ -46,6 +45,5 @@ type
     vendorId: cuint;
     productId: cuint;
   end;
-
 
 // #endif // SFML_JOYSTICKIDENDIFICATION_H
