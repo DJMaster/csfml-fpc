@@ -41,7 +41,12 @@ uses
   CSFMLWindow;
 
 const
+{$ifdef WINDOWS}
   LIB_CSFMLGRAPHICS = 'csfml-graphics-2.dll';
+{$endif}
+{$ifdef LINUX}
+  LIB_CSFMLGRAPHICS = 'libcsfml-graphics.so';
+{$endif}
 
 // #ifndef SFML_GRAPHICS_H
 // #define SFML_GRAPHICS_H

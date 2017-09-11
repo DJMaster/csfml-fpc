@@ -39,7 +39,12 @@ uses
   CSFMLConfig;
 
 const
+{$ifdef WINDOWS}
   LIB_CSFMLSYSTEM  = 'csfml-system-2.dll';
+{$endif}
+{$ifdef LINUX}
+  LIB_CSFMLSYSTEM  = 'libcsfml-system.so';
+{$endif}
 
 // #ifndef SFML_SYSTEM_H
 // #define SFML_SYSTEM_H

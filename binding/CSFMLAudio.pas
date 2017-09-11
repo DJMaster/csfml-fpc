@@ -40,7 +40,12 @@ uses
   CSFMLSystem;
 
 const
+{$ifdef WINDOWS}
   LIB_CSFMLAUDIO = 'csfml-audio-2.dll';
+{$endif}
+{$ifdef LINUX}
+  LIB_CSFMLAUDIO = 'libcsfml-audio.so';
+{$endif}
 
 // #ifndef SFML_AUDIO_H
 // #define SFML_AUDIO_H

@@ -40,7 +40,12 @@ uses
   CSFMLSystem;
 
 const
+{$ifdef WINDOWS}
   LIB_CSFMLNETWORK = 'csfml-network-2.dll';
+{$endif}
+{$ifdef LINUX}
+  LIB_CSFMLNETWORK = 'libcsfml-network.so';
+{$endif}
 
 // #ifndef SFML_NETWORK_H
 // #define SFML_NETWORK_H

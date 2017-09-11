@@ -40,7 +40,12 @@ uses
   CSFMLSystem;
 
 const
+{$ifdef WINDOWS}
   LIB_CSFMLWINDOW = 'csfml-window-2.dll';
+{$endif}
+{$ifdef LINUX}
+  LIB_CSFMLWINDOW = 'libcsfml-window.so';
+{$endif}
 
 // #ifndef SFML_SFML_WINDOW_H
 // #define SFML_SFML_WINDOW_H
