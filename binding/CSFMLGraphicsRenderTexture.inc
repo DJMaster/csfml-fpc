@@ -1,13 +1,13 @@
 //
 // SFML/CSFML Graphics.h header binding for the Free Pascal Compiler aka FPC
 //
-// Binaries and demos available at http://www.djmaster.com/
+// Binaries and demos available at https://www.djmaster.com/
 //
 
 ////////////////////////////////////////////////////////////
 //
 // SFML - Simple and Fast Multimedia Library
-// Copyright (C) 2007-2015 Laurent Gomila (laurent@sfml-dev.org)
+// Copyright (C) 2007-2018 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
 // In no event will the authors be held liable for any damages arising from the use of this software.
@@ -41,6 +41,7 @@
 // #include <SFML/Graphics/PrimitiveType.h>
 // #include <SFML/Graphics/RenderStates.h>
 // #include <SFML/Graphics/Vertex.h>
+// #include <SFML/Window/Window.h>
 // #include <SFML/System/Vector2.h>
 // #include <stddef.h>
 
@@ -52,8 +53,22 @@
   \param depthBuffer Do you want a depth-buffer attached? (useful only if you're doing 3D OpenGL on the rendertexture)
 
   \return A new sfRenderTexture object, or NULL if it failed
+
+  \deprecated
+  Use sfRenderTexture_createWithSettings instead.
 *)
 function sfRenderTexture_create(width: cuint; height: cuint; depthBuffer: sfBool): PsfRenderTexture; cdecl; external LIB_CSFMLGRAPHICS;
+
+(*
+  \brief Construct a new render texture
+
+  \param width    Width of the render texture
+  \param height   Height of the render texture
+  \param settings Settings of the render texture
+
+  \return A new sfRenderTexture object, or NULL if it failed
+*)
+function sfRenderTexture_createWithSettings(width: cuint; height: cuint; settings: sfContextSettings): PsfRenderTexture; cdecl; external LIB_CSFMLGRAPHICS;
 
 (*
   \brief Destroy an existing render texture
@@ -197,6 +212,7 @@ procedure sfRenderTexture_drawCircleShape(renderTexture: PsfRenderTexture; const
 procedure sfRenderTexture_drawConvexShape(renderTexture: PsfRenderTexture; const object_: PsfConvexShape; const states: PsfRenderStates); cdecl; external LIB_CSFMLGRAPHICS;
 procedure sfRenderTexture_drawRectangleShape(renderTexture: PsfRenderTexture; const object_: PsfRectangleShape; const states: PsfRenderStates); cdecl; external LIB_CSFMLGRAPHICS;
 procedure sfRenderTexture_drawVertexArray(renderTexture: PsfRenderTexture; const object_: PsfVertexArray; const states: PsfRenderStates); cdecl; external LIB_CSFMLGRAPHICS;
+procedure sfRenderTexture_drawVertexBuffer(renderTexture: PsfRenderTexture; const object_: PsfVertexBuffer; const states: PsfRenderStates); cdecl; external LIB_CSFMLGRAPHICS;
 
 (*
   \brief Draw primitives defined by an array of vertices to a render texture
@@ -262,6 +278,13 @@ procedure sfRenderTexture_resetGLStates(renderTexture: PsfRenderTexture); cdecl;
   \return Pointer to the target texture
 *)
 function sfRenderTexture_getTexture(const renderTexture: PsfRenderTexture): PsfTexture; cdecl; external LIB_CSFMLGRAPHICS;
+
+(*
+  \brief Get the maximum anti-aliasing level supported by the system
+
+  \return The maximum anti-aliasing level supported by the system
+*)
+function sfRenderTexture_getMaximumAntialiasingLevel(): cuint; cdecl; external LIB_CSFMLGRAPHICS;
 
 (*
   \brief Enable or disable the smooth filter on a render texture

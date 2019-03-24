@@ -1,13 +1,13 @@
 //
 // SFML/CSFML Graphics.h header binding for the Free Pascal Compiler aka FPC
 //
-// Binaries and demos available at http://www.djmaster.com/
+// Binaries and demos available at https://www.djmaster.com/
 //
 
 ////////////////////////////////////////////////////////////
 //
 // SFML - Simple and Fast Multimedia Library
-// Copyright (C) 2007-2015 Laurent Gomila (laurent@sfml-dev.org)
+// Copyright (C) 2007-2018 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
 // In no event will the authors be held liable for any damages arising from the use of this software.
@@ -227,6 +227,24 @@ procedure sfRenderWindow_setMouseCursorVisible(renderWindow: PsfRenderWindow; sh
 procedure sfRenderWindow_setMouseCursorGrabbed(renderWindow: PsfRenderWindow; grabbed: sfBool); cdecl; external LIB_CSFMLGRAPHICS;
 
 (*
+  \brief Set the displayed cursor to a native system cursor
+
+  Upon window creation, the arrow cursor is used by default.
+
+  \warning The cursor must not be destroyed while in use by
+           the window.
+
+  \warning Features related to Cursor are not supported on
+           iOS and Android.
+
+  \param cursor Native system cursor type to display
+
+  \see sfCursor_createFromSystem
+  \see sfCursor_createFromPixels
+*)
+procedure sfRenderWindow_setMouseCursor(window: PsfRenderWindow; const cursor: PsfCursor); cdecl; external LIB_CSFMLGRAPHICS;
+
+(*
   \brief Enable or disable automatic key-repeat for keydown events
 
   Automatic key-repeat is enabled by default
@@ -415,6 +433,7 @@ procedure sfRenderWindow_drawCircleShape(renderWindow: PsfRenderWindow; const ob
 procedure sfRenderWindow_drawConvexShape(renderWindow: PsfRenderWindow; const object_: PsfConvexShape; const states: PsfRenderStates); cdecl; external LIB_CSFMLGRAPHICS;
 procedure sfRenderWindow_drawRectangleShape(renderWindow: PsfRenderWindow; const object_: PsfRectangleShape; const states: PsfRenderStates); cdecl; external LIB_CSFMLGRAPHICS;
 procedure sfRenderWindow_drawVertexArray(renderWindow: PsfRenderWindow; const object_: PsfVertexArray; const states: PsfRenderStates); cdecl; external LIB_CSFMLGRAPHICS;
+procedure sfRenderWindow_drawVertexBuffer(renderWindow: PsfRenderWindow; const object_: PsfVertexBuffer; const states: PsfRenderStates); cdecl; external LIB_CSFMLGRAPHICS;
 
 (*
   \brief Draw primitives defined by an array of vertices to a render window

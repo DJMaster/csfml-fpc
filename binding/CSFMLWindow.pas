@@ -1,13 +1,13 @@
 //
 // SFML/CSFML Window.h header binding for the Free Pascal Compiler aka FPC
 //
-// Binaries and demos available at http://www.djmaster.com/
+// Binaries and demos available at https://www.djmaster.com/
 //
 
 ////////////////////////////////////////////////////////////
 //
 // SFML - Simple and Fast Multimedia Library
-// Copyright (C) 2007-2015 Laurent Gomila (laurent@sfml-dev.org)
+// Copyright (C) 2007-2018 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
 // In no event will the authors be held liable for any damages arising from the use of this software.
@@ -54,7 +54,9 @@ const
 // Headers
 ////////////////////////////////////////////////////////////
 // #include <SFML/System.h>
+// #include <SFML/Window/Clipboard.h>
 // #include <SFML/Window/Context.h>
+// #include <SFML/Window/Cursor.h>
 // #include <SFML/Window/Event.h>
 // #include <SFML/Window/Joystick.h>
 // #include <SFML/Window/JoystickIdentification.h>
@@ -76,7 +78,9 @@ const
 {$include CSFMLWindowVideoMode.inc}
 {$include CSFMLWindowWindow.inc}
 
+{$include CSFMLWindowClipboard.inc}
 {$include CSFMLWindowContext.inc}
+{$include CSFMLWindowCursor.inc}
 {$include CSFMLWindowTouch.inc}
 
 // #endif // SFML_SFML_WINDOW_H

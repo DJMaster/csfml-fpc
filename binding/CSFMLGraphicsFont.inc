@@ -1,13 +1,13 @@
 //
 // SFML/CSFML Graphics.h header binding for the Free Pascal Compiler aka FPC
 //
-// Binaries and demos available at http://www.djmaster.com/
+// Binaries and demos available at https://www.djmaster.com/
 //
 
 ////////////////////////////////////////////////////////////
 //
 // SFML - Simple and Fast Multimedia Library
-// Copyright (C) 2007-2015 Laurent Gomila (laurent@sfml-dev.org)
+// Copyright (C) 2007-2018 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
 // In no event will the authors be held liable for any damages arising from the use of this software.
@@ -96,7 +96,7 @@ procedure sfFont_destroy(font: PsfFont); cdecl; external LIB_CSFMLGRAPHICS;
 
   \return The corresponding glyph
 *)
-function sfFont_getGlyph(font: PsfFont; codePoint: sfUint32; characterSize: cuint; bold: sfBool; outlineThickness: cfloat): sfGlyph; cdecl; external LIB_CSFMLGRAPHICS;
+function sfFont_getGlyph(const font: PsfFont; codePoint: sfUint32; characterSize: cuint; bold: sfBool; outlineThickness: cfloat): sfGlyph; cdecl; external LIB_CSFMLGRAPHICS;
 
 (*
   \brief Get the kerning value corresponding to a given pair of characters in a font
@@ -108,7 +108,7 @@ function sfFont_getGlyph(font: PsfFont; codePoint: sfUint32; characterSize: cuin
 
   \return Kerning offset, in pixels
 *)
-function sfFont_getKerning(font: PsfFont; first: sfUint32; second: sfUint32; characterSize: cuint): cfloat; cdecl; external LIB_CSFMLGRAPHICS;
+function sfFont_getKerning(const font: PsfFont; first: sfUint32; second: sfUint32; characterSize: cuint): cfloat; cdecl; external LIB_CSFMLGRAPHICS;
 
 (*
   \brief Get the line spacing value
@@ -118,7 +118,7 @@ function sfFont_getKerning(font: PsfFont; first: sfUint32; second: sfUint32; cha
 
   \return Line spacing, in pixels
 *)
-function sfFont_getLineSpacing(font: PsfFont; characterSize: cuint): cfloat; cdecl; external LIB_CSFMLGRAPHICS;
+function sfFont_getLineSpacing(const font: PsfFont; characterSize: cuint): cfloat; cdecl; external LIB_CSFMLGRAPHICS;
 
 (*
   \brief Get the position of the underline
@@ -131,7 +131,7 @@ function sfFont_getLineSpacing(font: PsfFont; characterSize: cuint): cfloat; cde
 
   \return Underline position, in pixels
 *)
-function sfFont_getUnderlinePosition(font: PsfFont; characterSize: cuint): cfloat; cdecl; external LIB_CSFMLGRAPHICS;
+function sfFont_getUnderlinePosition(const font: PsfFont; characterSize: cuint): cfloat; cdecl; external LIB_CSFMLGRAPHICS;
 
 (*
   \brief Get the thickness of the underline
@@ -143,7 +143,7 @@ function sfFont_getUnderlinePosition(font: PsfFont; characterSize: cuint): cfloa
 
   \return Underline thickness, in pixels
 *)
-function sfFont_getUnderlineThickness(font: PsfFont; characterSize: cuint): cfloat; cdecl; external LIB_CSFMLGRAPHICS;
+function sfFont_getUnderlineThickness(const font: PsfFont; characterSize: cuint): cfloat; cdecl; external LIB_CSFMLGRAPHICS;
 
 (*
   \brief Get the texture containing the glyphs of a given size in a font

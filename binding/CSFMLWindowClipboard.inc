@@ -28,36 +28,57 @@
 //
 ////////////////////////////////////////////////////////////
 
-// #ifndef SFML_TOUCH_H
-// #define SFML_TOUCH_H
+// #ifndef SFML_CLIPBOARD_H
+// #define SFML_CLIPBOARD_H
 
 ////////////////////////////////////////////////////////////
 // Headers
 ////////////////////////////////////////////////////////////
 // #include <SFML/Window/Export.h>
 // #include <SFML/Window/Types.h>
-// #include <SFML/System/Vector2.h>
 
 (*
-  \brief Check if a touch event is currently down
+  \brief Get the content of the clipboard as string data (returns an ANSI string)
 
-  \param finger Finger index
+  This function returns the content of the clipboard
+  as a string. If the clipboard does not contain string
+  it returns an empty string.
 
-  \return sfTrue if \a finger is currently touching the screen, sfFalse otherwise
+  \return Clipboard contents as a locale-dependent ANSI string
 *)
-function sfTouch_isDown(finger: cuint): sfBool; cdecl; external LIB_CSFMLWINDOW;
+function sfClipboard_getString(): pchar; cdecl; external LIB_CSFMLWINDOW;
 
 (*
-  \brief Get the current position of a touch in window coordinates
+  \brief Get the content of the clipboard as string data (returns a Unicode string)
 
-  This function returns the current touch position
-  relative to the given window, or desktop if NULL is passed.
+  This function returns the content of the clipboard
+  as a string. If the clipboard does not contain string
+  it returns an empty string.
 
-  \param finger Finger index
-  \param relativeTo Reference window
-
-  \return Current position of \a finger, or undefined if it's not down
+  \return Clipboard contents as UTF-32
 *)
-function sfTouch_getPosition(finger: cuint; const relativeTo: PsfWindow): sfVector2i; cdecl; external LIB_CSFMLWINDOW;
+function sfClipboard_getUnicodeString(): PsfUint32; cdecl; external LIB_CSFMLWINDOW;
 
-// #endif // SFML_TOUCH_H
+(*
+  \brief Set the content of the clipboard as ANSI string data
+
+  This function sets the content of the clipboard as an
+  ANSI string.
+
+  \param text ANSI string containing the data to be sent
+  to the clipboard
+*)
+procedure sfClipboard_setString(const text: pchar); cdecl; external LIB_CSFMLWINDOW;
+
+(*
+  \brief Set the content of the clipboard as Unicode string data
+
+  This function sets the content of the clipboard as a
+  Unicode string.
+
+  \param text Unicode string containing the data to be sent
+  to the clipboard
+*)
+procedure sfClipboard_setUnicodeString(const text: PsfUint32); cdecl; external LIB_CSFMLWINDOW;
+
+// #endif // SFML_CURSOR_H

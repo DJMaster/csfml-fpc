@@ -1,13 +1,13 @@
 //
 // SFML/CSFML Window.h header binding for the Free Pascal Compiler aka FPC
 //
-// Binaries and demos available at http://www.djmaster.com/
+// Binaries and demos available at https://www.djmaster.com/
 //
 
 ////////////////////////////////////////////////////////////
 //
 // SFML - Simple and Fast Multimedia Library
-// Copyright (C) 2007-2015 Laurent Gomila (laurent@sfml-dev.org)
+// Copyright (C) 2007-2018 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
 // In no event will the authors be held liable for any damages arising from the use of this software.
@@ -333,6 +333,25 @@ procedure sfWindow_setMouseCursorVisible(window: PsfWindow; visible: sfBool); cd
   \param grabbed sfTrue to enable, sfFalse to disable
 *)
 procedure sfWindow_setMouseCursorGrabbed(window: PsfWindow; grabbed: sfBool); cdecl; external LIB_CSFMLWINDOW;
+
+(*
+  \brief Set the displayed cursor to a native system cursor
+
+  Upon window creation, the arrow cursor is used by default.
+
+  \warning The cursor must not be destroyed while in use by
+           the window.
+
+  \warning Features related to Cursor are not supported on
+           iOS and Android.
+
+  \param window Window object
+  \param cursor Native system cursor type to display
+
+  \see sfCursor_createFromSystem
+  \see sfCursor_createFromPixels
+*)
+procedure sfWindow_setMouseCursor(window: PsfWindow; const cursor: PsfCursor); cdecl; external LIB_CSFMLWINDOW;
 
 (*
   \brief Enable or disable automatic key-repeat

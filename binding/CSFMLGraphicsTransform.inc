@@ -1,13 +1,13 @@
 //
 // SFML/CSFML Graphics.h header binding for the Free Pascal Compiler aka FPC
 //
-// Binaries and demos available at http://www.djmaster.com/
+// Binaries and demos available at https://www.djmaster.com/
 //
 
 ////////////////////////////////////////////////////////////
 //
 // SFML - Simple and Fast Multimedia Library
-// Copyright (C) 2007-2015 Laurent Gomila (laurent@sfml-dev.org)
+// Copyright (C) 2007-2018 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
 // In no event will the authors be held liable for any damages arising from the use of this software.
@@ -197,5 +197,18 @@ procedure sfTransform_scale(transform: PsfTransform; scaleX: cfloat; scaleY: cfl
   \param centerY   Y coordinate of the center of scaling
 *)
 procedure sfTransform_scaleWithCenter(transform: PsfTransform; scaleX: cfloat; scaleY: cfloat; centerX: cfloat; centerY: cfloat); cdecl; external LIB_CSFMLGRAPHICS;
+
+(*
+  \brief Compare two transforms for equality
+
+  Performs an element-wise comparison of the elements of the
+  left transform with the elements of the right transform.
+
+  \param left Left operand (the first transform)
+  \param right Right operand (the second transform)
+
+  \return true if the transforms are equal, false otherwise
+*)
+function sfTransform_equal(left: PsfTransform; right: PsfTransform): sfBool; cdecl; external LIB_CSFMLGRAPHICS;
 
 // #endif // SFML_TRANSFORM_H

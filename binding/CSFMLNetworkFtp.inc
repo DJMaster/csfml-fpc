@@ -1,13 +1,13 @@
 //
 // SFML/CSFML Network.h header binding for the Free Pascal Compiler aka FPC
 //
-// Binaries and demos available at http://www.djmaster.com/
+// Binaries and demos available at https://www.djmaster.com/
 //
 
 ////////////////////////////////////////////////////////////
 //
 // SFML - Simple and Fast Multimedia Library
-// Copyright (C) 2007-2015 Laurent Gomila (laurent@sfml-dev.org)
+// Copyright (C) 2007-2018 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
 // In no event will the authors be held liable for any damages arising from the use of this software.
@@ -469,10 +469,11 @@ function sfFtp_download(ftp: PsfFtp; const remoteFile: pchar; const localPath: p
   \param localFile  Path of the local file to upload
   \param remotePath Where to put to file on the server
   \param mode       Transfer mode
+  \param append     Pass sfTrue to append to or sfFalse to overwrite the remote file if it already exists
 
   \return Server response to the request
 *)
-function sfFtp_upload(ftp: PsfFtp; const localFile: pchar; const destPath: pchar; mode: sfFtpTransferMode): PsfFtpResponse; cdecl; external LIB_CSFMLNETWORK;
+function sfFtp_upload(ftp: PsfFtp; const localFile: pchar; const remotePath: pchar; mode: sfFtpTransferMode; append: sfBool): PsfFtpResponse; cdecl; external LIB_CSFMLNETWORK;
 
 (*
   \brief Send a command to the FTP server

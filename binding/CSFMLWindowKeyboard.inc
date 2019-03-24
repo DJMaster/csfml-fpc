@@ -1,13 +1,13 @@
 //
 // SFML/CSFML Window.h header binding for the Free Pascal Compiler aka FPC
 //
-// Binaries and demos available at http://www.djmaster.com/
+// Binaries and demos available at https://www.djmaster.com/
 //
 
 ////////////////////////////////////////////////////////////
 //
 // SFML - Simple and Fast Multimedia Library
-// Copyright (C) 2007-2015 Laurent Gomila (laurent@sfml-dev.org)
+// Copyright (C) 2007-2018 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
 // In no event will the authors be held liable for any damages arising from the use of this software.
@@ -98,10 +98,10 @@ type
     sfKeyBackSlash,    ///< The \ key
     sfKeyTilde,        ///< The ~ key
     sfKeyEqual,        ///< The = key
-    sfKeyDash,         ///< The - key
+    sfKeyHyphen,       ///< The - key (hyphen)
     sfKeySpace,        ///< The Space key
-    sfKeyReturn,       ///< The Return key
-    sfKeyBack,         ///< The Backspace key
+    sfKeyEnter,        ///< The Enter/Return key
+    sfKeyBackspace,    ///< The Backspace key
     sfKeyTab,          ///< The Tabulation key
     sfKeyPageUp,       ///< The Page up key
     sfKeyPageDown,     ///< The Page down key
@@ -109,10 +109,10 @@ type
     sfKeyHome,         ///< The Home key
     sfKeyInsert,       ///< The Insert key
     sfKeyDelete,       ///< The Delete key
-    sfKeyAdd,          ///< +
-    sfKeySubtract,     ///< -
-    sfKeyMultiply,     ///< *
-    sfKeyDivide,       ///< /
+    sfKeyAdd,          ///< The + key
+    sfKeySubtract,     ///< The - key (minus, usually from numpad)
+    sfKeyMultiply,     ///< The * key
+    sfKeyDivide,       ///< The / key
     sfKeyLeft,         ///< Left arrow
     sfKeyRight,        ///< Right arrow
     sfKeyUp,           ///< Up arrow
@@ -146,6 +146,15 @@ type
 
     sfKeyCount         ///< Keep last -- the total number of keyboard keys
   );
+
+const
+  // Deprecated values:
+
+  sfKeyDash      = sfKeyHyphen;       ///< \deprecated Use Hyphen instead
+  sfKeyBack      = sfKeyBackspace;    ///< \deprecated Use Backspace instead
+  // sfKeyBackSlash = sfKeyBackslash;    ///< \deprecated Use Backslash instead
+  // sfKeySemiColon = sfKeySemicolon;    ///< \deprecated Use Semicolon instead
+  sfKeyReturn    = sfKeyEnter;        ///< \deprecated Use Enter instead
 
 (*
   \brief Check if a key is pressed

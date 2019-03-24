@@ -1,13 +1,13 @@
 //
 // SFML/CSFML Graphics.h header binding for the Free Pascal Compiler aka FPC
 //
-// Binaries and demos available at http://www.djmaster.com/
+// Binaries and demos available at https://www.djmaster.com/
 //
 
 ////////////////////////////////////////////////////////////
 //
 // SFML - Simple and Fast Multimedia Library
-// Copyright (C) 2007-2015 Laurent Gomila (laurent@sfml-dev.org)
+// Copyright (C) 2007-2018 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
 // In no event will the authors be held liable for any damages arising from the use of this software.
@@ -261,6 +261,39 @@ procedure sfText_setFont(text: PsfText; const font: PsfFont); cdecl; external LI
 procedure sfText_setCharacterSize(text: PsfText; size: cuint); cdecl; external LIB_CSFMLGRAPHICS;
 
 (*
+  \brief Set the line spacing factor
+
+  The default spacing between lines is defined by the font.
+  This method enables you to set a factor for the spacing
+  between lines. By default the line spacing factor is 1.
+
+  \param text Text object
+  \param spacingFactor New line spacing factor
+
+  \see sfText_getLineSpacing
+*)
+procedure sfText_setLineSpacing(text: PsfText; spacingFactor: cfloat); cdecl; external LIB_CSFMLGRAPHICS;
+
+(*
+  \brief Set the letter spacing factor
+
+  The default spacing between letters is defined by the font.
+  This factor doesn't directly apply to the existing
+  spacing between each character, it rather adds a fixed
+  space between them which is calculated from the font
+  metrics and the character size.
+  Note that factors below 1 (including negative numbers) bring
+  characters closer to each other.
+  By default the letter spacing factor is 1.
+
+  \param text Text object
+  \param spacingFactor New letter spacing factor
+
+  \see sfText_getLetterSpacing
+*)
+procedure sfText_setLetterSpacing(text: PsfText; spacingFactor: cfloat); cdecl; external LIB_CSFMLGRAPHICS;
+
+(*
   \brief Set the style of a text
 
   You can pass a combination of one or more styles, for
@@ -362,6 +395,28 @@ function sfText_getFont(const text: PsfText): PsfFont; cdecl; external LIB_CSFML
   \return Size of the characters
 *)
 function sfText_getCharacterSize(const text: PsfText): cuint; cdecl; external LIB_CSFMLGRAPHICS;
+
+(*
+  \brief Get the size of the letter spacing factor
+
+  \param text Text object
+
+  \return Size of the letter spacing factor
+
+  \see sfText_setLetterSpacing
+*)
+function sfText_getLetterSpacing(const text: PsfText): cfloat; cdecl; external LIB_CSFMLGRAPHICS;
+
+(*
+  \brief Get the size of the line spacing factor
+
+  \param text Text object
+
+  \return Size of the line spacing factor
+
+  \see sfText_setLineSpacing
+*)
+function sfText_getLineSpacing(const text: PsfText): cfloat; cdecl; external LIB_CSFMLGRAPHICS;
 
 (*
   \brief Get the style of a text
