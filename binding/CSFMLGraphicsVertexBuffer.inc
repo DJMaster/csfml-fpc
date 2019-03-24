@@ -241,5 +241,4 @@ procedure sfVertexBuffer_bind(const vertexBuffer: PsfVertexBuffer); cdecl; exter
 *)
 function sfVertexBuffer_isAvailable(): sfBool; cdecl; external LIB_CSFMLGRAPHICS;
 
-
 // #endif // SFML_VERTEXBUFFER_H

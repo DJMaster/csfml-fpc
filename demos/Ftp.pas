@@ -144,7 +144,7 @@ begin
           ReadLn(Filename);
           Write('Directory to upload the file to (relative to current directory): ');
           ReadLn(Directory);
-          Response := sfFtp_upload(Server, PChar(Filename), PChar(Directory), sfFtpBinary);
+          Response := sfFtp_upload(Server, PChar(Filename), PChar(Directory), sfFtpBinary, sfFalse);
           WriteLn(string(sfFtpResponse_getMessage(Response)));
         end;
       else
