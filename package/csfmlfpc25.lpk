@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <PathDelim Value="\"/>
+    <Name Value="csfmlfpc25"/>
+    <Type Value="RunAndDesignTime"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <IncludeFiles Value="..\binding"/>
+        <OtherUnitFiles Value="..\binding"/>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)\"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Files Count="81">
+      <Item1>
+        <Filename Value="..\binding\CSFMLAudio.pas"/>
+        <UnitName Value="CSFMLAudio"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\binding\CSFMLAudioExport.inc"/>
+        <Type Value="Include"/>
+      </Item2>
+      <Item3>
+        <Filename Value="..\binding\CSFMLAudioListener.inc"/>
+        <Type Value="Include"/>
+      </Item3>
+      <Item4>
+        <Filename Value="..\binding\CSFMLAudioMusic.inc"/>
+        <Type Value="Include"/>
+      </Item4>
+      <Item5>
+        <Filename Value="..\binding\CSFMLAudioSound.inc"/>
+        <Type Value="Include"/>
+      </Item5>
+      <Item6>
+        <Filename Value="..\binding\CSFMLAudioSoundBuffer.inc"/>
+        <Type Value="Include"/>
+      </Item6>
+      <Item7>
+        <Filename Value="..\binding\CSFMLAudioSoundBufferRecorder.inc"/>
+        <Type Value="Include"/>
+      </Item7>
+      <Item8>
+        <Filename Value="..\binding\CSFMLAudioSoundRecorder.inc"/>
+        <Type Value="Include"/>
+      </Item8>
+      <Item9>
+        <Filename Value="..\binding\CSFMLAudioSoundStatus.inc"/>
+        <Type Value="Include"/>
+      </Item9>
+      <Item10>
+        <Filename Value="..\binding\CSFMLAudioSoundStream.inc"/>
+        <Type Value="Include"/>
+      </Item10>
+      <Item11>
+        <Filename Value="..\binding\CSFMLAudioTypes.inc"/>
+        <Type Value="Include"/>
+      </Item11>
+      <Item12>
+        <Filename Value="..\binding\CSFMLConfig.pas"/>
+        <UnitName Value="CSFMLConfig"/>
+      </Item12>
+      <Item13>
+        <Filename Value="..\binding\CSFMLGraphics.pas"/>
+        <UnitName Value="CSFMLGraphics"/>
+      </Item13>
+      <Item14>
+        <Filename Value="..\binding\CSFMLGraphicsBlendMode.inc"/>
+        <Type Value="Include"/>
+      </Item14>
+      <Item15>
+        <Filename Value="..\binding\CSFMLGraphicsCircleShape.inc"/>
+        <Type Value="Include"/>
+      </Item15>
+      <Item16>
+        <Filename Value="..\binding\CSFMLGraphicsColor.inc"/>
+        <Type Value="Include"/>
+      </Item16>
+      <Item17>
+        <Filename Value="..\binding\CSFMLGraphicsConvexShape.inc"/>
+        <Type Value="Include"/>
+      </Item17>
+      <Item18>
+        <Filename Value="..\binding\CSFMLGraphicsExport.inc"/>
+        <Type Value="Include"/>
+      </Item18>
+      <Item19>
+        <Filename Value="..\binding\CSFMLGraphicsFont.inc"/>
+        <Type Value="Include"/>
+      </Item19>
+      <Item20>
+        <Filename Value="..\binding\CSFMLGraphicsFontInfo.inc"/>
+        <Type Value="Include"/>
+      </Item20>
+      <Item21>
+        <Filename Value="..\binding\CSFMLGraphicsGlsl.inc"/>
+        <Type Value="Include"/>
+      </Item21>
+      <Item22>
+        <Filename Value="..\binding\CSFMLGraphicsGlyph.inc"/>
+        <Type Value="Include"/>
+      </Item22>
+      <Item23>
+        <Filename Value="..\binding\CSFMLGraphicsImage.inc"/>
+        <Type Value="Include"/>
+      </Item23>
+      <Item24>
+        <Filename Value="..\binding\CSFMLGraphicsPrimitiveType.inc"/>
+        <Type Value="Include"/>
+      </Item24>
+      <Item25>
+        <Filename Value="..\binding\CSFMLGraphicsRect.inc"/>
+        <Type Value="Include"/>
+      </Item25>
+      <Item26>
+        <Filename Value="..\binding\CSFMLGraphicsRectangleShape.inc"/>
+        <Type Value="Include"/>
+      </Item26>
+      <Item27>
+        <Filename Value="..\binding\CSFMLGraphicsRenderStates.inc"/>
+        <Type Value="Include"/>
+      </Item27>
+      <Item28>
+        <Filename Value="..\binding\CSFMLGraphicsRenderTexture.inc"/>
+        <Type Value="Include"/>
+      </Item28>
+      <Item29>
+        <Filename Value="..\binding\CSFMLGraphicsRenderWindow.inc"/>
+        <Type Value="Include"/>
+      </Item29>
+      <Item30>
+        <Filename Value="..\binding\CSFMLGraphicsShader.inc"/>
+        <Type Value="Include"/>
+      </Item30>
+      <Item31>
+        <Filename Value="..\binding\CSFMLGraphicsShape.inc"/>
+        <Type Value="Include"/>
+      </Item31>
+      <Item32>
+        <Filename Value="..\binding\CSFMLGraphicsSprite.inc"/>
+        <Type Value="Include"/>
+      </Item32>
+      <Item33>
+        <Filename Value="..\binding\CSFMLGraphicsText.inc"/>
+        <Type Value="Include"/>
+      </Item33>
+      <Item34>
+        <Filename Value="..\binding\CSFMLGraphicsTexture.inc"/>
+        <Type Value="Include"/>
+      </Item34>
+      <Item35>
+        <Filename Value="..\binding\CSFMLGraphicsTransform.inc"/>
+        <Type Value="Include"/>
+      </Item35>
+      <Item36>
+        <Filename Value="..\binding\CSFMLGraphicsTransformable.inc"/>
+        <Type Value="Include"/>
+      </Item36>
+      <Item37>
+        <Filename Value="..\binding\CSFMLGraphicsTypes.inc"/>
+        <Type Value="Include"/>
+      </Item37>
+      <Item38>
+        <Filename Value="..\binding\CSFMLGraphicsVertex.inc"/>
+        <Type Value="Include"/>
+      </Item38>
+      <Item39>
+        <Filename Value="..\binding\CSFMLGraphicsVertexArray.inc"/>
+        <Type Value="Include"/>
+      </Item39>
+      <Item40>
+        <Filename Value="..\binding\CSFMLGraphicsVertexBuffer.inc"/>
+        <Type Value="Include"/>
+      </Item40>
+      <Item41>
+        <Filename Value="..\binding\CSFMLGraphicsView.inc"/>
+        <Type Value="Include"/>
+      </Item41>
+      <Item42>
+        <Filename Value="..\binding\CSFMLNetwork.pas"/>
+        <UnitName Value="CSFMLNetwork"/>
+      </Item42>
+      <Item43>
+        <Filename Value="..\binding\CSFMLNetworkExport.inc"/>
+        <Type Value="Include"/>
+      </Item43>
+      <Item44>
+        <Filename Value="..\binding\CSFMLNetworkFtp.inc"/>
+        <Type Value="Include"/>
+      </Item44>
+      <Item45>
+        <Filename Value="..\binding\CSFMLNetworkHttp.inc"/>
+        <Type Value="Include"/>
+      </Item45>
+      <Item46>
+        <Filename Value="..\binding\CSFMLNetworkIpAddress.inc"/>
+        <Type Value="Include"/>
+      </Item46>
+      <Item47>
+        <Filename Value="..\binding\CSFMLNetworkPacket.inc"/>
+        <Type Value="Include"/>
+      </Item47>
+      <Item48>
+        <Filename Value="..\binding\CSFMLNetworkSocketSelector.inc"/>
+        <Type Value="Include"/>
+      </Item48>
+      <Item49>
+        <Filename Value="..\binding\CSFMLNetworkSocketStatus.inc"/>
+        <Type Value="Include"/>
+      </Item49>
+      <Item50>
+        <Filename Value="..\binding\CSFMLNetworkTcpListener.inc"/>
+        <Type Value="Include"/>
+      </Item50>
+      <Item51>
+        <Filename Value="..\binding\CSFMLNetworkTcpSocket.inc"/>
+        <Type Value="Include"/>
+      </Item51>
+      <Item52>
+        <Filename Value="..\binding\CSFMLNetworkTypes.inc"/>
+        <Type Value="Include"/>
+      </Item52>
+      <Item53>
+        <Filename Value="..\binding\CSFMLNetworkUdpSocket.inc"/>
+        <Type Value="Include"/>
+      </Item53>
+      <Item54>
+        <Filename Value="..\binding\CSFMLOpenGL.inc"/>
+        <Type Value="Include"/>
+      </Item54>
+      <Item55>
+        <Filename Value="..\binding\CSFMLSystem.pas"/>
+        <UnitName Value="CSFMLSystem"/>
+      </Item55>
+      <Item56>
+        <Filename Value="..\binding\CSFMLSystemClock.inc"/>
+        <Type Value="Include"/>
+      </Item56>
+      <Item57>
+        <Filename Value="..\binding\CSFMLSystemExport.inc"/>
+        <Type Value="Include"/>
+      </Item57>
+      <Item58>
+        <Filename Value="..\binding\CSFMLSystemInputStream.inc"/>
+        <Type Value="Include"/>
+      </Item58>
+      <Item59>
+        <Filename Value="..\binding\CSFMLSystemMutex.inc"/>
+        <Type Value="Include"/>
+      </Item59>
+      <Item60>
+        <Filename Value="..\binding\CSFMLSystemSleep.inc"/>
+        <Type Value="Include"/>
+      </Item60>
+      <Item61>
+        <Filename Value="..\binding\CSFMLSystemThread.inc"/>
+        <Type Value="Include"/>
+      </Item61>
+      <Item62>
+        <Filename Value="..\binding\CSFMLSystemTime.inc"/>
+        <Type Value="Include"/>
+      </Item62>
+      <Item63>
+        <Filename Value="..\binding\CSFMLSystemTypes.inc"/>
+        <Type Value="Include"/>
+      </Item63>
+      <Item64>
+        <Filename Value="..\binding\CSFMLSystemVector2.inc"/>
+        <Type Value="Include"/>
+      </Item64>
+      <Item65>
+        <Filename Value="..\binding\CSFMLSystemVector3.inc"/>
+        <Type Value="Include"/>
+      </Item65>
+      <Item66>
+        <Filename Value="..\binding\CSFMLWindow.pas"/>
+        <UnitName Value="CSFMLWindow"/>
+      </Item66>
+      <Item67>
+        <Filename Value="..\binding\CSFMLWindowClipboard.inc"/>
+        <Type Value="Include"/>
+      </Item67>
+      <Item68>
+        <Filename Value="..\binding\CSFMLWindowContext.inc"/>
+        <Type Value="Include"/>
+      </Item68>
+      <Item69>
+        <Filename Value="..\binding\CSFMLWindowCursor.inc"/>
+        <Type Value="Include"/>
+      </Item69>
+      <Item70>
+        <Filename Value="..\binding\CSFMLWindowEvent.inc"/>
+        <Type Value="Include"/>
+      </Item70>
+      <Item71>
+        <Filename Value="..\binding\CSFMLWindowExport.inc"/>
+        <Type Value="Include"/>
+      </Item71>
+      <Item72>
+        <Filename Value="..\binding\CSFMLWindowJoystick.inc"/>
+        <Type Value="Include"/>
+      </Item72>
+      <Item73>
+        <Filename Value="..\binding\CSFMLWindowJoystickIdentification.inc"/>
+        <Type Value="Include"/>
+      </Item73>
+      <Item74>
+        <Filename Value="..\binding\CSFMLWindowKeyboard.inc"/>
+        <Type Value="Include"/>
+      </Item74>
+      <Item75>
+        <Filename Value="..\binding\CSFMLWindowMouse.inc"/>
+        <Type Value="Include"/>
+      </Item75>
+      <Item76>
+        <Filename Value="..\binding\CSFMLWindowSensor.inc"/>
+        <Type Value="Include"/>
+      </Item76>
+      <Item77>
+        <Filename Value="..\binding\CSFMLWindowTouch.inc"/>
+        <Type Value="Include"/>
+      </Item77>
+      <Item78>
+        <Filename Value="..\binding\CSFMLWindowTypes.inc"/>
+        <Type Value="Include"/>
+      </Item78>
+      <Item79>
+        <Filename Value="..\binding\CSFMLWindowVideoMode.inc"/>
+        <Type Value="Include"/>
+      </Item79>
+      <Item80>
+        <Filename Value="..\binding\CSFMLWindowWindow.inc"/>
+        <Type Value="Include"/>
+      </Item80>
+      <Item81>
+        <Filename Value="..\binding\CSFMLWindowWindowHandle.inc"/>
+        <Type Value="Include"/>
+      </Item81>
+    </Files>
+    <RequiredPkgs Count="1">
+      <Item1>
+        <PackageName Value="FCL"/>
+      </Item1>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>
