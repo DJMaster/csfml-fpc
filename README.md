@@ -26,8 +26,6 @@ var
 begin
   event := Default(sfEvent);
   shape := sfCircleShape_create();
-  position := Default(sfVector2f);
-  position := Default(sfVector2f);
   position.x := 100.0;
   position.y := 100.0;
   sfCircleShape_setRadius(shape, 40.0);
@@ -57,6 +55,7 @@ begin
   end;
 
   sfRenderWindow_destroy(window);
+end.                                                 
 end.
 ```
 
