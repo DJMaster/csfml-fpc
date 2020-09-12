@@ -2,7 +2,7 @@
 
 [SFML/CSFML](http://www.sfml-dev.org/) headers binding for the Free Pascal Compiler.
 
-* Basic example
+* **Basic example**
 ```pascal
 program basic;
 
@@ -50,9 +50,15 @@ begin
 end.
 ```
 
-| [Basic Window](demos/basic.pas)                        | [Shape Circles](demos/shcircles.pas)                |
-| ------------------------------------------------------ | --------------------------------------------------- |
-| <img src="images\basicwindow.PNG" style="zoom:33%;" /> | <img src="images\shcircles.PNG" style="zoom:33%;"/> |
-| [**Basic Text**](demos/text.pas)                           |                                                     |
-| <img src="images\text.png" style="zoom:33%;" />        |                                                     |
+* **Examples**
+
+A few examples that demonstrates basic sfml constructs.
+
+
+
+* [**Basic**](demos/basic.pas) - Just a basic window with only windows manager functions.
+
+* [**Shape Circles**](demos/shcircles.pas) - Exemplifies how to draw circle shapes on screen.
+* [**Text**](demos/text) - Draw a simple text on screen;
+* [**Vertex Array - points**](demos/vertexarraypoint.pas) - Draws 1M points in screen using sfVertexArray.
 
