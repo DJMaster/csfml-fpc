@@ -50,8 +50,8 @@ begin
 end.
 ```
 
-| [Basic Window](demos/basic.pas)                              | [Shape Circles](demos/shcircles.pas)                         |      |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| <img src="C:\Workspace\pascal\github\csfml-fpc\images\basicwindow.PNG" style="zoom:33%;" /> | <img src="C:\Workspace\pascal\github\csfml-fpc\images\shcircles.PNG" style="zoom:33%;" /> |      |
+| [Basic Window](demos/basic.pas)                        | [Shape Circles](demos/shcircles.pas)                 |      |
+| ------------------------------------------------------ | ---------------------------------------------------- | ---- |
+| <img src="images\basicwindow.PNG" style="zoom:33%;" /> | <img src="images\shcircles.PNG" style="zoom:33%;" /> |      |
 
 
