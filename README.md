@@ -59,6 +59,6 @@ A few examples that demonstrates basic sfml constructs.
 * [**Basic**](demos/basic.pas) - Just a basic window with only windows manager functions.
 
 * [**Shape Circles**](demos/shcircles.pas) - Exemplifies how to draw circle shapes on screen.
-* [**Text**](demos/text) - Draw a simple text on screen;
+* [**Text**](demos/text.pas) - Draw a simple text on screen;
 * [**Vertex Array - points**](demos/vertexarraypoint.pas) - Draws 1M points in screen using sfVertexArray.
 
