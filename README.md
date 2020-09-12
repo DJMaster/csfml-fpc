@@ -50,8 +50,9 @@ begin
 end.
 ```
 
-| [Basic Window](demos/basic.pas)                        | [Shape Circles](demos/shcircles.pas)                 |
-| ------------------------------------------------------ | ---------------------------------------------------- |
-| <img src="images\basicwindow.PNG" style="zoom:33%;" /> | <img src="images\shcircles.PNG" style="zoom:33%;" /> |
-
+| [Basic Window](demos/basic.pas)                        | [Shape Circles](demos/shcircles.pas)                |
+| ------------------------------------------------------ | --------------------------------------------------- |
+| <img src="images\basicwindow.PNG" style="zoom:33%;" /> | <img src="images\shcircles.PNG" style="zoom:33%;"/> |
+| [Basic Text](demos/text.pas)                           |                                                     |
+| <img src="images\text.png" style="zoom:33%;" />        |                                                     |
 
