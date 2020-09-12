@@ -1,9 +1,3 @@
-## csfml-fpc
-
-[SFML/CSFML](http://www.sfml-dev.org/) headers binding for the Free Pascal Compiler.
-
-* Basic example
-```pascal
 program basic;
 
 {$mode objfpc}{$H+}
@@ -48,10 +42,6 @@ begin
 
   sfRenderWindow_destroy(window);
 end.
-```
 
-| [Basic Window](demos/basic.pas)                              | [Shape Circles](demos/shcircles.pas)                         |      |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| <img src="C:\Workspace\pascal\github\csfml-fpc\images\basicwindow.PNG" style="zoom:33%;" /> | <img src="C:\Workspace\pascal\github\csfml-fpc\images\shcircles.PNG" style="zoom:33%;" /> |      |
 
 
